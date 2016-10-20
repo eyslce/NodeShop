@@ -6,6 +6,7 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "jade": "^1.11.0",
+    "sequelize": "^3.24.4",
     "serve-favicon": "^2.3.0"
   }
 }
