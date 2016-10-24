@@ -5,5 +5,5 @@ var sequelize = new Sequelize(config.connectionString);
 
 
 module.exports = {
-    example: sequelize.import(__dirname + "/example")
+    ns_login: sequelize.import(__dirname + "/ns_login")
 };
