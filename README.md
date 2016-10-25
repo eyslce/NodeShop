@@ -1,6 +1,6 @@
 #NodeShop
-项目说明
+椤圭洰璇存槑
 ##How to use
-1、运行项目，执行node index.js
-2、如有模块未安装，先执行npm install
-3、访问http://localhost:8000
+1銆佽繍琛岄」鐩紝鎵цnode index.js
+2銆佸鏈夋ā鍧楁湭瀹夎锛屽厛鎵цnpm install
+3銆佽闂甴ttp://localhost:8000
