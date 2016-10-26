@@ -1,12 +1,43 @@
 {
   "name": "NodeShop",
+  "description": "taobaoke web",
   "version": "0.0.1",
+  "author": {
+    "name": "Fman",
+    "email": "https://git.oschina.net/fman"
+  },
+  "contributors": [
+    {
+      "name": "eyslce",
+      "email": "holyking@sina.cn"
+    },
+    {
+      "name": "Steven",
+      "email": "julywjie@sina.cn"
+    },
+    {
+      "name": "chengrx",
+      "email": "hansierchen@qq.com"
+    },
+    {
+      "name": "socole",
+      "email": "socole@sohu.com"
+    }
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://git.oschina.net/fman/NodeShop.git"
+  },
+  "homepage": "https://git.oschina.net/fman/NodeShop",
   "dependencies": {
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "jade": "^1.11.0",
+    "lodash": "^4.16.4",
     "mysql": "^2.11.1",
+    "request": "^2.75.0",
     "sequelize": "^3.24.4",
     "serve-favicon": "^2.3.0"
   },

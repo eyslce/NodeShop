@@ -1,3 +1,22 @@
-var istanbul = require('istanbul');//´úÂë¸²¸ÇÂÊ²âÊÔ¹¤¾ß
-var chai = require('chai');//¶ÏÑÔ¿â
-//mocha µ¥Ôª²âÊÔ¿ò¼Ü
+var istanbul = require('istanbul');//ä»£ç è¦†ç›–ç‡æµ‹è¯•å·¥å…·
+var chai = require('chai');//æ–­è¨€åº“
+//mocha å•å…ƒæµ‹è¯•æ¡†æ¶
+
+
+var baseApi = require('../lib/baseApi.js');
+
+baseApi.init().getItem( {
+    'q':'å¥³è£…',
+    'cat':'16,18',
+    'itemloc':'æ­å·',
+    'sort':'tk_rate_des',
+    'is_tmall':'false',
+    'is_overseas':'false',
+    'start_price':'10',
+    'end_price':'10',
+    'start_tk_rate':'123',
+    'end_tk_rate':'123',
+    'platform':'1',
+    'page_no':'123',
+    'page_size':'20'
+});
