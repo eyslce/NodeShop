@@ -5,15 +5,7 @@ var path = require('path');
 function base() {
     //
     var view_path ;
-    //初始化
-    this.init = function (req, res, next) {
-        view_path =path.join(req.app.get("views"), 'mobile');
-        next();
-    };
-    this.getViewPath = function(){
-        return view_path;
-    };
-    this.isMobile = function (req) {
+    function isMobile (req) {
         // 如果有X_WAP_PROFILE则一定是移动设备
         if (req.get('X_WAP_PROFILE')) {
             return true;
@@ -75,6 +67,18 @@ function base() {
         }
         return false;
     }
+    //初始化
+    this.init = function (req, res, next) {
+        view_path =path.join(req.app.get("views"), 'mobile');
+        //if(isMobile(req)){
+            //view_path =path.join(req.app.get("views"), 'mobile');
+       // }
+        next();
+    };
+    this.getViewPath = function(){
+        return view_path;
+    };
+
 }
 
 module.exports = new base();
