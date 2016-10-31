@@ -1,16 +1,15 @@
 /**
- * ÏîÄ¿Èë¿ÚÎÄ¼þ
+ * ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
  */
 
 var http = require('http');
 var app = require('./app.js');
-var debug = require('debug')('demo:server');
 var config = require('./config.js');
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(config.http_port || '8000');
+var port = normalizePort(config.http_port || '5050');
 app.set('port', port);
 
 /**
@@ -83,5 +82,5 @@ function onListening() {
     var bind = typeof addr === 'string'
         ? 'pipe ' + addr
         : 'port ' + addr.port;
-    debug('Listening on ' + bind);
+    console.log('Listening on ' + bind);
 }
