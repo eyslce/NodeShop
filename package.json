@@ -42,7 +42,8 @@
     "serve-favicon": "^2.3.0"
   },
   "scripts": {
-    "test": "istanbul cover test/test.js"
+    "test": "istanbul cover test/test.js",
+    "start": "node index.js"
   },
   "devDependencies": {
     "chai": "^3.5.0",
