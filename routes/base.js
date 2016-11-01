@@ -69,10 +69,10 @@ function base() {
     }
     //初始化
     this.init = function (req, res, next) {
-        view_path =path.join(req.app.get("views"), 'mobile');
-        //if(isMobile(req)){
-            //view_path =path.join(req.app.get("views"), 'mobile');
-       // }
+        view_path =path.join(req.app.get("views"), 'window');
+        if(isMobile(req)){
+            view_path =path.join(req.app.get("views"), 'mobile');
+        }
         next();
     };
     this.getViewPath = function(){
