@@ -12,5 +12,17 @@ router.get('/', function(req, res, next) {
     res.sendFile(base.getViewPath() +'/index.html');
 
 });
+router.get('/index', function(req, res, next) {
+    res.sendFile(base.getViewPath() +'/index.html');
+});
+router.get('/boutique', function(req, res, next) {
+    res.sendFile(base.getViewPath() +'/boutique.html');
+});
+router.get('/package', function(req, res, next) {
+    res.sendFile(base.getViewPath() +'/package.html');
+});
+router.get('/hot', function(req, res, next) {
+    res.sendFile(base.getViewPath() +'/hot.html');
+});
 
 module.exports = router;
