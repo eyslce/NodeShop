@@ -25,10 +25,11 @@
 			<div id="head">
 		      <ul>
 		         <li class="left">
-		            <!--<span>Menu</span>-->
+		            <a href="javascript:;" onclick="javascript:history.back(-1);"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
 		         </li>
 		          <li class="center">
-		            <img src="img/mobile.logo.png">
+		            <!--<img src="img/mobile.logo.png">-->
+		            	<span>9.9包邮</span>
 		         </li>
 		          <li class="right">
 		            <!--<span>icon</span>-->
@@ -36,85 +37,28 @@
 		      </ul>
             </div>
             <!--头部导航 end-->
-            <!--轮播幻灯片-->
-		    <div class="app-lunbo">
-				<div id="lunbo1">
-					<div id="frame1">
-						<div id="inner">
-							<ul>
-								<li class="animation00">
-								    <img src="img/b01.jpg">
-								</li>
-								<li class="animation01">
-									<img src="img/b02.jpg">
-								</li>
-								<li class="animation02">
-									<img src="img/b03.jpg">
-								</li>
-								<li class="animation03">
-									<img src="img/b04.jpg">
-								</li>
-								<li class="animation04">
-									<img src="img/b05.jpg">
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			
+			<script>
+					$(document).ready(function(){
+						$(".goods-tag>a").click(function(){
+							$(this).addClass("current").siblings().removeClass("current");
+						});
+					});
+				</script>
 			<div class="app-goods">
-				<!--导航分类-->
-				<ul class="app-classify clearfix">
-					<li>
-			 		    <a href="product.html">
-			 			    <img src="img/icon/index_baoyou.png">
-			 				<span>9.9包邮</span>
-			 			</a>
-			 	    </li>
-			 	    <li>
-			 			<a>
-			 			    <img src="img/icon/index_baoyou.png">
-			 				<span>潮流女装</span>
-			 			</a>
-			 	    </li>
-			 	    <li>
-			 			<a>
-			 			    <img src="img/icon/index_baoyou.png">
-			 				<span>鞋包配饰</span>
-			 			</a>
-			 	    </li>
-			 	    <li>
-			 			<a>
-			 			    <img src="img/icon/index_baoyou.png">
-			 				<span>母婴用品</span>
-			 			</a>
-			 	   </li>
-			 	    <li>
-			 			<a>
-			 			    <img src="img/icon/index_baoyou.png">
-			 				<span>领券购</span>
-			 			</a>
-			 	   </li>
-			 	    <li>
-			 			<a>
-			 			    <img src="img/icon/index_baoyou.png">
-			 				<span>零食美味</span>
-			 			</a>
-			 	   </li>
-			 	    <li>
-			 			<a>
-			 			    <img src="img/icon/index_baoyou.png">
-			 				<span>美容护肤</span>
-			 			</a>
-			 	   </li>
-			 	    <li>
-			 			<a>
-			 			    <img src="img/icon/index_baoyou.png">
-			 				<span>今日新品</span>
-			 			</a>
-			 	   </li>
-				</ul>
+				<!--标签分类-->
+				<div class="goods-tag">
+					<a class="current">全部</a>
+					<a>上衣</a>
+					<a>套装</a>
+					<a>裙子</a>
+					<a>保暖裤</a>
+					<a>裤子</a>
+					<a>内衣</a>
+					<a>外套</a>
+					<a>袜子</a>
+					<a>文胸</a>
+				</div>
+				
 				<!--今日上新-->
 				<div class="recommend">
 				 	<i class="fa fa-hand-o-right" aria-hidden="true"></i>
@@ -239,7 +183,7 @@
 	        		<li>
 	        			<a>
 	        				<i class="fa fa-list" aria-hidden="true"></i>
-	        				<span>商品分类</span>
+	        				<span>分类</span>
 	        			</a>
 	        		</li>
 	        	</ul>

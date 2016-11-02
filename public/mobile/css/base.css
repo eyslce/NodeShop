@@ -1,0 +1,317 @@
+/* css reset*/
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+fieldset,img{ border:none;}
+address,caption,cite,code,dfn,em,strong,th,var,i{ font-style:normal; font-weight:normal;}
+ol,ul,li{ list-style:none;}
+caption,th{ text-align:left;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-weight:normal;}
+q:before,q:after{content:''}
+abbr,acronym{ border:0px;}
+input{ background:none; border:none;}
+*{ outline:none;}
+html{ overflow-x:hidden}
+body{ font-family:"Microsoft Yahei","微软雅黑", "Hiragino Sans GB","Helvetica Neue",Helvetica,tahoma,arial,Verdana,sans-serif,"WenQuanYi Micro Hei",
+      "\5B8B\4F53";font-size:12px;color:#666;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing:grayscale;}
+a{text-decoration:none;cursor:pointer;}
+a:hover{text-decoration: none;cursor: pointer;}
+
+/*--HTML5标签--*/
+article, aside, footer, header, hgroup, nav, section {display: block;}
+/*img*/
+img{border:0;vertical-align:middle}
+a img,img{-ms-interpolation-mode:bicubic}
+.img-responsive{max-width: 100%;height: auto}
+a:link {color: #666;cursor: pointer;}
+/*------样式排版------*/
+ /*--px--*/
+.f10{font-size: 10px;}
+.f12{ font-size:12px;}
+.f14{ font-size:14px;}
+.f16{ font-size:16px;}
+.f20 {font-size: 20px;}
+.fn{ font-weight:400;}
+.fb{ font-weight:700;}
+.unl{ text-decoration:underline;}
+.no_unl{ text-decoration:none;}
+
+ /*--字体--*/
+.fm01{ font-family:"Microsoft Yahei";}
+.fm02{ font-family:arial;}
+
+/*--缩进--*/
+.tn10 {text-indent: 10px;}
+.tn15 {text-indent: 15px;}
+.tn20 {text-indent: 20px;}
+.tnt30{ text-indent:30px;}
+
+/*--定位--*/
+.none{ display:none;}
+.hidden{ visibility:hidden;}
+.none{ display:none;}
+.db{ display:block;}
+.dib{ display:inline-block;}
+.pr{ position:relative;}
+.pa{ position:absolute;}
+.fix{position: fixed;}
+
+/*--float--*/
+.mc {margin: 0 auto;}
+.fl {float: left;}
+.fr {float: right;}
+.vm{ vertical-align:middle;}
+.tl{ text-align:left;}
+.tc{ text-align:center;}
+.tr{ text-align:right;}
+.bc{ margin-left:auto; margin-right:auto;}
+.lt{ float:left; display:inline;}
+.rt{ float:right; display:inline;}
+.clear{ clear:both;}
+
+/*---width & height---*/
+.w320 {width: 320px;}
+.w640 {width: 640px;}
+.w100{ width:100px;}
+
+.h38 {height: 38px;}
+.h44 {height: 44px;}
+.h50 {height: 50px;}
+.h203 {height: 203px;}
+
+.lh16{line-height:16px;}
+.lh20{line-height:20px;}
+.lh35{line-height:35px;}
+.lh36{line-height:36px;}
+.lh44{line-height:44px;}
+.lh50{line-height:50px;}
+
+/*---margin---*/
+.mt10{ margin-top:10px;}
+.mt15{ margin-top:15px;}
+.mt20{ margin-top:20px;}
+.mt25{ margin-top:25px;}
+.mb10{ margin-bottom:10px;}
+.mb15{ margin-bottom:15px;}
+.mb20{ margin-bottom:20px;}
+.mb30{ margin-bottom:30px;}
+.mb60{ margin-bottom:60px;}
+.ml5{ margin-left:5px;}
+.ml10{ margin-left:10px;}
+.ml15{ margin-left:15px;}
+.ml20{ margin-left:20px;}
+.ml60{ margin-left:60px;}
+.ml90{ margin-left:90px;}
+.mr5{ margin-right:5px;}
+.mr10{ margin-right:10px;}
+.mr15{ margin-right:15px;}
+
+/*--padding--*/
+.pt5{ padding-top:5px;}
+.pt10{ padding-top:10px;}
+.pt12{ padding-top:12px;}
+.pt15{ padding-top:15px;}
+.pt20{ padding-top:20px;}
+.pt25{ padding-top:25px;}
+.pt50{ padding-top:50px;}
+.pt60{ padding-top:60px;}
+
+.pm5{ padding-bottom:5px;}
+.pm15{ padding-bottom:15px;}
+.pm20{ padding-bottom:20px;}
+.pm22{ padding-bottom:22px;}
+.pm25{ padding-bottom:25px;}
+.pm30{ padding-bottom:30px;}
+
+.pl5{ padding-left:5px;}
+.pl10{ padding-left:10px;}
+.pl15{ padding-left:15px;}
+.pl20{ padding-left:20px;}
+.pl25{ padding-left:25px;}
+.pl30{ padding-left:30px;}
+
+.pr5{ padding-right:5px;}
+.pr10{ padding-right:10px;}
+.pr15{ padding-right:15px;}
+.pr20{ padding-right:20px;}
+
+.plr5{ padding:0 5px;}
+.ptm16{ padding:16px 0;}
+.ptm24{ padding:24px 0;}
+
+/*--color--*/
+.color01{color:#ccc;}
+.color02{color:#646464;}
+.color03{color:#333;}
+.color04{color:#666;}            /* 商品标题色  */
+.color05{color:#999;}
+.color06{color:#f6f4f4;}
+.color07{color:#e94643;}
+.color08{color:#2196f3;}         /* 独家券背景色  */
+.color09{color:#c8c8c8;}
+.color10{color:#fff;}
+.color11 {color:#df1956;}        /* 商品价格颜色  */
+
+/*--background--*/
+.bg01{ background:#F6F4F4;}      /* html body背景色  */
+.bg02{ background:#ffffff;}
+.bg03{ background:#3d3d3d;}
+.bg04{ background:#2c2c2c;}
+
+
+/*--------------------------------------[项目常用代码片段与样式]----------------------------------------------------------------------*/
+
+/*---mobile 宽度区间设置; div.class 为body里面最外层div---*/
+.main {height: auto;overflow: visible;max-width:640px;min-width:320px;width:100%;margin: 0 auto;background: #f6f4f4;}
+/*--首页头部--*/
+  /*
+  <div id="head">
+		      <ul>
+		         <li class="left">
+		            <span>Menu</span>
+		         </li>
+		          <li class="center">
+		            <img src="img/mobile.logo.png">
+		         </li>
+		          <li class="right">
+		            <span>icon</span>
+		         </li>
+		      </ul>
+    </div>
+*/
+#head {height: 44px;background: #fff;border-bottom: 1px solid #dedede;}
+#head ul li{float:left;height: 44px;line-height: 44px;font-size: 1rem;}
+#head ul li.left {width: 24%;padding-left: 10px;}
+#head ul li.right {width: 24%;text-align: right;}
+#head ul li.right span {padding-right:10px;}
+#head ul li.center {width: 48%;margin: 0 auto;text-align: center;}
+
+
+
+/*------------ 商品分类 ul li --------------*/
+/*
+   <ul class="app-classify clearfix">
+			<li>
+	 		   <a>
+	 			    <img src="img/icon/index_baoyou.png">
+	 			  	<span>9.9包邮</span>
+	 			 </a>
+	 	  </li>
+	 	  <li>
+	 			<a>
+	 			  <img src="img/icon/index_baoyou.png">
+	 				<span>潮流女装</span>
+	 			</a>
+	 	  </li>
+	 	  <li>
+	 			<a>
+	 			  <img src="img/icon/index_baoyou.png">
+	 				<span>鞋包配饰</span>
+	 			</a>
+	 	  </li>
+	 	  <li>
+	 			<a>
+	 			  <img src="img/icon/index_baoyou.png">
+	 				<span>母婴用品</span>
+	 			</a>
+	 	  </li>
+		</ul>
+*/
+
+.main .app-goods ul.app-classify {width: 96%;margin:0 auto;margin-top: 10px;background: #fff;padding-left: 2%;}
+.main .app-goods ul.app-classify li {float: left;width: 24%;text-align: center;margin: 5px 0px;}
+.main .app-goods ul.app-classify li img {max-width: 70%;max-height: 70%;}
+.main .app-goods ul.app-classify li span {display: block;text-align: center;font-size: 0.8rem;color: #666;}
+
+
+
+/*------------ 商品列表 ul li --------------*/
+
+  /*
+   <div class="app-goods">
+         <ul class="good-list">
+             <li class="goods-item">
+                 <a href="">
+                    <span class="quan-tag">独家券<br>15 元 </span>
+                    <img src="img/1.jpg" alt="">
+                    <div class="goods-info">
+                        <p class="goods-title">休闲运动服饰女式运动套装</p>
+                        <span class="goods-price">￥<em>45.00</em></span>
+                        <span class="sale-num"><em>963</em>人已买</span>
+                    </div>
+                  </a>
+              </li>
+         </ul>
+      </div>
+  */
+.app-goods {overflow: hidden;min-height: 20rem;padding: 0;margin: 0;background: #f6f4f4;}
+   ul.good-list {width: 100%;margin: 0;padding: 0;list-style: none;}
+   ul.good-list li {width: 48%;float: left;margin-top: 5px;margin-left:5px;padding-bottom:10px;overflow: hidden;border: none;
+                     background:#fff;position: relative;}
+   ul.good-list li:nth-child(even) {margin-left: 5px;}
+   ul.good-list li img {max-width:100%;max-height:100%;display:block;margin:auto auto;position: relative;vertical-align:middle;padding: 3px 5px;min-height: 203px;}
+
+    /*--Li 右上角 优惠券标签span : 独家券10元 --*/
+   span.quan-tag {z-index:100;position: absolute;background: #2196f3;color: #fff;width:48px;height: 36px;text-align: center;
+               right: 0;margin-top: 1px;padding-top: 3px;font-size: 0.8rem;}
+   span.quan-tag:after {content:".";width: 0;height: 0;position: absolute;bottom: -16px;left: 0;border-left: 24px solid transparent;
+                     border-right: 24px solid transparent;border-top:16px solid #2196f3;}
+
+   /*--li中标题部分--*/
+    ul.good-list li div.goods-info {padding: 0px 5px;}
+    ul.good-list li div.goods-info .goods-title {height: 1rem;overflow: hidden;line-height: 1.1rem;font-weight: 300;color: #4a4a4a;}
+    ul.good-list li div.goods-info span em{font-style: normal;font-size: 1rem;color: #dc4642;font-weight:bold;}
+    ul.good-list li div.goods-info span.goods-price {display: block;float: left;width: 33%;margin-top:5px;color: #dc4642;font-weight:bold;}
+    ul.good-list li div.goods-info span.sale-num {display: block;float: right;width: 50%;margin-top: 5px;text-align: right;padding-right: 5px;color: #666;}
+
+    /*--下一页--*/
+    .app-goods .next-page {text-align: center;margin:20px 0px 10px 0px;}
+    .app-goods .next-page a {padding: 5px 10px;background: #f60;color: #fff;border-radius: 3px;}
+    .clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+
+    /*--底部foot--*/
+    .foot {border-top: 1px solid #dc4642;margin-top: 1rem;}
+    .foot p {text-align:center;padding: 15px 0px;}
+
+    /*--底部固定导航栏--*/
+    .app-goods .footer-nav {max-width: 640px;min-width: 320px;width: 100%;height: 44px;bottom: 0;position: fixed;z-index: 300;background: #fff;}
+    .app-goods .footer-nav ul li {float: left;width: 25%;text-align: center;height: 44px;padding-top: 5px;}
+    .app-goods .footer-nav ul li span {display: block;color: #666;margin-top: 3px;}
+    .app-goods .footer-nav ul li i {font-size: 1.2rem;color: #f60;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.test {}
+
+
+
+/*--input--*/
+
+/*--button--*/
+
+
+/*--border--*/
