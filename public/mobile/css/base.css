@@ -183,65 +183,13 @@ a:link {color: #666;cursor: pointer;}
 #head ul li.right {width: 24%;text-align: right;}
 #head ul li.right span {padding-right:10px;}
 #head ul li.center {width: 48%;margin: 0 auto;text-align: center;}
-
-
-
-/*------------ 商品分类 ul li --------------*/
-/*
-   <ul class="app-classify clearfix">
-			<li>
-	 		   <a>
-	 			    <img src="img/icon/index_baoyou.png">
-	 			  	<span>9.9包邮</span>
-	 			 </a>
-	 	  </li>
-	 	  <li>
-	 			<a>
-	 			  <img src="img/icon/index_baoyou.png">
-	 				<span>潮流女装</span>
-	 			</a>
-	 	  </li>
-	 	  <li>
-	 			<a>
-	 			  <img src="img/icon/index_baoyou.png">
-	 				<span>鞋包配饰</span>
-	 			</a>
-	 	  </li>
-	 	  <li>
-	 			<a>
-	 			  <img src="img/icon/index_baoyou.png">
-	 				<span>母婴用品</span>
-	 			</a>
-	 	  </li>
-		</ul>
-*/
+#head ul li.center img {max-width: 100%;max-height: 100%;}
 
 .main .app-goods ul.app-classify {width: 96%;margin:0 auto;margin-top: 10px;background: #fff;padding-left: 2%;}
 .main .app-goods ul.app-classify li {float: left;width: 24%;text-align: center;margin: 5px 0px;}
 .main .app-goods ul.app-classify li img {max-width: 70%;max-height: 70%;}
 .main .app-goods ul.app-classify li span {display: block;text-align: center;font-size: 0.8rem;color: #666;}
 
-
-
-/*------------ 商品列表 ul li --------------*/
-
-  /*
-   <div class="app-goods">
-         <ul class="good-list">
-             <li class="goods-item">
-                 <a href="">
-                    <span class="quan-tag">独家券<br>15 元 </span>
-                    <img src="img/1.jpg" alt="">
-                    <div class="goods-info">
-                        <p class="goods-title">休闲运动服饰女式运动套装</p>
-                        <span class="goods-price">￥<em>45.00</em></span>
-                        <span class="sale-num"><em>963</em>人已买</span>
-                    </div>
-                  </a>
-              </li>
-         </ul>
-      </div>
-  */
 .app-goods {overflow: hidden;min-height: 20rem;padding: 0;margin: 0;background: #f6f4f4;}
    ul.good-list {width: 100%;margin: 0;padding: 0;list-style: none;}
    ul.good-list li {width: 48%;float: left;margin-top: 5px;margin-left:5px;padding-bottom:10px;overflow: hidden;border: none;
