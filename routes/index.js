@@ -24,5 +24,7 @@ router.get('/package', function(req, res, next) {
 router.get('/hot', function(req, res, next) {
     res.sendFile(base.getViewPath() +'/hot.html');
 });
-
+router.get('/product', function(req, res, next) {
+    res.sendFile(base.getViewPath() +'/product.html');
+});
 module.exports = router;
