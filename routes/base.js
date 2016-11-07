@@ -1,4 +1,6 @@
 var path = require('path');
+var config = require('../config.js');
+var crypto = require('crypto');
 /**
  * 路由级别中间件
  */
@@ -69,6 +71,17 @@ function base() {
     }
     //初始化
     this.init = function (req, res, next) {
+        //生成淘点金签名参数
+        var app_key = config.app_key;
+        var secret = config.app_secret;
+        var timestamp = Date.now();
+        var message = secret+'app_key'+app_key+'timestamp'+timestamp+secret;
+        var hmac = crypto.createHmac('md5',secret);
+        hmac.update(message);
+        var sign = hmac.digest('hex').toLowerCase();
+        res.cookie("timestamp",timestamp);
+        res.cookie("sign",sign);
+        //
         view_path =path.join(req.app.get("views"), 'window');
         if(isMobile(req)){
             view_path =path.join(req.app.get("views"), 'mobile');
@@ -78,6 +91,7 @@ function base() {
     this.getViewPath = function(){
         return view_path;
     };
+    //
 
 }
 
