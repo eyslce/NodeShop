@@ -35,7 +35,7 @@ img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inlin
 
 /*-----Classification of goods-----*/
 .sidebar{ position:relative; padding:0; height:36px; z-index:18;}
-.sidebar .tip{ padding:0 20px; line-height:36px; color:#fff; background-color:#ff6537;}
+.sidebar .tip{ padding:0 20px; line-height:36px; color:#fff; font-weight:700; background-color:#ff6537;}
 .sidebar .tip .tb-icon{ top:12px; right:20px; width:18px; height:12px; background-position:-44px -24px;}
 .sidebar .sidebar-list{ position:absolute; left:0; top:36px; margin-bottom:0; width:100%; background-color:#f6f6f6;}
 .sidebar .sidebar-list .sidebar-cat{ padding:0; height:60px; line-height:20px; color:#fff; overflow:hidden;}
