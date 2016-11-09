@@ -104,8 +104,9 @@ img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inlin
 .seckill-tit b{ font-size:18px; color:#2e2e2e;}
 .seckill-list{ margin-bottom:0;}
 .seckill-list .seckill-item:hover{ border-color:#ff4a00; box-shadow:0 0 5px rgba(0,0,0,0.4);-moz-box-shadow:0 0 5px rgba(0,0,0,0.4)}
-.seckill-item{ margin-bottom:15px; border:1px solid #e5e5e5;}
-
+.seckill-item{ position:relative; margin-bottom:15px; border:1px solid #e5e5e5;}
+.seckill-item .discount{ position:absolute; right:0; top:0; width:83px; height:75px; background:url(../images/discount.png) no-repeat; text-decoration:none;}
+.seckill-item .discount .discount-img{ padding-top:14px; text-align:center; font-size:28px; color:#fff; font-family:Arial;}
 .seckill-item .goods-info{ overflow:hidden;}
 .seckill-item .goods-info .discount{ width:60px; height:60px; text-align:center; color:#666; font-size:22px; line-height:58px; background:url(../images/zhe_bg.png) no-repeat right center;}
 .seckill-item .goods-info .title{ padding:0 10px 0 70px;}
@@ -136,12 +137,39 @@ img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inlin
 .seckill-item .info-mark .icon9{ position:relative; float:left; right:0; margin-left:6px;}
 .seckill-item .info-mark .bicon01{ right:10px; width:46px; height:18px; background-position:-123px -20px;}
 .seckill-item .info-mark .bicon02{ right:10px; width:46px; height:18px; background-position:-123px 0;}
+.seckill-item.hover .info-mark .mall{ top:-6px; width:68px; height:28px; line-height:28px; font-size:14px; text-align:center; border-radius:4px; text-decoration:none; color:#fff; background:#f50;}
 
 .seckill-nav{ margin-bottom:16px; border:1px solid #ff988f; border-width:0 0 1px; color:#666;}
 .menu-nav{ margin-bottom:0; overflow:hidden;}
 .menu-nav>li{ float:left;}
 .menu-nav>li>a{ display:block; padding:10px 18px; color:#666; text-decoration:none;}
 .menu-nav>li>a:hover{ color:#ff4a00;}
+
+/*-----Coupon redemption-----*/
+.coupon-list{ padding-top:20px;}
+.coupon-item{ border:1px solid #e0e0e0; overflow:hidden;}
+.coupon-item>dt[class^="col-"]{ padding-left:0; padding-right:0;}
+.coupon-item>dt>img{ width:100%;}
+.coupon-item .coupon-inf{ padding:0 0 0 20px; color:#9999a8;}
+.coupon-item .coupon-inf .name{ height:40px; line-height:20px; font-size:14px; color:#626262;}
+.coupon-item .coupon-quan{ font-size:14px; line-height:52px; color:#fff; background-color:#ff9a3f;}
+.coupon-item .coupon-quan .price{ margin-left:10px;}
+.coupon-quan .price b{ font-size:24px;}
+.coupon-item .coupon-quan .shop{ margin-left:6px;}
+.coupon-item .privilege{ margin-bottom:25px;}
+.coupon-item .privilege b{ font-weight:400; color:#ff9a3f;}
+.coupon-item .process h4{ padding-top:20px; font-size:12px;}
+.coupon-item .routine{ padding:10px 0 12px; overflow:hidden;}
+.coupon-item .routine a{ padding:0 12px; margin-right:6px; line-height:30px; font-size:12px; border:1px dashed #db771c; border-radius:8px; color:#db771c; text-decoration:none;}
+.coupon-item .routine a:hover{ color:#fff; background-color:#db771c;}
+.coupon-item .routine .routine-jt{ margin-right:8px; line-height:30px;}
+
+.report-reason{ padding:38px 0; font-size:14px;}
+.report-reason h2{ font-size:14px;}
+.report-reason h2 a{ color:#ff9a3f;}
+.report-reason .checkbox{ padding:10px 0 10px 25px;}
+.report-reason .report-text{ padding-bottom:12px;}
+.report-banner p{ padding-top:38px; text-align:center;}
 
 /*-----Page-----*/
 .mPages{ text-align:center;}

@@ -27,4 +27,10 @@ router.get('/hot', function(req, res, next) {
 router.get('/product', function(req, res, next) {
     res.sendFile(base.getViewPath() +'/product.html');
 });
+router.get('/catid', function(req, res, next) {
+    res.sendFile(base.getViewPath() +'/catid.html');
+});
+router.get('/coupon', function(req, res, next) {
+    res.sendFile(base.getViewPath() +'/coupon.html');
+});
 module.exports = router;

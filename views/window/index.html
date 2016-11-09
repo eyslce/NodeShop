@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="window/assets/css/site.css" />
     <script type="text/javascript" src="window/assets/js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="window/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="window/assets/js/index.js"></script>
     <script type="text/javascript" src="/baidu.js"></script>
     <script src="http://l.tbcdn.cn/apps/top/x/sdk.js?appkey=xxxxxxx"></script>
 </head>
@@ -42,60 +43,60 @@
                        <ul class="sidebar-list">
                            <li class="sidebar-cat sidebar-women">
                                <div class="sidebar-big fl">
-                                   <a href="catid.html"><span>女装</span></a>
+                                   <a href="/catid"><span>女装</span></a>
                                </div>
                                <div class="sidebar-small">
-                                   <a href="catid.html">上衣</a><a href="catid.html">套装</a><a href="catid.html">裙子</a>
-                                   <a href="catid.html">上衣</a><a href="catid.html">套装</a><a href="catid.html">裙子</a>
+                                   <a href="/catid">上衣</a><a href="/catid">套装</a><a href="/catid">裙子</a>
+                                   <a href="/catid">上衣</a><a href="/catid">套装</a><a href="/catid">裙子</a>
                                </div>
 
                            </li>
                            <li class="sidebar-cat sidebar-men">
                                <div class="sidebar-big fl">
-                                   <a href="catid.html"><span>男装</span></a>
+                                   <a href="/catid"><span>男装</span></a>
                                </div>
                                <div class="sidebar-small">
-                                   <a href="catid.html">上衣</a><a href="#">套装</a><a href="#">裙子</a>
+                                   <a href="/catid">上衣</a><a href="/catid">套装</a><a href="#">裙子</a>
                                    <a href="#">上衣</a><a href="catid.html">套装</a><a href="#">裙子</a>
                                </div>
 
                            </li>
                            <li class="sidebar-cat sidebar-mother">
                                <div class="sidebar-big fl">
-                                   <a href="catid.html"><span>母婴</span></a>
+                                   <a href="/catid"><span>母婴</span></a>
                                </div>
                                <div class="sidebar-small">
-                                   <a href="#">上衣</a><a href="#">套装</a><a href="#">裙子</a>
+                                   <a href="/catid">上衣</a><a href="/catid">套装</a><a href="/catid">裙子</a>
                                    <a href="#">上衣</a><a href="#">套装</a><a href="#">裙子</a>
                                </div>
 
                            </li>
                            <li class="sidebar-cat sidebar-xie">
                                <div class="sidebar-big fl">
-                                   <a href="catid.html"><span>鞋包</span></a>
+                                   <a href="/catid"><span>鞋包</span></a>
                                </div>
                                <div class="sidebar-small">
-                                   <a href="#">上衣</a><a href="#">套装</a><a href="#">裙子</a>
+                                   <a href="/catid">上衣</a><a href="#">套装</a><a href="#">裙子</a>
                                    <a href="#">上衣</a><a href="#">套装</a><a href="#">裙子</a>
                                </div>
 
                            </li>
                            <li class="sidebar-cat sidebar-home">
                                <div class="sidebar-big fl">
-                                   <a href="catid.html"><span>家居</span></a>
+                                   <a href="/catid"><span>家居</span></a>
                                </div>
                                <div class="sidebar-small">
-                                   <a href="#">上衣</a><a href="#">套装</a><a href="#">裙子</a>
+                                   <a href="/catid">上衣</a><a href="/catid">套装</a><a href="#">裙子</a>
                                    <a href="#">上衣</a><a href="#">套装</a><a href="#">裙子</a>
                                </div>
 
                            </li>
                            <li class="sidebar-cat sidebar-food">
                                <div class="sidebar-big fl">
-                                   <a href="catid.html"><span>美食</span></a>
+                                   <a href="/catid"><span>美食</span></a>
                                </div>
                                <div class="sidebar-small">
-                                   <a href="#">上衣</a><a href="#">套装</a><a href="#">裙子</a>
+                                   <a href="/catid">上衣</a><a href="/catid">套装</a><a href="/catid">裙子</a>
                                    <a href="#">上衣</a><a href="#">套装</a><a href="#">裙子</a>
                                </div>
 
@@ -149,9 +150,12 @@
            <div class="container">
                <div class="seckill-tit"><b>今日新款</b></div>
                <div class="seckill-con">
-                   <ul class="row seckill-list">
+                   <ul class="row seckill-list J-seckill">
                        <li class="col-sm-4 col-md-3">
                            <div class="seckill-item">
+                               <a class="discount" href="/coupon">
+                                   <p class="discount-img"><span class="discount-num">80</span></p>
+                               </a>
                                <a class="goods-img" href="#"><img src="window/assets/upload/TB2ECTXa4j300x300.jpg"></a>
                                <div class="goods-info">
                                    <p class="info-tit"><a class="name">创意桌面收纳盒塑料</a></p>
@@ -162,7 +166,7 @@
                                    <div class="info-mark">
                                        <p class="old fl"><del>¥138.00</del><span>2.6折</span></p>
                                        <i class="free-icon icon9"></i>
-                                       <i class="mall bicon01 free-icon"></i>
+                                       <a class="mall bicon01 free-icon" data-source="淘宝"></a>
                                    </div>
 
 
@@ -186,7 +190,7 @@
                                    <div class="info-mark">
                                        <p class="old fl"><del>¥168.00</del><span>2.6折</span></p>
                                        <i class="free-icon icon9"></i>
-                                       <i class="mall bicon01 free-icon"></i>
+                                       <a class="mall bicon01 free-icon" data-source="淘宝"></a>
                                    </div>
 
 
@@ -210,7 +214,7 @@
                                    <div class="info-mark">
                                        <p class="old fl"><del>¥128.00</del><span>2.5折</span></p>
                                        <i class="free-icon icon9"></i>
-                                       <i class="mall bicon01 free-icon"></i>
+                                       <a class="mall bicon01 free-icon" data-source="淘宝"></a>
                                    </div>
 
 
@@ -234,7 +238,7 @@
                                    <div class="info-mark">
                                        <p class="old fl"><del>¥98.00</del><span>4.1折</span></p>
                                        <i class="free-icon icon9"></i>
-                                       <i class="mall bicon01 free-icon"></i>
+                                       <a class="mall bicon02 free-icon" data-source="天猫"></a>
                                    </div>
 
 
@@ -258,7 +262,7 @@
                                    <div class="info-mark">
                                        <p class="old fl"><del>¥90.00</del><span>4.8折</span></p>
                                        <i class="free-icon icon9"></i>
-                                       <i class="mall bicon01 free-icon"></i>
+                                       <a class="mall bicon01 free-icon" data-source="淘宝"></a>
                                    </div>
 
 
@@ -282,7 +286,7 @@
                                    <div class="info-mark">
                                        <p class="old fl"><del>¥138.00</del><span>2.6折</span></p>
                                        <i class="free-icon icon9"></i>
-                                       <i class="mall bicon02 free-icon"></i>
+                                       <a class="mall bicon02 free-icon" data-source="天猫"></a>
                                    </div>
 
 
@@ -306,7 +310,7 @@
                                    <div class="info-mark">
                                        <p class="old fl"><del>¥60.00</del><span>9.9折</span></p>
                                        <i class="free-icon icon9"></i>
-                                       <i class="mall bicon02 free-icon"></i>
+                                       <a class="mall bicon01 free-icon" data-source="淘宝"></a>
                                    </div>
 
 
@@ -330,7 +334,7 @@
                                    <div class="info-mark">
                                        <p class="old fl"><del>¥158.00</del><span>3.2折</span></p>
                                        <i class="free-icon icon9"></i>
-                                       <i class="mall bicon02 free-icon"></i>
+                                       <a class="mall bicon02 free-icon" data-source="天猫"></a>
                                    </div>
 
 
