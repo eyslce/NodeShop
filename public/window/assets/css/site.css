@@ -98,6 +98,11 @@ img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inlin
 
 .page-ad{ padding-bottom:25px; text-align:center;}
 
+.banner-new div[class^=col-]{ padding:0;}
+.banner-new .banner-right{ overflow:hidden;}
+.banner-new .banner-right li{ float:left; width:50%; height:180px;}
+.banner-new .banner-right img{ height:100%;}
+
 /*-----List of goods-----*/
 .free-icon{ position:absolute; background:url(../images/icon9.png) no-repeat;}
 .seckill-tit{ padding:12px 0 12px; margin-bottom:12px; text-indent:30px; line-height:24px; border-bottom:1px solid #ababab; background:url(../images/icon1.png) no-repeat 4px center;}
@@ -197,8 +202,8 @@ img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inlin
 .foot-code h4{ font-size:14px; font-weight:700; text-align:center}
 .foot-code img{ width:120px; height:120px;}
 .foot-code .code-mobile{  margin-right:20px;}
-.cripte{ font-size:13px;}
-.cripte .safe{width: 66%;margin: 0 auto; margin-bottom:10px;margin-left:20%;text-align: center}
+.cripte{ padding:10px 0; font-size:13px;}
+.cripte .safe{ text-align: center}
 .cripte p{ padding-bottom:5px; margin-bottom:0; font-size:13px;}
 
 
@@ -212,4 +217,7 @@ img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inlin
 @media (min-width: 1200px) {
     .menu-nav>.list{ margin-right:30px;}
     .header .logo-ad{}
+    .banner-new .col-md-offset-2{margin-left:20%;}
+    .banner-new .col-md-7{ width:58%;}
+    .banner-new .col-md-3{ width:22%;}
 }
