@@ -184,17 +184,21 @@ img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inlin
 
 /*-----footer-----*/
 .footer-box{ padding-top:12px; background-color:#f1f1f1;}
-.foot-nav{ text-align:center; overflow:hidden;}
-.foot-nav .nav-list{ float:left; width:25%;}
-.foot-nav .nav-list .title{ font-size:16px; font-weight:600;}
+.foot-nav{ text-align:center; overflow:hidden;margin-top: 5%;margin-bottom: 2%;}
+.foot-nav .nav-list{ float:left; width:20%;}
+/*.foot-nav .nav-list .title{ font-size:16px; font-weight:600;}*/
+.foot-nav li {border-right: 1px solid #666;height: 18px;}
+.foot-nav li:last-child {border:none;}
 .foot-nav .nav-list a{ color:#575757; font-size:13px; text-decoration:none;}
 .foot-nav .nav-list a:hover{ color:#ff4a00}
+.footer-box p.copyright {width:66%;margin:0 auto;margin-top:20px;text-align: center;}
+
 .foot-code{ padding-top:14px;}
 .foot-code h4{ font-size:14px; font-weight:700; text-align:center}
 .foot-code img{ width:120px; height:120px;}
 .foot-code .code-mobile{  margin-right:20px;}
 .cripte{ font-size:13px;}
-.cripte .safe{ margin-bottom:10px;}
+.cripte .safe{width: 66%;margin: 0 auto; margin-bottom:10px;margin-left:20%;text-align: center}
 .cripte p{ padding-bottom:5px; margin-bottom:0; font-size:13px;}
 
 
