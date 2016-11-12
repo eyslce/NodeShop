@@ -1,6 +1,6 @@
 /*-----common-----*/
 *{ outline:none;}
-a{ cursor:pointer; color:#3c3c3c;}
+a{ cursor:pointer; color:#3c3c3c; outline-color:transparent;}
 ul{ padding:0; list-style:none;}
 img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inline-block; vertical-align:middle; }
 .fl{ float:left}
@@ -28,7 +28,7 @@ img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inlin
 /*-----Middle of the navigation-----*/
 .main-nav{ background-color:#f60;}
 .menu-nav > .list{ margin-right:0;}
-.menu-nav > .list > a{ padding:8px 12px; text-align:center; font-size:14px; font-weight:700; color:#3c3c3c;}
+.menu-nav > .list > a{ padding:8px 12px; text-align:center; font-size:14px; font-weight:700; color:#3c3c3c; outline:none;}
 .menu-nav > .list > a:hover{ color:#f40; background-color:transparent;}
 .main-nav .menu-nav>.list>a{ color:#fff;}
 .main-nav .menu-nav > .list > a:hover{ background-color:#ee5500;}
@@ -105,7 +105,7 @@ img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inlin
 .seckill-list{ margin-bottom:0;}
 .seckill-list .seckill-item:hover{ border-color:#ff4a00; box-shadow:0 0 5px rgba(0,0,0,0.4);-moz-box-shadow:0 0 5px rgba(0,0,0,0.4)}
 .seckill-item{ position:relative; margin-bottom:15px; border:1px solid #e5e5e5;}
-.seckill-item .discount{ position:absolute; right:0; top:0; width:83px; height:75px; background:url(../images/discount.png) no-repeat; text-decoration:none;}
+.seckill-item .discount{ position:absolute; right:0; top:0; width:83px; height:75px; background:url(../images/discount.png) no-repeat; text-decoration:none; outline:none;}
 .seckill-item .discount .discount-img{ padding-top:14px; text-align:center; font-size:28px; color:#fff; font-family:Arial;}
 .seckill-item .goods-info{ overflow:hidden;}
 .seckill-item .goods-info .discount{ width:60px; height:60px; text-align:center; color:#666; font-size:22px; line-height:58px; background:url(../images/zhe_bg.png) no-repeat right center;}
@@ -177,7 +177,7 @@ img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inlin
 .pagination > .active > a{ color:#fff; background-color:#ff4a00; border-color:#ff4a00;}
 
 /*-----404-----*/
-.error-con{ width:380px; margin:30px auto; text-align:center;#5f5f5f; font-family: "Microsoft YaHei";}
+.error-con{ width:380px; margin:30px auto; text-align:center; font-family: "Microsoft YaHei";}
 .error-con p{ margin:10px 0; font-size:28px;}
 .error-con p b{ color:#f60;}
 .error-con .btn{ color:#f60;}
