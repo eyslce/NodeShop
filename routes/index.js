@@ -27,6 +27,9 @@ router.get('/hot', function(req, res, next) {
 router.get('/product', function(req, res, next) {
     res.sendFile(base.getViewPath() +'/product.html');
 });
+router.get('/classify', function(req, res, next) {
+    res.sendFile(base.getViewPath() +'/classify.html');
+});
 router.get('/catid', function(req, res, next) {
     res.sendFile(base.getViewPath() +'/catid.html');
 });
