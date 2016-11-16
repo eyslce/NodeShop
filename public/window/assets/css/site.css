@@ -212,6 +212,8 @@ img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inlin
 @media (min-width: 992px){
     .nav-box .col-md-3{width:20%;}
     .nav-box .col-md-9{width:80%;}
+    .footer-box .col-md-3{ width:42%;}
+    .footer-box .col-md-9{ width:58%;}
 }
 
 @media (min-width: 1200px) {
