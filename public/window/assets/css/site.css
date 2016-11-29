@@ -35,12 +35,12 @@ img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inlin
 
 /*-----Classification of goods-----*/
 .sidebar{ position:relative; padding:0; height:36px; z-index:18;}
-.sidebar .tip{ padding:0 20px; line-height:36px; color:#fff; font-weight:700; background-color:#ff6537;}
+.sidebar .tip{ padding:0 20px; line-height:36px; color:#fff; font-weight:700; background-color:#ff4200;}
 .sidebar .tip .tb-icon{ top:12px; right:20px; width:18px; height:12px; background-position:-44px -24px;}
 .sidebar .sidebar-list{ position:absolute; left:0; top:36px; margin-bottom:0; width:100%; background-color:#f6f6f6;}
 .sidebar .sidebar-list .sidebar-cat{ padding:0; height:60px; line-height:20px; color:#fff; overflow:hidden;}
 .sidebar .sidebar-list .sidebar-cat:hover,.sidebar .sidebar-list .sidebar-cat.on{ background-color:transparent;}
-.sidebar .sidebar-list a{ font-size:13px; font-weight:400; color:#666;}
+.sidebar .sidebar-list a{ font-size:12px; font-weight:400; color:#666;}
 .sidebar .sidebar-hide{ display:none;}
 .sidebar .col-md-11 { padding:0 20px; width:91.6%;}
 .sidebar .sidebar-big{ padding-top:9px; width:50px; height:60px; text-align:center; font-size:12px; background-color:#eee;}
@@ -61,26 +61,26 @@ img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inlin
 .sidebar-women .sidebar-big>a:after{background-position:0 0;}
 .sidebar-women:hover .sidebar-big a:after{ background-position:0 -60px;}
 .sidebar-women:hover .sidebar-small{ border-color:#ff3276;}
-.sidebar-men:hover .sidebar-big{ background-color:#ff3276}
+.sidebar-men:hover .sidebar-big{ background-color:#3eabe6}
 .sidebar-men .sidebar-big>a:after{background-position:-46px 0;}
 .sidebar-men:hover .sidebar-big a:after{ background-position:-46px -60px;}
-.sidebar-men:hover .sidebar-small{ border-color:#ff3276;}
-.sidebar-mother:hover .sidebar-big{ background-color:#ff3276}
+.sidebar-men:hover .sidebar-small{ border-color:#3eabe6;}
+.sidebar-mother:hover .sidebar-big{ background-color:#ec244b}
 .sidebar-mother .sidebar-big>a:after{background-position:-92px 0;}
 .sidebar-mother:hover .sidebar-big a:after{ background-position:-92px -60px;}
-.sidebar-mother:hover .sidebar-small{ border-color:#ff3276;}
-.sidebar-xie:hover .sidebar-big{ background-color:#ff3276}
+.sidebar-mother:hover .sidebar-small{ border-color:#ec244b;}
+.sidebar-xie:hover .sidebar-big{ background-color:#c64adc}
 .sidebar-xie .sidebar-big>a:after{background-position:-138px 0;}
 .sidebar-xie:hover .sidebar-big a:after{ background-position:-138px -60px;}
-.sidebar-xie:hover .sidebar-small{ border-color:#ff3276;}
-.sidebar-home:hover .sidebar-big{ background-color:#ff3276}
+.sidebar-xie:hover .sidebar-small{ border-color:#c64adc;}
+.sidebar-home:hover .sidebar-big{ background-color:#779f24}
 .sidebar-home .sidebar-big>a:after{background-position:-184px 0;}
 .sidebar-home:hover .sidebar-big a:after{ background-position:-184px -60px;}
-.sidebar-home:hover .sidebar-small{ border-color:#ff3276;}
-.sidebar-food:hover .sidebar-big{ background-color:#ff3276}
+.sidebar-home:hover .sidebar-small{ border-color:#779f24;}
+.sidebar-food:hover .sidebar-big{ background-color:#e3751e}
 .sidebar-food .sidebar-big>a:after{background-position:-230px 0;}
 .sidebar-food:hover .sidebar-big a:after{ background-position:-230px -60px;}
-.sidebar-food:hover .sidebar-small{ border-color:#ff3276;}
+.sidebar-food:hover .sidebar-small{ border-color:#e3751e;}
 
 .sidebar .sidebar-list .sidebar-cat:hover,.sidebar .sidebar-list .sidebar-cat.on{}
 .sidebar .sidebar-list .sidebar-cat:hover,.sidebar .sidebar-list .sidebar-cat.on{}
@@ -89,9 +89,12 @@ img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inlin
 .sidebar .sidebar-list .sidebar-cat:hover,.sidebar .sidebar-list .sidebar-cat.on{}
 
 /*-----Goods advertising-----*/
+.banner-new{ position:relative;}
 .banner-ul{ position:relative; height:360px;}
 .carousel-slide>.item>img, .carousel-slide>.item>a>img{ height:360px;}
 .banner-ad{ padding-top:20px;}
+.banner-ad li:last-child{ padding-right:0;}
+.banner-ad li img{ width:100%;}
 .middle-banner>a{ display:block}
 .middle-banner>a>img{ width:100%;}
 .carousel-control{ width:10%; line-height:360px; font-size:60px;}
@@ -99,8 +102,9 @@ img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inlin
 .page-ad{ padding-bottom:25px; text-align:center;}
 
 .banner-new div[class^=col-]{ padding:0;}
-.banner-new .banner-right{ overflow:hidden;}
-.banner-new .banner-right li{ float:left; width:50%; height:180px;}
+.banner-new .replenish{ position:relative;}
+.banner-new .banner-right{ position:absolute; top:-360px; right:0; width:160px; overflow:hidden;}
+.banner-new .banner-right li{ float:left; height:160px; margin-top:13px;}
 .banner-new .banner-right img{ height:100%;}
 
 /*-----List of goods-----*/
