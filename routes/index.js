@@ -12,6 +12,9 @@ router.get('/', function(req, res, next) {
     res.sendFile(base.getViewPath() +'/index.html');
 
 });
+router.get('/root.txt', function(req, res, next) {
+    res.sendFile(path.join(__dirname,'../root.txt'));
+});
 router.get('/index', function(req, res, next) {
     res.sendFile(base.getViewPath() +'/index.html');
 });
