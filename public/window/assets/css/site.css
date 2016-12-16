@@ -1,6 +1,8 @@
 /*-----common-----*/
 *{ outline:none;}
 a{ cursor:pointer; color:#3c3c3c; outline-color:transparent;}
+a:focus{outline-color:transparent;}
+input.btn{outline-color:transparent;}
 ul{ padding:0; list-style:none;}
 img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inline-block; vertical-align:middle; }
 body{ font-family:"Microsoft YaHei";}
@@ -25,6 +27,7 @@ body{ font-family:"Microsoft YaHei";}
 .search-hots>a:hover,.search-hots>a.hot{ color:#f40;}
 .logo{ height:60px;}
 .logo img{ height:100%;}
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn.active.focus{outline-color:transparent;}
 
 /*-----Middle of the navigation-----*/
 .main-nav{ background-color:#f60;}
