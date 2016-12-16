@@ -3,6 +3,7 @@
 a{ cursor:pointer; color:#3c3c3c; outline-color:transparent;}
 ul{ padding:0; list-style:none;}
 img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inline-block; vertical-align:middle; }
+body{ font-family:"Microsoft YaHei";}
 .fl{ float:left}
 .fr{ float:right}
 
@@ -113,32 +114,35 @@ img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inlin
 .seckill-tit b{ font-size:18px; color:#2e2e2e;}
 .seckill-list{ margin-bottom:0;}
 .seckill-list .seckill-item:hover{ border-color:#ff4a00; box-shadow:0 0 5px rgba(0,0,0,0.4);-moz-box-shadow:0 0 5px rgba(0,0,0,0.4)}
-.seckill-item{ position:relative; margin-bottom:15px; border:1px solid #e5e5e5;}
+.seckill-item{ position:relative; margin-bottom:12px; border:1px solid #e5e5e5;}
 .seckill-item .discount{ position:absolute; right:0; top:0; width:83px; height:75px; background:url(../images/discount.png) no-repeat; text-decoration:none; outline:none;}
 .seckill-item .discount .discount-img{ padding-top:14px; text-align:center; font-size:28px; color:#fff; font-family:Arial;}
 .seckill-item .goods-info{ overflow:hidden;}
 .seckill-item .goods-info .discount{ width:60px; height:60px; text-align:center; color:#666; font-size:22px; line-height:58px; background:url(../images/zhe_bg.png) no-repeat right center;}
 .seckill-item .goods-info .title{ padding:0 10px 0 70px;}
 .seckill-item .goods-info .zhe{ margin-left:4px; font-size:12px;}
-.seckill-item .goods-info .name{ display:block; margin-top:12px; height:16px; line-height:16px; font-size:12px; font-family:"SimSun"; overflow:hidden;}
+.seckill-item .goods-info .name{ display:block; margin-top:12px; height:16px; line-height:16px; font-size:12px; font-family:"SimSun"; color:#666; overflow:hidden;}
 .seckill-item .goods-info .name:hover{ color:#ff4a00; text-decoration:none;}
 .seckill-item .goods-info .price{ position:relative; padding-top:4px; margin-bottom:0; font-size:19px; font-family:Arial; color:#ff4a00;}
 .seckill-item .goods-info .yun{ padding-left:5px; font-size:17px; color:#666;}
 .seckill-item .icon9{ right:10px; width:32px; height:18px; background-position:0 -114px;}
 .seckill-item .info-pinzhi{ padding:6px 0; margin:0 12px; border-top:1px dotted #c1c1c1; font-size:12px; overflow:hidden;}
 .seckill-item .pinzhi1{ float:left; margin-bottom:0; }
-.seckill-item .info-pinzhi a{color:#999; display:block; float:left; height:20px; line-height:20px; margin-left:4px; padding-left:22px; position:relative; width:88px;}
-.seckill-item .info-pinzhi i{display: block;  height: 18px;  left: 2px;  position: absolute;  top: 0;  width: 18px;}
+.seckill-item .info-pinzhi a{color:#999; display:block; float:left; height:20px; line-height:19px; margin-left:4px; padding-left:24px; text-decoration:none; position:relative; width:88px;}
+.seckill-item .info-pinzhi a:hover{ color:#ff4a00;}
+.seckill-item .info-pinzhi i{display:block; height:18px; left:2px; position:absolute; top:0; width:18px;}
 .seckill-item .pinzhi1 .icon1{ background-position:-178px 0;}
-.seckill-item .pinzhi2{ float:right; margin-bottom:0;}
+.seckill-item .pinzhi2{ float:left; margin-bottom:0;}
 .seckill-item .pinzhi2 a{ width:98px;}
 .seckill-item .pinzhi2 .icon1{ background-position:-178px -19px}
-.seckill-item .line{ float:left; margin-left:20px; line-height:20px; color:#999; margin-bottom:0;}
+.seckill-item .line{ float:left; margin:0 20px 0 20px; line-height:20px; color:#999;}
+.seckill-item .pinzhi1 a:hover i{ background-position:-198px 0;}
+.seckill-item .pinzhi2 a:hover i{ background-position:-198px -19px;}
 
 .seckill-item .goods-info .info-tit{ padding:0 12px; margin-bottom:0; font-family:"SimSun";}
 .seckill-item .info-price{ padding:0 12px;}
 .seckill-item .info-price .new{ font-size:32px; font-weight:700; color:#ff4a00;}
-.seckill-item .info-price .sales{ float:right; padding-top:18px; margin-bottom:0; color:#666;}
+.seckill-item .info-price .sales{ float:right; padding-top:18px; margin-bottom:0; font-size:12px; color:#666;}
 .seckill-item .goods-info .info-mark{ position:relative; padding:0 12px;}
 .seckill-item .info-mark{ font-size:12px;}
 .seckill-item .info-mark del{ padding:0 8px 0 0; line-height:18px; color:#ccc; border-right:1px solid #ccc;}
