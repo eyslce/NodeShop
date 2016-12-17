@@ -29,7 +29,12 @@ body{ font-family:"Microsoft YaHei";}
 .logo img{ height:100%;}
 .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn.active.focus{outline-color:transparent;}
 
+.top-head{ width:100%; padding:5px 0; height:40px; background-color:#9b68f2; line-height:30px; text-align:center; font-size:14px; color:#fff;}
+.top-head p{ margin-bottom:0;}
+.top-head a{ color:#f60;}
+
 /*-----Middle of the navigation-----*/
+.main{ position:relative;}
 .main-nav{ background:#f60;}
 .menu-nav > .list{ margin-right:0;}
 .menu-nav > .list > a{ padding:8px 17px; text-align:center; font-size:14px; font-weight:700; color:#fff; outline:none;}
@@ -96,6 +101,45 @@ body{ font-family:"Microsoft YaHei";}
 .sidebar .sidebar-list .sidebar-cat:hover,.sidebar .sidebar-list .sidebar-cat.on{}
 .sidebar .sidebar-list .sidebar-cat:hover,.sidebar .sidebar-list .sidebar-cat.on{}
 .sidebar .sidebar-list .sidebar-cat:hover,.sidebar .sidebar-list .sidebar-cat.on{}
+
+.start-side{ display:none; position:absolute; top:20px; left:50%; margin-left:-730px; width:140px;}
+.start-side .start-title{ height:30px; line-height:30px; margin:0; font-size:12px; border-top-left-radius:4px; border-top-right-radius:4px; background-color:#f60; color:#fff; text-align:center;}
+.start-side .start-sup{ border:1px solid #eee;}
+.shop-type{ padding:10px 0 10px 10px; margin-bottom:0;}
+.shop-type li{display:inline-block; list-style:none; vertical-align:top; margin-bottom:10px;}
+.shop-type li a{ display:block; color:#666; text-decoration:none; padding:0 6px 0 25px; height:24px; line-height:26px; font-size:12px; background:url(../images/icon10.png) no-repeat;}
+.shop-type li a.selected{background-color:#f60!important;color:#fff; border-radius:4px;}
+.shop-type li a:hover{ background-color:#eee; border-radius:4px;}
+.shop-type li.all a{background-position:2px -5px}
+.shop-type li.all a.selected{background-position:2px -386px}
+.shop-type li.nvzhuang a{background-position:-63px -5px}
+.shop-type li.nvzhuang a.selected{background-position:-63px -386px}
+.shop-type li.nanzhuang a{background-position:2px -37px}
+.shop-type li.nanzhuang a.selected{background-position:2px -418px}
+.shop-type li.jujia a{background-position:-63px -37px}
+.shop-type li.jujia a.selected{background-position:-63px -418px}
+.shop-type li.muying a{background-position:2px -69px}
+.shop-type li.muying a.selected{background-position:2px -450px}
+.shop-type li.xiebao a{background-position:-63px -69px}
+.shop-type li.xiebao a.selected{background-position:-63px -450px}
+.shop-type li.peishi a{background-position:2px -102px}
+.shop-type li.peishi a.selected{background-position:2px -483px}
+.shop-type li.meishi a{background-position:-63px -102px}
+.shop-type li.meishi a.selected{background-position:-63px -483px}
+.shop-type li.shuma a{background-position:2px -133px}
+.shop-type li.shuma a.selected{background-position:2px -514px}
+.shop-type li.meishi a{background-position:-63px -133px}
+.shop-type li.meishi a.selected{background-position:-63px -514px}
+.shop-type li.qita a{background-position:2px -164px}
+.shop-type li.qita a.selected{background-position:2px -545px}
+.shop-type li.remai a{background-position:-63px -164px}
+.shop-type li.remai a.selected{background-position:-63px -545px}
+.web-box{ width:115px; margin:0 auto; padding-top:12px; border-top:1px solid #eee;}
+.web-box li{ padding-bottom:10px; display:inline-block; width:50%;}
+.web-box li a{ font-size:12px; color:#666; text-decoration:none;}
+.start-side .go-top{ display:block; line-height:32px; text-indent:60px; text-decoration:none; color:#666; border-top:1px solid #eee; background:url(../images/icon10.png) no-repeat 0 -252px;}
+.start-side .go-top:hover{ color:#f60;}
+.start-fixed{ display:block; position:fixed;}
 
 /*-----Goods advertising-----*/
 .banner-new{ position:relative;}
@@ -214,6 +258,7 @@ body{ font-family:"Microsoft YaHei";}
 .report-reason .checkbox{ padding:10px 0 10px 25px;}
 .report-reason .report-text{ padding-bottom:12px;}
 .report-banner p{ padding-top:38px; text-align:center;}
+.ensure-img{ margin:0; text-align:center;}
 
 /*-----Page-----*/
 .mPages{ text-align:center;}

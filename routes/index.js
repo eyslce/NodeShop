@@ -42,4 +42,7 @@ router.get('/catid', function(req, res, next) {
 router.get('/coupon', function(req, res, next) {
     res.sendFile(base.getViewPath() +'/coupon.html');
 });
+router.get('/ensure', function(req, res, next) {
+    res.sendFile(base.getViewPath() +'/ensure.html');
+});
 module.exports = router;

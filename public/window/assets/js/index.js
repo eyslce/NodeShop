@@ -7,6 +7,7 @@
     $(document).ready(function () {
         $(".J-sidebar").setCageShow();
         $(".J-seckill").seckillLink();
+        $(".J-fixed").setFixed();
     })
 
     //默认设置参数
@@ -43,6 +44,35 @@
                 $(this).removeClass(defaults.goodClass);
                 orginBtn.text("");
             })
+        })
+    }
+
+    //产品分类漂浮的效果
+    $.fn.setFixed = function(){
+
+        return this.each(function() {
+            var thisTag = $(this);
+            var thisGot = thisTag.find(".go-top");
+
+            $(".go-top").click(function(){
+
+                $('body,html').animate({
+                    scrollTop:0
+                },800);
+
+            })
+
+            $(window).scroll(function(){
+                var top = $(this).scrollTop();
+                var heg = $('.main-nav').outerHeight(true) + $("header").outerHeight(true);
+                if(top>heg){
+                    thisTag.addClass("start-fixed");
+                }else{
+                    thisTag.removeClass("start-fixed");
+                }
+            });
+
+
         })
     }
 
