@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
+var goods = require('./routes/goods');
 
 var app = express();
 
@@ -19,6 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //默认路由
 app.use('/', routes);
+app.use('/goods', goods);
 
 
 // catch 404 and forward to error handler

@@ -5,8 +5,33 @@ var crypto = require('crypto');
  * 路由级别中间件
  */
 function base() {
-    //
+    //视图
     var view_path ;
+    //每页分页数
+    this.page_size = 40;
+    //初始化
+    this.init = function (req, res, next) {
+        //生成淘点金签名参数
+        var app_key = config.app_key;
+        var secret = config.app_secret;
+        var timestamp = Date.now();
+        var message = secret+'app_key'+app_key+'timestamp'+timestamp+secret;
+        var hmac = crypto.createHmac('md5',secret);
+        hmac.update(message);
+        var sign = hmac.digest('hex').toLowerCase();
+        res.cookie("timestamp",timestamp);
+        res.cookie("sign",sign);
+        //设置视图路径
+        view_path =path.join(req.app.get("views"), 'window');
+        if(isMobile(req)){
+            view_path =path.join(req.app.get("views"), 'mobile');
+        }
+        next();
+    };
+    this.getViewPath = function(){
+        return view_path;
+    };
+    //
     function isMobile (req) {
         // 如果有X_WAP_PROFILE则一定是移动设备
         if (req.get('X_WAP_PROFILE')) {
@@ -69,30 +94,6 @@ function base() {
         }
         return false;
     }
-    //初始化
-    this.init = function (req, res, next) {
-        //生成淘点金签名参数
-        var app_key = config.app_key;
-        var secret = config.app_secret;
-        var timestamp = Date.now();
-        var message = secret+'app_key'+app_key+'timestamp'+timestamp+secret;
-        var hmac = crypto.createHmac('md5',secret);
-        hmac.update(message);
-        var sign = hmac.digest('hex').toLowerCase();
-        res.cookie("timestamp",timestamp);
-        res.cookie("sign",sign);
-        //
-        view_path =path.join(req.app.get("views"), 'window');
-        if(isMobile(req)){
-            view_path =path.join(req.app.get("views"), 'mobile');
-        }
-        next();
-    };
-    this.getViewPath = function(){
-        return view_path;
-    };
-    //
-
 }
 
 module.exports = new base();
