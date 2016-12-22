@@ -3,27 +3,24 @@ var router = express.Router();
 var base = require('./base.js');
 var path = require('path');
 var baseApi = require('../lib/baseApi.js');
+var config = require('../config.js');
 
 router.use(base.init);
 router.get('/getlist', function(req, res, next) {
-    baseApi.init().getItem({
-        'q':'女装',
-        'fields': 'num_iid',
-        'platform':'1',
-        'page_no':req.query.page_no,
-        'page_size':base.page_size
+    baseApi.init().getFavoritesUatm({
+        'page_no':1,
+        'page_size':1
     },function(data){
-        var items = data.results.n_tbk_item;
-        var num_ids = [];
-        for(var i in items){
-            num_ids.push(items[i].num_iid);
-        }
-        baseApi.init().getItemInfo({
-            num_iids:num_ids.toString()
-        },function(detail_data){
-            res.json(detail_data);
+        var items = data.results.tbk_favorites;
+        var favorites_id = items.shift().favorites_id;
+        baseApi.init().getItemFavoritesUatm({
+            'page_size':base.page_size,
+            'page_no':req.query.page_no,
+            'favorites_id':favorites_id,
+            'adzone_id':config.adzone_id
+        },function(goods_data){
+            res.json(goods_data);
         });
-
     });
 
 });
