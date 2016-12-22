@@ -206,7 +206,8 @@ body{ font-family:"Microsoft YaHei";}
 .seckill-item .info-mark .bicon02{ right:10px; width:46px; height:18px; background-position:-123px 0;}
 .seckill-item.hover .info-mark .mall{ top:-6px; width:68px; height:28px; line-height:28px; font-size:14px; text-align:center; border-radius:4px; text-decoration:none; color:#fff; background:#f50;}
 
-.seckill-item img {max-height: 236px;}
+.seckill-item .goods-img{ display:block; text-align:center;}
+.seckill-item img { height:278px;}
 .seckill-area{ padding-top:15px; overflow:hidden;}
 .seckill-area label{color:#ff4a00;}
 .seckill-tag>a{ float:left; margin-left:15px; line-height:20px; color:#666; text-decoration:none;}
