@@ -148,6 +148,7 @@ body{ font-family:"Microsoft YaHei";}
 .banner-ad{ padding-top:20px; margin-bottom:0;}
 .banner-ad li:last-child{ padding-right:0;}
 .banner-ad li img{ width:100%;}
+.middle-bm{ margin-bottom:15px;}
 .middle-banner>a{ display:block}
 .middle-banner>a>img{ width:100%;}
 .carousel-control{ width:10%; line-height:360px; font-size:60px;}
