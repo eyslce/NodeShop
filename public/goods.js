@@ -14,9 +14,9 @@ $.get('/goods/getlist',{page_no:1},function(data){
             +'<p class="old fl"><del>¥'+item[i].reserve_price+'</del></p>'
             +'<i class="free-icon icon9"></i>';
         if(item[i].user_type == 1){
-            html += '<a class="mall bicon02 free-icon" data-source="天猫"></a>';
+            html += '<a class="mall bicon02 free-icon" data-source="天猫" href="'+item[i].click_url+'" target="_blank"></a>';
         }else{
-            html += '<a class="mall bicon01 free-icon" data-source="淘宝"></a>';
+            html += '<a class="mall bicon01 free-icon" data-source="淘宝" href="'+item[i].click_url+'" target="_blank"></a>';
         }
         html += '</div>'
             +'</div>'
