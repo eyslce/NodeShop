@@ -8,7 +8,7 @@ function base() {
     //视图
     var view_path ;
     //每页分页数
-    this.page_size = 40;
+    this.page_size = 48;
     //初始化
     this.init = function (req, res, next) {
         //生成淘点金签名参数
