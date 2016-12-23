@@ -18,10 +18,9 @@ router.get('/getlist', function(req, res, next) {
         baseApi.init().getItemFavoritesUatm({
             'page_size':base.page_size,
             'page_no':req.query.page_no,
-            'favorites_id':2418800,
+            'favorites_id':2432913,
             'adzone_id':config.adzone_id
         },function(goods_data){
-            console.log(goods_data);
             res.json(_.defaults(goods_data, {page_size:base.page_size}));
         });
     });

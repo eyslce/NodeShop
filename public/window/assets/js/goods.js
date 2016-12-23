@@ -7,6 +7,7 @@ var index = {
         $.get('/goods/getlist', {page_no: page_no}, function (data) {
             index.total_page = data.total_results;
             index.page_size = data.page_size;
+            $('ul.seckill-list').empty();
             var item = data.results.uatm_tbk_item;
             for (var i in item) {
                 var html = '<li class="col-sm-4 col-md-3">'
