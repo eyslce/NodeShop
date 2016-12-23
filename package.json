@@ -46,9 +46,9 @@
     "ws": "^0.4.32"
   },
   "engines": {
-    "node": ">= 5.9.1"
+    "node": ">= 5.9.1",
+    "npm":">=3.7.3"
   },
-  "_npmVersion": "3.7.3",
   "scripts": {
     "test": "istanbul cover test/test.js",
     "start": "node index.js"
