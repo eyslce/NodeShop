@@ -7,7 +7,7 @@ var index = {
             var item = data.results.uatm_tbk_item;
             for (var i in item) {
                 var html = '<li class="goods-item">'
-                    + '<a href="' + item[i].click_url + '" target="_blank">'
+                    + '<a href="javascript:;" class="goods_click" url="' + item[i].click_url + '">'
                     + '<img src="' + item[i].pict_url + '" alt="">'
                     + '<div class="goods-info clearfix">'
                     + '<p class="goods-title">' + item[i].title + '</p>'
@@ -29,6 +29,14 @@ var index = {
             }
 
         }, 'json');
+    },
+    is_weixin: function () {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
     }
 };
 
@@ -42,8 +50,17 @@ $(document).ready(function () {
         } else {
             $(this).parent().html('木有更多了。。。');
         }
+    });
+    //点击商品
+    $("ul.good-list").delegate('a.goods_click','click',function(){
+        var url = $(this).attr('url');
+        if(index.is_weixin()){
+            alert('请在浏览器中打开！');
+            //待优化
+        }else{
+            window.location.href = url;
+        }
     })
-
 
 });
 
