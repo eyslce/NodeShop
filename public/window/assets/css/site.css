@@ -286,7 +286,7 @@ body{ font-family:"Microsoft YaHei";}
 .foot-nav .nav-list a:hover{ color:#ff4a00}
 .footer-box p.copyright { margin:0 auto 10px;text-align: center; color:#999; font-size:12px;}
 
-.foot-code{ padding-top:14px;}
+/*.foot-code{ padding-top:14px;}*/
 .foot-code h4{ font-size:14px; font-weight:700; text-align:center}
 .foot-code img{ width:132px; height:132px; padding:6px; border:1px solid #ddd; background:#fff;}
 .foot-code .code-mobile{  margin-right:50px;}
