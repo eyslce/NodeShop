@@ -2,7 +2,7 @@ var index = {
     current_page: 1,
     page_num: 1,
     getGoodsList: function (page_no) {
-        $.get('/goods/getlist', {page_no: page_no}, function (data) {
+        $.get('/goods/getlist', {page_no: page_no,category:'index'}, function (data) {
             index.page_num = Math.round(data.total_results / data.page_size);
             var item = data.results.uatm_tbk_item;
             for (var i in item) {
