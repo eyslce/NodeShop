@@ -5,6 +5,8 @@ var crypto = require('crypto');
  * 路由级别中间件
  */
 function base() {
+    //是否移动端
+    var is_mobile = false;
     //视图
     var view_path ;
     //每页分页数
@@ -24,6 +26,7 @@ function base() {
         //设置视图路径
         view_path =path.join(req.app.get("views"), 'window');
         if(isMobile(req)){
+            is_mobile = true;
             view_path =path.join(req.app.get("views"), 'mobile');
         }
         next();
@@ -32,6 +35,9 @@ function base() {
         return view_path;
     };
     //
+    this.isMobile = function(){
+        return is_mobile;
+    };
     function isMobile (req) {
         // 如果有X_WAP_PROFILE则一定是移动设备
         if (req.get('X_WAP_PROFILE')) {
