@@ -45,4 +45,7 @@ router.get('/coupon', function(req, res, next) {
 router.get('/ensure', function(req, res, next) {
     res.sendFile(base.getViewPath() +'/ensure.html');
 });
+router.get('/issue', function(req, res, next) {
+    res.sendFile(base.getViewPath() +'/issue.html');
+});
 module.exports = router;
