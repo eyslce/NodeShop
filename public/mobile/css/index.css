@@ -191,7 +191,7 @@
 
 /*--精选新品--*/
 .main .app-goods .recommend {padding-left: 10px;margin: 10px 0px 0px 0px;background: #fff;height: 30px;}
-.main .app-goods .recommend .fa-hand-o-right {font-size: 1.4rem;vertical-align: -webkit-baseline-middle;}
+.main .app-goods .recommend .fa-heart {font-size: 1rem;vertical-align: -webkit-baseline-middle;}
 .main .app-goods .recommend span {font-size: 0.8rem; vertical-align: -webkit-baseline-middle;}
 
 /*-----------------------[产品列表页 product.html]---------------------*/
