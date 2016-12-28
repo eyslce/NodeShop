@@ -268,6 +268,16 @@ body{ font-family:"Microsoft YaHei";}
 .pagination > li > a{ color:#323232; outline:none;}
 .pagination > .active > a{ color:#fff; background-color:#ff4a00; border-color:#ff4a00;}
 
+/*-----helpCenter-----*/
+.subside>.title{ margin-bottom:0; font-size:18px; color:#fff; line-height:40px; text-align:center; background-color:#f60;}
+.subside-mod .title{ margin:0; padding-left:45px; font-weight:400; line-height:40px; background-color:#eaeaea;}
+.subside-mod .subside-list{ padding-left:45px; line-height:30px;}
+.subside-mod .subside-list a.active{ color:#f60; font-weight:700;}
+.subside-mod .subside-list p{ margin-bottom:0; font-size:13px;}
+.sidebox{ margin:20px 0 30px; border:1px solid #ddd;}
+.sidebox .breadcrum{ padding-left:15px; line-height:32px; font-size:14px; background-color:#eaeaea;}
+.sidebox .all-ques{ padding:30px 15px;}
+
 /*-----404-----*/
 .error-con{ width:380px; margin:30px auto; text-align:center; font-family: "Microsoft YaHei";}
 .error-con p{ margin:10px 0; font-size:28px;}
@@ -303,16 +313,16 @@ body{ font-family:"Microsoft YaHei";}
 
 }
 @media (min-width: 992px) and (max-width: 1199px){
-    .nav-box .col-md-3{width:20%;}
-    .nav-box .col-md-9{width:80%;}
+    .nav-box .col-md-3,.subside-list .col-md-3{width:20%;}
+    .nav-box .col-md-9,.subside-list .col-md-9{width:80%;}
     .footer-box .col-md-3{ width:42%;}
     .footer-box .col-md-9{ width:58%;}
 
 }
 
 @media (min-width: 1200px) {
-    .nav-box .col-md-3{width:20%;}
-    .nav-box .col-md-9{width:80%;}
+    .nav-box .col-md-3,.subside-list .col-md-3{width:20%;}
+    .nav-box .col-md-9,.subside-list .col-md-9{width:80%;}
     .menu-nav>.list{ margin-right:0;}
     .header .logo-ad{}
     .banner-new .col-md-offset-2{margin-left:20%;}
