@@ -161,23 +161,7 @@ a,a:link {color: #666;cursor: pointer;}
 
 /*---mobile 宽度区间设置; div.class 为body里面最外层div---*/
 .main {height: auto;overflow: visible;max-width:640px;min-width:320px;width:100%;margin: 0 auto;background: #f6f4f4;}
-/*--首页头部--*/
-  /*
-  <div id="head">
-		      <ul>
-		         <li class="left">
-		            <span>Menu</span>
-		         </li>
-		          <li class="center">
-		            <img src="img/mobile.logo.png">
-		         </li>
-		          <li class="right">
-		            <span>icon</span>
-		         </li>
-		      </ul>
-    </div>
-*/
-#head {height: 44px;background: #fff;border-bottom: 1px solid #dedede;}
+#head {height: 44px;background: #fff;border-bottom: 1px solid #dedede;padding-bottom: 5px;}
 #head ul li{float:left;height: 44px;line-height: 44px;font-size: 1rem;}
 #head ul li.left {width: 24%;padding-left: 10px;}
 #head ul li.right {width: 24%;text-align: right;}
