@@ -45,6 +45,6 @@ router.get('/ensure', function(req, res, next) {
     res.render(base.getViewPath() +'/ensure');
 });
 router.get('/issue', function(req, res, next) {
-    res.sendFile(base.getViewPath() +'/issue');
+    res.render(base.getViewPath() +'/issue');
 });
 module.exports = router;
