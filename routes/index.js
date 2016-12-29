@@ -9,40 +9,39 @@ router.use(base.init);
 router.get('/', function(req, res, next) {
     var userAgent = req.get('User-Agent');
     //login.addLoginInfo(req.ip,req.hostname,userAgent);
-    res.sendFile(base.getViewPath() +'/index.html');
-
+    res.render(base.getViewPath() +'/index');
 });
 router.get('/root.txt', function(req, res, next) {
     res.sendFile(path.join(__dirname,'../root.txt'));
 });
 router.get('/index', function(req, res, next) {
-    res.sendFile(base.getViewPath() +'/index.html');
+    res.render(base.getViewPath() +'/index');
 });
 router.get('/boutique', function(req, res, next) {
-    res.sendFile(base.getViewPath() +'/boutique.html');
+    res.render(base.getViewPath() +'/boutique');
 });
 router.get('/package', function(req, res, next) {
-    res.sendFile(base.getViewPath() +'/package.html');
+    res.render(base.getViewPath() +'/package');
 });
 router.get('/hot', function(req, res, next) {
-    res.sendFile(base.getViewPath() +'/hot.html');
+    res.render(base.getViewPath() +'/hot');
 });
 router.get('/product', function(req, res, next) {
-    res.sendFile(base.getViewPath() +'/product.html');
+    res.render(base.getViewPath() +'/product');
 });
 router.get('/classify', function(req, res, next) {
-    res.sendFile(base.getViewPath() +'/classify.html');
+    res.render(base.getViewPath() +'/classify');
 });
 router.get('/ticket',function(req, res, next){
-    res.sendFile(base.getViewPath() +'/ticket.html');
+    res.render(base.getViewPath() +'/ticket');
 });
 router.get('/catid', function(req, res, next) {
-    res.sendFile(base.getViewPath() +'/catid.html');
+    res.render(base.getViewPath() +'/catid');
 });
 router.get('/coupon', function(req, res, next) {
-    res.sendFile(base.getViewPath() +'/coupon.html');
+    res.render(base.getViewPath() +'/coupon');
 });
 router.get('/ensure', function(req, res, next) {
-    res.sendFile(base.getViewPath() +'/ensure.html');
+    res.render(base.getViewPath() +'/ensure');
 });
 module.exports = router;

@@ -24,10 +24,10 @@ function base() {
         res.cookie("timestamp",timestamp);
         res.cookie("sign",sign);
         //设置视图路径
-        view_path =path.join(req.app.get("views"), 'window');
+        view_path = 'window';
         if(isMobile(req)){
             is_mobile = true;
-            view_path =path.join(req.app.get("views"), 'mobile');
+            view_path ='mobile';
         }
         next();
     };
