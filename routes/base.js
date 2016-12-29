@@ -9,6 +9,8 @@ function base() {
     var is_mobile = false;
     //视图
     var view_path ;
+    //公共参数
+    var common_params = {};
     //每页分页数
     this.page_size = 48;
     //初始化
@@ -29,14 +31,20 @@ function base() {
             is_mobile = true;
             view_path ='mobile';
         }
+        common_params.app_key = app_key;
         next();
     };
+    //获取视图路径
     this.getViewPath = function(){
         return view_path;
     };
-    //
+    //判断是否移动端
     this.isMobile = function(){
         return is_mobile;
+    };
+    //获取公共参数
+    this.getCommonParams = function(){
+      return common_params;
     };
     function isMobile (req) {
         // 如果有X_WAP_PROFILE则一定是移动设备
