@@ -8,6 +8,7 @@ img { max-width:100%; height:auto; -ms-interpolation-mode:bicubic; display:inlin
 body{ font-family:"Microsoft YaHei";}
 .fl{ float:left}
 .fr{ float:right}
+.none{ display:none;}
 
 /*------Bootstrap reset-------*/
 .container{padding-right:6px; padding-left:6px;}
@@ -272,11 +273,13 @@ body{ font-family:"Microsoft YaHei";}
 .subside>.title{ margin-bottom:0; font-size:18px; color:#fff; line-height:40px; text-align:center; background-color:#f60;}
 .subside-mod .title{ margin:0; padding-left:45px; font-weight:400; line-height:40px; background-color:#eaeaea;}
 .subside-mod .subside-list{ padding-left:45px; line-height:30px;}
-.subside-mod .subside-list a.active{ color:#f60; font-weight:700;}
+.subside-mod .subside-list a.active,.subside-mod .subside-list a:hover{ color:#f60; font-weight:700; text-decoration:none;}
 .subside-mod .subside-list p{ margin-bottom:0; font-size:13px;}
 .sidebox{ margin:20px 0 30px; border:1px solid #ddd;}
 .sidebox .breadcrum{ padding-left:15px; line-height:32px; font-size:14px; background-color:#eaeaea;}
 .sidebox .all-ques{ padding:30px 15px;}
+.sidebox .quesant{ margin-bottom:15px;}
+.sidebox .quesant h4{ font-size:16px; margin-bottom:8px; color:#f60;}
 
 /*-----404-----*/
 .error-con{ width:380px; margin:30px auto; text-align:center; font-family: "Microsoft YaHei";}

@@ -8,6 +8,7 @@
         $(".J-sidebar").setCageShow();
         $(".J-seckill").seckillLink();
         $(".J-fixed").setFixed();
+        $(".J-subcage").setTab();
     })
 
     //默认设置参数
@@ -76,6 +77,24 @@
         })
     }
 
+    //帮助中心切换
+    $.fn.setTab = function(){
+        return this.each(function(){
+            var thisTag = $(this);
 
+            thisTag.find("a").each(function(index,elem){
+                $(elem).click(function(){
+                    var sLevel = $(this).parents(".subside-list").prev().text();
+                    var sublev = $(this).text();
+                    var smain =  $(this).parents(".subside").next();
+                    $(this).addClass("active").parent().siblings().children().removeClass("active");
+                    $(this).parents(".subside-mod").siblings().find("a").removeClass("active");
+                    smain.find(".sLevel").text(sLevel).end().find(".subLeve").text(sublev);
+                    smain.find(".queslist").eq(index).removeClass("none").siblings().addClass("none");
+                })
+            })
+           
+        })
+    }
 
 })(jQuery)
