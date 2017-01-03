@@ -180,7 +180,9 @@ a,a:link {color: #666;cursor: pointer;}
                      background:#fff;position: relative;}
    ul.good-list li:nth-child(even) {margin-left: 5px;}
    ul.good-list li img {max-width:100%;max-height:100%;display:block;margin:auto auto;position: relative;vertical-align:middle;padding: 3px 5px;min-height: 203px;}
-
+   @media (max-width: 413px){
+       ul.good-list li img {min-height: 160px;}
+   }
     /*--Li 右上角 优惠券标签span : 独家券10元 --*/
    span.quan-tag {z-index:100;position: absolute;background: #2196f3;color: #fff;width:48px;height: 36px;text-align: center;
                right: 0;margin-top: 1px;padding-top: 3px;font-size: 0.8rem;}
@@ -190,12 +192,16 @@ a,a:link {color: #666;cursor: pointer;}
    /*--li中标题部分--*/
     ul.good-list li div.goods-info {padding: 0px 5px;}
     ul.good-list li div.goods-info .goods-title {height: 1rem;overflow: hidden;line-height: 1.1rem;font-weight: 300;color: #4a4a4a;}
+    ul.good-list li div.goods-info .goods-title em.site-tag {background:url("../img/icon/icon4.png") no-repeat scroll 0 0;
+                   display: inline-block;height: 16px;width: 16px;margin-right: 4px;vertical-align: middle;}
+    ul.good-list li div.goods-info .goods-title em.taobao {background-position: -53px 0;}
+    ul.good-list li div.goods-info .goods-title em.tmall {background-position: -41px -19px;}
     ul.good-list li div.goods-info span.goods-price {display: block;float: left;width: 33%;margin-top:5px;color: #999;}
     ul.good-list li div.goods-info span.goods-price em{font-style: normal;font-size: 1rem;color: #dc4642;font-weight:bold;padding-right: 3px;}
     ul.good-list li div.goods-info span.goods-price i {text-decoration: line-through;font-size: 0.8rem;}
     ul.good-list li div.goods-info span.sale-num {display: block;float: right;width: 50%;margin-top: 5px;text-align: right;padding-right: 5px;
         color: #666;}
-    ul.good-list .quality-tag {margin-top: 10px;}
+    ul.good-list .quality-tag {margin-top: 10px;overflow: hidden;padding: 3px 0px;}
     ul.good-list .quality-tag span {font-size: 0.8rem;color: #666;float: right;padding-right: 10px;}
     ul.good-list .quality-tag span:nth-child(1) {float: left;color: #f60;}
     ul.good-list .quality-tag span:nth-child(1) i {border: 1px solid #f60;padding: 0 5px;border-radius: 3px;margin-left: 10px;}
@@ -212,10 +218,16 @@ a,a:link {color: #666;cursor: pointer;}
     .foot p {text-align:center;padding: 15px 0px;}
 
     /*--底部固定导航栏--*/
-    .app-goods .footer-nav {max-width: 640px;min-width: 320px;width: 100%;height: 44px;bottom: 0;position: fixed;z-index: 300;background: #fff;}
-    .app-goods .footer-nav ul li {float: left;width: 25%;text-align: center;height: 44px;padding-top: 5px;}
-    .app-goods .footer-nav ul li span {display: block;color: #666;margin-top: 3px;}
-    .app-goods .footer-nav ul li i {font-size: 1.2rem;color: #f60;}
+    .app-goods .footer-nav {max-width: 640px;min-width: 320px;width: 100%;height: 60px;bottom: 0;position: fixed;z-index: 300;background: #f6f4f4;}
+    .app-goods .footer-nav ul li { float: left; width: 25%; text-align: center;  height: 60px;  padding-top: 8px;  }
+    .app-goods .footer-nav ul li span {  display: block;  color: #666;  margin-top: 3px;font-size: 0.9rem;  }
+    .app-goods .footer-nav ul li i {  font-size: 1.6rem;  color: #f60;  }
+    @media (max-width: 413px) {
+        .app-goods .footer-nav {height: 50px;}
+        .app-goods .footer-nav ul li {  height: 44px;  padding-top: 5px; }
+        .app-goods .footer-nav ul li span {font-size: 0.8rem;}
+
+    }
 
 
 
