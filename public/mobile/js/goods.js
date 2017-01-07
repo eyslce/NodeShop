@@ -55,7 +55,7 @@ $(document).ready(function () {
     $("ul.good-list").delegate('a.goods_click','click',function(){
         var url = $(this).attr('url');
         if(index.is_weixin()){
-            alert('请在浏览器中打开！');
+            $(".ayer").removeClass("none");
             //待优化
         }else{
             window.location.href = url;

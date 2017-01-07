@@ -244,3 +244,13 @@ font-size:14px;font-weight: 400;color: #666;height: 28px;line-height:28px;border
 }
 
 .test {}
+
+/*-----------------------[微信遮罩层 ayer.ejs]---------------------*/
+.ayer{ position:fixed; left:0; right:0; top:0; bottom:0; height:100%; z-index:999; background:rgba(0,0,0,0.5);}
+.ayer .ayer-list{ position:relative;}
+.ayer .ayer-list:before{ display:block; height:6.9rem; background:url(../img/icon/link-arrow.png) no-repeat 90% 2rem; content:"";}
+.ayer .ayer-list>li{ padding-left:0.9rem; margin-bottom:0.6rem; font-size:1.09rem; line-height:1.75rem; color:#fff;}
+.ayer .ayer-list i{ position:relative; top:0.5rem; margin:0 0.6rem; display:inline-block;}
+.ayer .ayer-list .circle{ display:inline-block; margin-right:0.6rem; text-align:center; font-family:Arial; height:1.75rem; width:1.75rem; border-radius:50%; background-color:#fa4604;}
+.ayer .ayer-list .ayer-btn{  width:2.375rem; height:1.75rem; background:url(../img/icon/link-btn.png) no-repeat; background-size:cover;}
+.ayer .ayer-list .ayer-fox{  width:9.06rem; height:1.75rem; background:url(../img/icon/liulan-btn.png) no-repeat; background-size:cover;}
