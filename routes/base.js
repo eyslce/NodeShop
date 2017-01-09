@@ -32,6 +32,11 @@ function base() {
             view_path ='mobile';
         }
         common_params.app_key = app_key;
+        var category = req.query.category;
+        if(!category){
+            category = 'index';
+        }
+        common_params.category = category;
         next();
     };
     //获取视图路径

@@ -8,6 +8,9 @@ var _ = require('lodash');
 router.use(base.init);
 router.post('/getlist', function (req, res, next) {
     var category = req.body.category;
+    if(!category){
+        category = 'index';
+    }
     var platform = base.isMobile() ? 2:1;
     var pre = base.isMobile() ? 'wx':'pc';
     baseApi.init().getItemFavoritesUatm({

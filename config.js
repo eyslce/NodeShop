@@ -16,6 +16,10 @@ var config = {
     },
     //选品库
     goodsLibrary: {
+        underwear: {favorites_id: 2673614, favorites_title: '内衣配饰（女）', type: 1},
+        trousers: {favorites_id: 2673606, favorites_title: '裤子（女）', type: 1},
+        skirt: {favorites_id: 2673604, favorites_title: '裙子', type: 1},
+        coat: {favorites_id: 2673598, favorites_title: '上衣（女）', type: 1},
         index: {favorites_id: 2432913, favorites_title: '首页', type: 1},
         food: {favorites_id: 2432705, favorites_title: '美食', type: 1},
         house: {favorites_id: 2432700, favorites_title: '家居', type: 1},

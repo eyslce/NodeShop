@@ -4,7 +4,10 @@ var index = {
     total_page: 0,
     page_size:48,
     getGoodsList: function (page_no) {
-        $.post('/goods/getlist', {page_no: page_no,category:'index'}, function (data) {
+        if(!category){
+            category = 'index';
+        }
+        $.post('/goods/getlist', {page_no: page_no,category:category}, function (data) {
             index.total_page = data.total_results;
             index.page_size = data.page_size;
             $('ul.seckill-list').empty();

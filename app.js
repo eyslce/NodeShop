@@ -48,8 +48,12 @@ if (app.get('env') === 'development') {
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
+    var category = req.query.category;
+    if(!category){
+        category = 'index';
+    }
     res.status(err.status || 500);
-    res.render('window/404.ejs');
+    res.render('window/404.ejs',{category:category});
 });
 
 

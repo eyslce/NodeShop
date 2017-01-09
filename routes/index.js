@@ -9,42 +9,42 @@ router.use(base.init);
 router.get('/', function(req, res, next) {
     var userAgent = req.get('User-Agent');
     //login.addLoginInfo(req.ip,req.hostname,userAgent);
-    res.render(base.getViewPath() +'/index');
+    res.render(base.getViewPath() +'/index',base.getCommonParams());
 });
 router.get('/root.txt', function(req, res, next) {
     res.sendFile(path.join(__dirname,'../root.txt'));
 });
 router.get('/index', function(req, res, next) {
-    res.render(base.getViewPath() +'/index');
+    res.render(base.getViewPath() +'/index',base.getCommonParams());
 });
 router.get('/boutique', function(req, res, next) {
-    res.render(base.getViewPath() +'/boutique');
+    res.render(base.getViewPath() +'/boutique',base.getCommonParams());
 });
 router.get('/package', function(req, res, next) {
-    res.render(base.getViewPath() +'/package');
+    res.render(base.getViewPath() +'/package',base.getCommonParams());
 });
 router.get('/hot', function(req, res, next) {
-    res.render(base.getViewPath() +'/hot');
+    res.render(base.getViewPath() +'/hot',base.getCommonParams());
 });
 router.get('/product', function(req, res, next) {
-    res.render(base.getViewPath() +'/product');
+    res.render(base.getViewPath() +'/product',base.getCommonParams());
 });
 router.get('/classify', function(req, res, next) {
-    res.render(base.getViewPath() +'/classify');
+    res.render(base.getViewPath() +'/classify',base.getCommonParams());
 });
 router.get('/ticket',function(req, res, next){
-    res.render(base.getViewPath() +'/ticket');
+    res.render(base.getViewPath() +'/ticket',base.getCommonParams());
 });
 router.get('/catid', function(req, res, next) {
-    res.render(base.getViewPath() +'/catid');
+    res.render(base.getViewPath() +'/catid',base.getCommonParams());
 });
 router.get('/coupon', function(req, res, next) {
-    res.render(base.getViewPath() +'/coupon');
+    res.render(base.getViewPath() +'/coupon',base.getCommonParams());
 });
 router.get('/ensure', function(req, res, next) {
-    res.render(base.getViewPath() +'/ensure');
+    res.render(base.getViewPath() +'/ensure',base.getCommonParams());
 });
 router.get('/issue', function(req, res, next) {
-    res.render(base.getViewPath() +'/issue');
+    res.render(base.getViewPath() +'/issue',base.getCommonParams());
 });
 module.exports = router;
