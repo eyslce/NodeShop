@@ -106,6 +106,7 @@ body{ font-family:"Microsoft YaHei";}
 .start-side{ display:none; position:absolute; top:20px; left:50%; margin-left:-730px; width:140px;}
 .start-side .start-title{ height:30px; line-height:30px; margin:0; font-size:12px; border-top-left-radius:4px; border-top-right-radius:4px; background-color:#f60; color:#fff; text-align:center;}
 .start-side .start-sup{ border:1px solid #eee;}
+.start-recharge{ margin-left:-820px; width:212px; height:202px;}
 .shop-type{ padding:10px 0 10px 10px; margin-bottom:0;}
 .shop-type li{display:inline-block; list-style:none; vertical-align:top; margin-bottom:10px;}
 .shop-type li a{ display:block; color:#666; text-decoration:none; padding:0 6px 0 25px; height:24px; line-height:26px; font-size:12px; background:url(../images/icon10.png) no-repeat;}
