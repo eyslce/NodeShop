@@ -37,6 +37,7 @@ function base() {
             category = 'index';
         }
         common_params.category = category;
+        common_params.category_name = config.goodsLibrary[category].favorites_title;
         next();
     };
     //获取视图路径
