@@ -16,6 +16,7 @@ var config = {
     },
     //选品库
     goodsLibrary: {
+        99:{ favorites_id: 3127268, favorites_title: '9块9包邮', type: 1 },
         underwear: {favorites_id: 2673614, favorites_title: '内衣配饰（女）', type: 1},
         trousers: {favorites_id: 2673606, favorites_title: '裤子（女）', type: 1},
         skirt: {favorites_id: 2673604, favorites_title: '裙子', type: 1},
