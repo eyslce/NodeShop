@@ -33,7 +33,7 @@ function base() {
         }
         common_params.app_key = app_key;
         var category = req.query.category;
-        if(!category){
+        if(!config.goodsLibrary[category]){
             category = 'index';
         }
         common_params.category = category;

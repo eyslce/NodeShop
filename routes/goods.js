@@ -8,7 +8,7 @@ var _ = require('lodash');
 router.use(base.init);
 router.post('/getlist', function (req, res, next) {
     var category = req.body.category;
-    if(!category){
+    if(!config.goodsLibrary[category]){
         category = 'index';
     }
     var platform = base.isMobile() ? 2:1;
