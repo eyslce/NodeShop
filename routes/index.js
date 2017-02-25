@@ -47,4 +47,7 @@ router.get('/ensure', function(req, res, next) {
 router.get('/issue', function(req, res, next) {
     res.render(base.getViewPath() +'/issue',base.getCommonParams());
 });
+router.get('/redpacket', function(req, res, next) {
+    res.render(base.getViewPath() +'/redpacket',base.getCommonParams());
+});
 module.exports = router;
