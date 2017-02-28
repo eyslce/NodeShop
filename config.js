@@ -16,6 +16,11 @@ var config = {
     },
     //选品库
     goodsLibrary: {
+        six: {favorites_id: 3242324, favorites_title: '6/6plus', type: 1},
+        adultproducts: {favorites_id: 3225595, favorites_title: '成人用品', type: 1},
+        makeup: {favorites_id: 3225593, favorites_title: '护肤美妆', type: 1},
+        household: {favorites_id: 3225588, favorites_title: '家居家纺', type: 1},
+        seven: {favorites_id: 3225584, favorites_title: '7/7plus配件', type: 1},
         calecon: {favorites_id: 3196060, favorites_title: '男内衣裤', type: 1},
         pants: {favorites_id: 3196052, favorites_title: '男裤', type: 1},
         tshirt: {favorites_id: 3196019, favorites_title: '男衬衣T恤', type: 1},
