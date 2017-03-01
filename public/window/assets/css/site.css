@@ -286,6 +286,9 @@ body{ font-family:"Microsoft YaHei";}
 /*-----red packet-----*/
 .packet-search{ background:url(../images/bg02.jpg) no-repeat center top;}
 .packet-search .pane-search{ padding:200px 0 70px;}
+/*--调整红包页面搜索框的背景、样式--*/
+.packet-search-content {padding: 20px 0px 10px 20px;background:#fff;}
+
 .pstep{ margin:0; width:100%;}
 .pstep-one{ height:405px; background:url(../images/bg03.png) no-repeat;}
 .pstep-two{ height:482px;  background:url(../images/bg04.png) no-repeat;}
