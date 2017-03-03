@@ -290,10 +290,10 @@ body{ font-family:"Microsoft YaHei";}
 .packet-search-content {padding: 20px 0px 10px 20px;background:#fff;}
 
 .pstep{ margin:0; width:100%;}
-.pstep-one{ height:405px; background:url(../images/bg03.png) no-repeat;}
-.pstep-two{ height:482px;  background:url(../images/bg04.png) no-repeat;}
-.pstep-third{ height:385px; background:url(../images/bg05.png) no-repeat;}
-.pstep-four{ height:442px;  background:url(../images/bg06.png) no-repeat;}
+.pstep-one{ height:405px; background:url(../images/bg03.png) no-repeat; background-size:100% 100%;}
+.pstep-two{ height:482px;  background:url(../images/bg04.png) no-repeat; background-size:100% 100%;}
+.pstep-third{ height:385px; background:url(../images/bg05.png) no-repeat; background-size:100% 100%;}
+.pstep-four{ height:442px;  background:url(../images/bg06.png) no-repeat; background-size:100% 100%;}
 .frequently{ padding-bottom:30px;}
 .frequently .title{ margin:42px 0 0; height:53px; font-size:20px; line-height:50px; color:#f60; text-indent:20px; background:url(../images/wenda.png) no-repeat;}
 .frequently .wendas{ padding:20px; font-size:15px; background-color:#fff; border:2px solid #f6e0ba;}
