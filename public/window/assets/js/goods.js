@@ -15,7 +15,8 @@ var index = {
             for (var i in item) {
                 var html = '<li class="col-sm-4 col-md-3">'
                     + '<div class="seckill-item">'
-                    + '<a><div class="dispacka"><span class="discount-img">55</span></div></a>'
+                    + '<a href="/redpacket"><div class="dispacka"><span class="discount-img">'
+                    +Math.ceil(parseFloat(item[i].zk_final_price)*(parseInt(item[i].tk_rate)/100)*0.8)+'</span></div></a>'
                     + '<a class="goods-img" href="' + item[i].click_url + '" target="_blank"><img src="' + item[i].pict_url + '"></a>'
                     + '<div class="goods-info">'
                     + '<p class="info-tit"><a class="name">' + item[i].title + '</a></p>'
