@@ -7,7 +7,13 @@ var config = {
     tbk_url: 'https://eco.taobao.com/router/rest',
     adzone_id: 68784612,
     //mysql配置
-    connectionString: 'mysql://root:123456@192.168.33.138:3306/nodeshop',
+    mysql:{
+        host     : 'w.rdc.sae.sina.com.cn',//process.env.MYSQL_HOST,
+        port     : '3306',//process.env.MYSQL_PORT,
+        user     : '1wmxxoo0zx',//process.env.ACCESSKEY,
+        password : 'yjlzw1i0iimh2zjhxm2xhy51ix234zw00m5l4y2z',//process.env.SECRETKEY,
+        database : 'app_neetao',//'app_' + process.env.APPNAME
+    },
     //redis配置
     redis: {
         host: '192.168.33.138',
