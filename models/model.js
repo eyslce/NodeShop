@@ -5,7 +5,10 @@ var Sequelize = require('sequelize');
 //连接字符串
 var connectionString = 'mysql://' + config.mysql.user + ':' + config.mysql.password
     + '@' + config.mysql.host + ':' + config.mysql.port + '/' + config.mysql.database;
-var sequelize = new Sequelize(connectionString);
+var sequelizeObj = new Sequelize(connectionString);
+
+//导出的对象
 module.exports = {
-    nt_goods: sequelize.import(__dirname + "/nt_goods")
+    query:sequelizeObj.query,//自定义查询
+    nt_goods: sequelizeObj.import(__dirname + "/nt_goods")
 };

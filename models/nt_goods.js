@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
     return sequelize.define('nt_goods', {
         id: {
-            type: DataTypes.INTEGER(10),
+            type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
@@ -31,23 +31,23 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         },
         cid: {
-            type: DataTypes.INTEGER(10),
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         org_price: {
-            type: DataTypes.FLOAT,
+            type: DataTypes.DECIMAL,
             allowNull: false
         },
         price: {
-            type: DataTypes.FLOAT,
+            type: DataTypes.DECIMAL,
             allowNull: false
         },
         is_tmall: {
-            type: DataTypes.INTEGER(3),
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         sales_num: {
-            type: DataTypes.INTEGER(10),
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         dsr: {
@@ -55,7 +55,7 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         },
         seller_id: {
-            type: DataTypes.INTEGER(10),
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         commission_plan: {
@@ -71,7 +71,7 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         },
         plan_approval:{
-            type: DataTypes.INTEGER(10),
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         introduce: {
@@ -91,11 +91,11 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         },
         ticket_surplus:{
-            type: DataTypes.INTEGER(10),
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         ticket_receive:{
-            type: DataTypes.INTEGER(10),
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         ticket_condition: {
