@@ -8,11 +8,19 @@ var config = {
     adzone_id: 68784612,
     //mysql配置
     mysql:{
-        host     : 'w.rdc.sae.sina.com.cn',//process.env.MYSQL_HOST,
-        port     : '3306',//process.env.MYSQL_PORT,
-        user     : '1wmxxoo0zx',//process.env.ACCESSKEY,
-        password : 'yjlzw1i0iimh2zjhxm2xhy51ix234zw00m5l4y2z',//process.env.SECRETKEY,
-        database : 'app_neetao',//'app_' + process.env.APPNAME
+        host     : process.env.MYSQL_HOST,
+        port     : process.env.MYSQL_PORT,
+        user     : process.env.ACCESSKEY,
+        password : process.env.SECRETKEY,
+        database : 'app_' + process.env.APPNAME
+    },
+    //测试库
+    dev_mysql:{
+        host     : 'w.rdc.sae.sina.com.cn',
+        port     : '3306',
+        user     : '1wmxxoo0zx',
+        password : 'yjlzw1i0iimh2zjhxm2xhy51ix234zw00m5l4y2z',
+        database : 'app_neetao'
     },
     //redis配置
     redis: {
