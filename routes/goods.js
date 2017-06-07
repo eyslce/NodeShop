@@ -6,6 +6,10 @@ var config = require('../config.js');
 var _ = require('lodash');
 
 router.use(base.init);
+/**
+ *  路径：/goods/getlist
+ *
+ */
 router.post('/getlist', function (req, res, next) {
     var category = req.body.category;
     if(!config.goodsLibrary[category]){

@@ -7,4 +7,6 @@
 ##html2jade使用方法
 1、安装执行 npm install -g html2jade
 2、转换某个HTML文件执行
-   html2jade index.html  
+   html2jade index.html   
+##项目结构
+![项目结构](public/doc/jiegou.png)
