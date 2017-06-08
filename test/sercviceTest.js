@@ -11,4 +11,3 @@ GoodsService.getGoodsList({id:1},1,0,function(count,rows){
         console.log(url);
     }
 })
-

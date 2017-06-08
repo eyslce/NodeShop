@@ -1,6 +1,7 @@
 /**
  * 商品业务逻辑类
  */
+var _ = require('lodash');
 var model = require('../models/model.js');
 function GoodsService() {
 
@@ -10,7 +11,7 @@ function GoodsService() {
  * 获取商品列表
  */
 GoodsService.prototype.getGoodsList = function (where,limit,offset,callback) {
-    var where = where || {};
+    var where = _.defaults(where,{ticket_time:{gt:new Date().toLocaleString()}});
     model.nt_goods
         .findAndCountAll({
             where:where,
