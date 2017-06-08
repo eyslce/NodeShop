@@ -105,7 +105,7 @@
 .goods-list .goods-pic .ticket-tab:hover {background: #f5344f;cursor: pointer;}
 
 .goods-list .goods-name{ padding:0 5px; width:276px; height:30px; line-height:30px; font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
-.goods-list .goods-name>a:hover{color:#f4341a;}
+.goods-list .goods-name>a:hover{color:#f4341a; }
 .goods-list .goods-price{ padding:4px 6px 10px 6px;}
 .goods-list .goods-price>span{ margin-top:3px; font-size:16px; color:#f4341a;}
 .goods-list .goods-price>label{font-family:Arial; font-size:23px; color:#f4341a;}
