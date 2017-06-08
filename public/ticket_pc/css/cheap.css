@@ -101,7 +101,7 @@
 .goods-list>li:hover{ border-color:#f60;box-shadow:3px 3px 5px #999;position:relative;}
 .goods-list .goods-pic{height:286px;overflow: hidden;position: relative;}
 .goods-list .goods-pic img {width: 100%;}
-.goods-list .goods-pic .ticket-tab {position: absolute;bottom: 0;background:rgba(255,101,45,0.8);color: #fff;text-align: center; height: 40px;line-height: 40px;width: 100%;font-size: 18px;z-index: 100;}
+.goods-list .goods-pic .ticket-tab {position: absolute;bottom: 0;background:rgba(248,56,84,0.9);color: #fff;text-align: center; height: 40px;line-height: 40px;width: 100%;font-size: 18px;z-index: 100;}
 .goods-list .goods-pic .ticket-tab:hover {background: #f5344f;cursor: pointer;}
 
 .goods-list .goods-name{ padding:0 5px; width:276px; height:30px; line-height:30px; font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
@@ -142,6 +142,7 @@
 .foot{ border-top:4px solid #f4341a; background-color:#fff;}
 .foot-top>dl{ background:url(../images/boot_bg.gif) no-repeat left center;}
 .foot-top>dl,.foot-top>.foot-log{ padding:10px 20px;}
+.foot-top>.foot-log img{ width:263px; height:42px;}
 .foot-top>.foot-log img{ margin:40px 0;}
 .foot-top .foot-cage{ width:140px;}
 .foot-top .foot-other{ width:322px;}
