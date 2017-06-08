@@ -6,6 +6,8 @@ var config = {
     app_secret: '44553e0abe4863eaaddae035889a0323',
     tbk_url: 'https://eco.taobao.com/router/rest',
     adzone_id: 68784612,
+    pid:'mm_29574340_19906004_68784612',
+    ticket_and_goods_url:'http://uland.taobao.com/coupon/edetail?',
     //mysql配置
     mysql:{
         host     : process.env.MYSQL_HOST,
@@ -16,10 +18,10 @@ var config = {
     },
     //测试库
     dev_mysql:{
-        host     : 'w.rdc.sae.sina.com.cn',
+        host     : '192.168.49.128',
         port     : '3306',
-        user     : '1wmxxoo0zx',
-        password : 'yjlzw1i0iimh2zjhxm2xhy51ix234zw00m5l4y2z',
+        user     : 'root',
+        password : '123456',
         database : 'app_neetao'
     },
     //redis配置

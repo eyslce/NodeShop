@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/*通用*/
+html,body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,menu,a{margin:0;padding:0}
+/**{ margin: 0px; padding: 0px; }*/
+html{ font-size: 100%; -webkit-text-size-adjust:none; -ms-text-size-adjust:none; overflow-x:hidden;}
+*html{ overflow-y:scroll ; } 
+*html,*html{ background-image: url(about:blank); background-attachment: fixed; } /* 修正IE6振动bug */ 
+body{background:#f6f6f6;}
+body { font: 12px "Microsoft YaHei", Arial, Helvetica, sans-serif; position: relative; color: #3c3c3c; }
+a { text-decoration: none; blr: expression(this.onFocus=this.blur()); cursor:pointer;}/*去掉a标签的虚线框，避免出现奇怪的选中区域*/
+a:hover,a:active,:focus{ outline: 0; }
+li { list-style: none; }
+abbr,address,acronym { border: 0; font-variant: normal; }
+input,button,textarea,select { *font-size: 100%; }
+input, select, label { vertical-align:middle; }
+img { border-width: 0px; border-style: none; -ms-interpolation-mode: bicubic; vertical-align: middle; max-width:100%; height:auto; width:auto; }
+a:link,a:visited,a:hover,a:active {outline: none;color: #666;}
+/*clearfix*/
+
+.clearfix{clear:both;}
+.clearfix:before, .clearfix:after{content:""; display:table;}
+.clearfix{zoom:1;}
+.clearfixs:after{clear:both;}
+.clearfixs:before, .clearfix:after{content:""; display:table;}
+/*h/n*/
+h1,h2,h3,h4,h5,h6 { font-weight: normal; }
+h1 { font-size: 18px; }
+h2,h3 { font-size: 16px; }
+h4,h5 { font-size: 14px;font-family: '宋体'; color: #333333;}
+h6 { font-size: 12px; }
+
+
+/*通配样式*/
+.middle { margin-right: auto; margin-left: auto;}
+.left { float: left; }
+.right { float: right;}
+.vertical{background: #999999;height: 12px;width: 1px;}
+.triangle{width: 0;height: 0;border-left: 4px solid transparent; border-right: 4px solid transparent; border-top:4px solid #666666;display: block;}
+.relative{position:relative;}
+.none{ display:none;}
+.tc{ text-align:center;}
+.tl{ text-align:left;}
+.tr{ text-align:right;}
+
+/*链接颜色*/
+.gray-red-3c a { color: #3c3c3c; }
+.gray-red-6c a { color: #6c6c6c; }
+.gray-red-999 a{ color: #999;}
+.gray-red-f4 a{ color:#f4341a;}
+.gray-red-3c a:hover,.gray-red-6c a:hover ,.gray-red-999 a:hover { color: #e02828; }
+.gray-red-e0 a{color: #e02828 !important;}
+.gray-6c{color: #6c6c6c; }
+.gray-fff a{color: #ffffff;font-family: "微软雅黑";font-size: 14px; }
+.prb {border:1px solid #f4341a !important;}
+.pre {border:1px solid #AAAAAA !important;}
+.prd {border:1px solid #60BD39 !important;}
+
+/*按钮颜色*/
+.btn{height:42px; font:700 16px/42px '\5FAE\8F6F\96C5\9ED1'; color:#fff; border:none; background-color:#f4341a; border-radius:3px; vertical-align:middle; cursor:pointer;}
+
+/*字体库*/
+@font-face {
+    font-family: 'iconfont';  /* project id 294180 */
+    src: url('//at.alicdn.com/t/font_1i5i5ucho4huayvi.eot');
+    src: url('//at.alicdn.com/t/font_1i5i5ucho4huayvi.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_1i5i5ucho4huayvi.woff') format('woff'),
+    url('//at.alicdn.com/t/font_1i5i5ucho4huayvi.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_1i5i5ucho4huayvi.svg#iconfont') format('svg');
+}
+.iconfont{ font-family:"iconfont" !important; font-size:16px;font-style:normal; -webkit-font-smoothing: antialiased; -webkit-text-stroke-width: 0.2px; -moz-osx-font-smoothing: grayscale;}

@@ -34,4 +34,9 @@ router.post('/getlist', function (req, res, next) {
         res.json(_.defaults(goods_data, {page_size: base.page_size}));
     });
 });
+
+router.get('',function(req, res, next){
+
+});
+
 module.exports = router;

@@ -26,7 +26,7 @@ function base() {
         res.cookie("timestamp",timestamp);
         res.cookie("sign",sign);
         //设置视图路径
-        view_path = 'window';
+        view_path = 'ticket_pc';
         if(isMobile(req)){
             is_mobile = true;
             //view_path ='mobile';
