@@ -4,11 +4,12 @@ var base = require('./base.js');
 var baseApi = require('../lib/baseApi.js');
 var config = require('../config.js');
 var _ = require('lodash');
+var GoodsService = require('../service/GoodsService.js');
 
 router.use(base.init);
 /**
  *  路径：/goods/getlist
- *
+ *  获取阿里妈妈选品库商品
  */
 router.post('/getlist', function (req, res, next) {
     var category = req.body.category;
@@ -35,8 +36,29 @@ router.post('/getlist', function (req, res, next) {
     });
 });
 
-router.get('',function(req, res, next){
-
+/**
+ * 路径：/goods/getTicketlist
+ * 获取优惠卷商品列表
+ */
+router.post('/getTicketList',function(req, res, next){
+    var where = {};
+    //每页分页数
+    var limit = base.page_size;
+    //第几页
+    var pageNo = parseInt(req.body.page_no);
+    if(isNaN(pageNo)){
+        pageNo = 1;
+    }
+    var offset = (pageNo-1)*limit;
+    GoodsService.getGoodsList(where,limit,offset,function(count,rows){
+        var result = {total_page:count,page_size:limit,data:[]};
+        for(var i in rows){
+            var obj = rows[i].dataValues;
+            obj.click_url = config.ticket_and_goods_url+'activityId='+obj.ticket_id+'&pid=mm_29574340_19906004_68784612&itemId='+obj.goods_id;
+            result.data.push(obj);
+        }
+        res.json(result);
+    })
 });
 
 module.exports = router;
