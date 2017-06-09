@@ -1,14 +1,14 @@
 # NodeShop  
-项目说明  
-## How to use  
+## 项目说明  
+###  How to use  
 1.运行项目，执行node index.js  
 2.如有模块未安装，先执行npm install  
 3.访问http://localhost:5050  
-## html2jade使用方法  
+### html2jade使用方法  
 1.安装执行 npm install -g html2jade  
 2.转换某个HTML文件执行  
   html2jade index.html  
-## 自动生成sequelizejs模型文件  
+### 自动生成sequelizejs模型文件  
  npm install -g sequelize-auto  
  必须全局安装以下数据库工具：  
  Example for MySQL/MariaDB   
@@ -23,8 +23,8 @@
  Example for MSSQL   
  npm install -g tedious  
  用法：  
- [node] sequelize-auto -h <host> -d <database> -u <user> -x [password] -p [port]  --dialect [dialect] -c [/path/to/config] -o [/path/to/models] -t [tableName] -C
- Options:
+ [node] sequelize-auto -h <host> -d <database> -u <user> -x [password] -p [port]  --dialect [dialect] -c [/path/to/config] -o [/path/to/models] -t [tableName] -C  
+ Options:  
    -h, --host        IP/Hostname for the database.   [required]  
    -d, --database    Database name.                  [required]  
    -u, --user        Username for database.  
@@ -41,5 +41,5 @@
    -s, --schema      Database schema from which to retrieve tables  
    示例：  
    sequelize-auto -o "./models" -d app_neetao -h 192.168.49.128 -u root -p   3306 -x 123456 -e mysql  
-## 项目结构  
+### 项目结构  
 ![项目结构](public/doc/jiegou.png)
