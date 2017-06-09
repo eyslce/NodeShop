@@ -8,6 +8,6 @@ GoodsService.getGoodsList({id:1},1,0,function(count,rows){
     for(var i in rows){
         var obj = rows[i].dataValues;
         var url = 'http://uland.taobao.com/coupon/edetail?activityId='+obj.ticket_id+'&pid=mm_29574340_19906004_68784612&itemId='+obj.goods_id;
-        console.log(url);
+        console.log(obj);
     }
 })
