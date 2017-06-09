@@ -70,9 +70,11 @@
 .hot-hunt .hot-word>li>a:hover{color:#ff4a00;}
 
 .cate-menu{ padding:2px 10px 1px;}
-.cate-menu>li{ float:left; width:95px;}
-.cate-menu>li>a{ position:relative; display:block; line-height:39px; font-size:14px;}
-.cate-menu .nt-icon{ position:relative; display:inline-block; margin-right:5px; height:24px; width:24px; vertical-align:middle;}
+.cate-menu>li{ position:relative; float:left; width:95px; background:url(../images/dotted_line.png) repeat-x left bottom;}
+.cate-menu>li>a{ position:relative; display:block; line-height:39px; font-size:16px;}
+.cate-menu>li>a:after{ display:block; position:absolute; right:0; top:12px; width:1px; height:15px; background-color:#eee; content:'';}
+.cate-menu>li:nth-child(2n)>a:after{ background-color:#fff;}
+.cate-menu .nt-icon{ position:relative; display:inline-block; margin-right:3px; height:24px; width:24px; vertical-align:middle;}
 
 /*--3个广告图--*/
 .ad-top {overflow: hidden;margin: 10px 0px;}
@@ -99,6 +101,8 @@
 .goods-list{ padding:12px 0 0;}
 .goods-list>li{ float:left;border:1px solid #eee;box-sizing:border-box;width:288px;background-color:#fff;margin: 6px;position: relative;height: 416px;}
 .goods-list>li:hover{ border-color:#f60;box-shadow:3px 3px 5px #999;position:relative;}
+.goods-list>li:hover .gray-icon>a{ width:47px; padding-left:5px; color:#fff; background-color:#f4341a; border-radius:4px;}
+.goods-list>li:hover .gray-icon>a i{ display:none;}
 .goods-list .goods-pic{height:286px;overflow: hidden;position: relative;}
 .goods-list .goods-pic img {width: 100%;}
 .goods-list .goods-pic .ticket-tab {position: absolute;bottom: 0;background:rgba(248,56,84,0.9);color: #fff;text-align: center; height: 40px;line-height: 40px;width: 100%;font-size: 18px;z-index: 100;}
@@ -107,22 +111,24 @@
 .goods-list .goods-name{ padding:0 5px; width:276px; height:30px; line-height:30px; font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 .goods-list .goods-name>a:hover{color:#f4341a; }
 .goods-list .goods-price{ padding:4px 6px 10px 6px;}
-.goods-list .goods-price>span{ margin-top:3px; font-size:16px; color:#f4341a;}
-.goods-list .goods-price>label{font-family:Arial; font-size:23px; color:#f4341a;}
-.goods-list .goods-price .old-price{ margin-left:4px;}
+.goods-list .goods-price .new-price{ position:relative; float:left;}
+.goods-list .goods-price .new-price:before{ display:block; position:absolute; right:-50px; width:47px; height:19px; background:url(../images/qhj.png) no-repeat; background-size:47px 19px; content:'';}
+.goods-list .goods-price .new-price:after{ display:block; content:''; clear:both;}
+.goods-list .goods-price .new-price>span{ margin-top:3px; font-size:16px; color:#f4341a;}
+.goods-list .goods-price .new-price>label{font-family:Arial; font-size:23px; color:#f4341a;}
+.goods-list .goods-price .old-price{ padding-top:5px; margin:0 0 0 4px; clear:both;}
 .goods-list .goods-price .old-price p{ padding-bottom:2px; margin-right:10px; font-size:12px; text-decoration:line-through; font-family:Arial; color:#a0a0a0;display: inline-block;}
 .goods-list .goods-price .old-price .sell-pre{ color:#a0a0a0;}
-.goods-list .goods-price .old-price .icon-fan{ display:inline-block; line-height:18px; padding:0 5px; font-size:12px; color:#fff; font-style:normal; background-color:#f60;}
+.goods-list .goods-price .old-price .icon-fan{ display:inline-block; line-height:18px; padding:0 5px; font-size:12px; color:#fff; font-style:normal; background-color:#ff472b; border-radius:2px;}
 .goods-list .gray-icon{ float:right; margin:0px 4px 0 0; line-height:25px;}
-.goods-list .gray-icon>a{ display:block; position:relative; padding:0 5px 0 18px; width:34px; text-align:center; font-size:14px; color:#c40000;}
-.goods-list .gray-icon .m-icon{position:absolute; left:0; top:7px; width:15px; height:15px; background-position:right -71px;}
-.goods-list .gray-icon .t-icon{position:absolute; left:0; top:7px; width:15px; height:15px; background-position:right -88px;}
-.goods-list .gray-icon .j-icon{position:absolute; left:0; top:7px; width:15px; height:15px; background-position:right -54px;}
-.goods-list .gray-icon>a:hover{ width:47px; padding-left:5px; color:#fff; background-color:#f4341a; border-radius:4px;}
-.goods-list .gray-icon>a:hover i{ display:none;}
+.goods-list .gray-icon>a{ display:block; position:relative; margin-top:4px; padding:0 5px 0 18px; width:34px; text-align:center; font-size:14px; color:#f4341a;}
+.goods-list .gray-icon>span{ display:block; padding-top:2px;}
+.goods-list .gray-icon .m-icon{position:absolute; left:0; top:6px; width:15px; height:15px; background-position:right -71px;}
+.goods-list .gray-icon .t-icon{position:absolute; left:0; top:6px; width:15px; height:15px; background-position:right -88px;}
+.goods-list .gray-icon .j-icon{position:absolute; left:0; top:6px; width:15px; height:15px; background-position:right -54px;}
 .goods-list .goods-tips {bottom:0px;position:absolute;width:100%;height:30px;line-height:30px;font-size:14px;border-top:1px solid #e5e5e5;}
-.goods-list .goods-tips span {float:left;display:block;width:50%;text-align:center;}
-.goods-list .goods-tips span:nth-child(1) {border-right:1px solid #e5e5e5;box-sizing: border-box;width: 50%;}
+.goods-list .goods-tips a {float:left;display:block;width:50%;text-align:center;}
+.goods-list .goods-tips a:nth-child(1) {border-right:1px solid #e5e5e5;box-sizing: border-box;width: 50%;}
 
  /*红包*/
 .goods-list .red-package-tips {width: 82px;height:73px; font-size:14px;position: absolute;right: 0;top: 0;z-index: 500;}
@@ -264,8 +270,9 @@
 .logo-list li{ float:left; width:92px; height:70px; border:1px solid #ddd; margin:-1px 0 0 -1px;}
 
 /***********Conditions for screening************/
-.hottest{ padding:3px 15px; line-height:28px; border:1px solid #f1f1f1; background:#f5f5f5;}
-.hottest>a{ margin-right:15px; color:#666; text-decoration:none;}
+.cate-nav{ padding:12px 0; background-color:#fff;}
+.hottest{ line-height:28px;}
+.hottest>a{ margin-right:20px; font-size:14px; color:#666; text-decoration:none;}
 .hottest>a>i{ font-style:normal; font-size:12px;}
 .hottest>a:hover,.hottest>a.hover{ color:#ff4a00;}
 .hottest>a.hover{ font-weight:600;}
