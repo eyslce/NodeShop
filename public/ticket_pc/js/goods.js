@@ -18,9 +18,11 @@ var index = {
                     + '<a href="' + item[i].click_url + '" target="_blank"><img src="' + item[i].pic + '" /></a>'
                     + '<p class="ticket-tab">优惠券' + item[i].ticket_price + '元</p>'
                     + '</div>'
-                    + '<h3 class="goods-name"><a href="#">' + item[i].title + '</a></h3>'
-                    + '<div class="goods-price left"><span class="left sell-prb">券后价￥</span>'
-                    + '<label class="left sell-prb">' + item[i].price + '</label>'
+                    + '<h3 class="goods-name"><a href="' + item[i].click_url + '" target="_blank">' + item[i].title + '</a></h3>'
+                    + '<div class="goods-price left">'
+                    + '<div class="new-price">'
+                    + '<span class="left sell-prb">￥</span>'
+                    + '<label class="left sell-prb">' + item[i].price + '</label></div>'
                     + '<div class="old-price">'
                     + '<p>' + item[i].org_price + '</p><i class="icon-fan">包邮</i>'
                     + '</div>'
@@ -45,7 +47,7 @@ var index = {
                 html += '<span>销量:' + item[i].sales_num + '</span>'
                     + '</div>'
                     + '<div class="goods-tips">'
-                    + '<span><i></i>已缴保证金</span><span><i></i>进群领红包</span>'
+                    + '<a><i></i>已缴保证金</a><a><i></i>进群领红包</a>'
                     + '</div>'
                     + '<div class="red-package-tips">'
                     + '<a href="#"><span>返现金红包</span>'
@@ -66,7 +68,7 @@ var index = {
         for (var i = 0; i <= page_range; i++) {
             var c = 'pages';
             if (index.begin_page + i == index.current_page) {
-                c = 'on';
+                  c = 'on';
             }
             html += '<a class="' + c + '" page_no="' + (index.begin_page + i) + '">' + (index.begin_page + i) + '</a>';
         }
