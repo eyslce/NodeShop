@@ -8,7 +8,7 @@ html{ font-size: 100%; -webkit-text-size-adjust:none; -ms-text-size-adjust:none;
 *html,*html{ background-image: url(about:blank); background-attachment: fixed; } /* 修正IE6振动bug */ 
 body{background:#f6f6f6;}
 body { font: 12px "Microsoft YaHei", Arial, Helvetica, sans-serif; position: relative; color: #3c3c3c; }
-a { text-decoration: none; blr: expression(this.onFocus=this.blur()); cursor:pointer;}/*去掉a标签的虚线框，避免出现奇怪的选中区域*/
+a { color:#5e5e5e; text-decoration: none; blr: expression(this.onFocus=this.blur()); cursor:pointer;}/*去掉a标签的虚线框，避免出现奇怪的选中区域*/
 a:hover,a:active,:focus{ outline: 0; }
 li { list-style: none; }
 abbr,address,acronym { border: 0; font-variant: normal; }
@@ -61,11 +61,11 @@ h6 { font-size: 12px; }
 
 /*字体库*/
 @font-face {
-    font-family: 'iconfont';  /* project id 294180 */
-    src: url('//at.alicdn.com/t/font_1i5i5ucho4huayvi.eot');
-    src: url('//at.alicdn.com/t/font_1i5i5ucho4huayvi.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_1i5i5ucho4huayvi.woff') format('woff'),
-    url('//at.alicdn.com/t/font_1i5i5ucho4huayvi.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_1i5i5ucho4huayvi.svg#iconfont') format('svg');
+    font-family: 'iconfont';  /* project id 323247 */
+    src: url('//at.alicdn.com/t/font_t7jxfh3dmbdibe29.eot');
+    src: url('//at.alicdn.com/t/font_t7jxfh3dmbdibe29.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_t7jxfh3dmbdibe29.woff') format('woff'),
+    url('//at.alicdn.com/t/font_t7jxfh3dmbdibe29.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_t7jxfh3dmbdibe29.svg#iconfont') format('svg');
 }
 .iconfont{ font-family:"iconfont" !important; font-size:16px;font-style:normal; -webkit-font-smoothing: antialiased; -webkit-text-stroke-width: 0.2px; -moz-osx-font-smoothing: grayscale;}

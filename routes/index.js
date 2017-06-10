@@ -38,6 +38,9 @@ router.get('/ticket',function(req, res, next){
 router.get('/catid', function(req, res, next) {
     res.render(base.getViewPath() +'/catid',base.getCommonParams());
 });
+router.get('/cage', function(req, res, next) {
+    res.render(base.getViewPath() +'/cage',base.getCommonParams());
+});
 router.get('/coupon', function(req, res, next) {
     res.render(base.getViewPath() +'/coupon',base.getCommonParams());
 });
@@ -49,5 +52,11 @@ router.get('/issue', function(req, res, next) {
 });
 router.get('/redpacket', function(req, res, next) {
     res.render(base.getViewPath() +'/redpacket',base.getCommonParams());
+});
+router.get('/404', function(req, res, next) {
+    res.render(base.getViewPath() +'/404',base.getCommonParams());
+});
+router.get('/search', function(req, res, next) {
+    res.render(base.getViewPath() +'/search',base.getCommonParams());
 });
 module.exports = router;

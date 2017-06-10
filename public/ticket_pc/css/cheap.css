@@ -33,7 +33,10 @@
 .head-search .search-btn{ float:left; width:78px; height:36px; background:url(../images/ico-header9.png) no-repeat 0 -40px; border:none; cursor:pointer;}
 .head-hot{ width:370px; height:22px; overflow:hidden;margin-left:0;margin-top: 10px;}
 .head-hot>li{float:left; line-height:18px; margin-left:12px}
-.head-hot>li>a:hover{}
+.head-hot>li>a:hover{ color:#fe5800;}
+
+.bz-list li{ float:left; margin-left:10px; font-size:18px; line-height:36px;}
+.bz-list li>i{ float:left; margin-right:6px; font-size:36px; color:#fe5800;}
 
 /*the middle of the navigation*/
 .head-nav{ height:38px;background:-webkit-linear-gradient(left,#fe5800,#ff610c,#ff5700); background:-moz-linear-gradient(left,#fe5800,#ff610c,#ff5700); background:linear-gradient(left,#fe5800,#ff610c,#ff5700);}
@@ -54,10 +57,14 @@
 .banner-list>.banner-com>a{ display:block; position:absolute; top:-136px; width:60px; height:60px;}
 .banner-list>.banner-com>a.banner-pre{left:-20px; background:url(../images/banner_l.png) no-repeat;}
 .banner-list>.banner-com>a.banner-next{ right:8px; background:url(../images/banner_r.png) no-repeat;}
+.banner-list>.banner-contr{ position:absolute; width:200px; left:50%; margin-left:-100px; bottom:20px;}
+.banner-list>.banner-contr span{ background:#fff; border-radius:10px; cursor:pointer; display:inline-block; height:10px; margin-right:7px; width:10px; overflow:hidden; vertical-align:middle;}
+.banner-list>.banner-contr span.current{ background:transparent; border:3px solid #fff;}
+
 
 .top-warp{ position:relative;}
 .top-remain{ position:absolute; top:-280px; height:280px; background-color:#fff;}
-.top-warp .hot-hunt{ left:0; width:210px;}
+.top-warp .hot-hunt{ left:0; width:200px;}
 .top-warp .new-dl{ right:0; width:200px;}
 .dl-list{ padding:10px 0 0 10px; height:110px overflow:hidden;}
 .dl-list dt{ float:left; margin-right:6px;}
@@ -69,12 +76,13 @@
 .hot-hunt .hot-word>li>a{ color:#000;}
 .hot-hunt .hot-word>li>a:hover{color:#ff4a00;}
 
-.cate-menu{ padding:2px 10px 1px;}
-.cate-menu>li{ position:relative; float:left; width:95px; background:url(../images/dotted_line.png) repeat-x left bottom;}
-.cate-menu>li>a{ position:relative; display:block; line-height:39px; font-size:16px;}
+.cate-menu{ padding:2px 0 1px;}
+.cate-menu>li{ position:relative; float:left; width:100px; background:url(../images/dotted_line.png) repeat-x left bottom;}
+.cate-menu>li>a{ position:relative; display:block; padding-right:5px; line-height:39px; font-size:16px; text-align:center;}
 .cate-menu>li>a:after{ display:block; position:absolute; right:0; top:12px; width:1px; height:15px; background-color:#eee; content:'';}
+.cate-menu>li>a:hover{ color:#fe5800;}
 .cate-menu>li:nth-child(2n)>a:after{ background-color:#fff;}
-.cate-menu .nt-icon{ position:relative; display:inline-block; margin-right:3px; height:24px; width:24px; vertical-align:middle;}
+.cate-menu .nt-icon{ position:relative; top:-2px; display:inline-block; margin-right:3px; height:24px; width:24px; line-height:24px; font-size:18px; vertical-align:middle;}
 
 /*--3个广告图--*/
 .ad-top {overflow: hidden;margin: 10px 0px;}
@@ -99,7 +107,7 @@
 .switch-tab>a.on{ color:#fff; background-color:#ff4a00;}
  /*--商品展示li--*/
 .goods-list{ padding:12px 0 0;}
-.goods-list>li{ float:left;border:1px solid #eee;box-sizing:border-box;width:288px;background-color:#fff;margin: 6px;position: relative;height: 416px;}
+.goods-list>li{ float:left;border:1px solid #eee;box-sizing:border-box;width:288px;background-color:#fff;margin: 6px;position: relative;height:auto;}
 .goods-list>li:hover{ border-color:#f60;box-shadow:3px 3px 5px #999;position:relative;}
 .goods-list>li:hover .gray-icon>a{ width:47px; padding-left:5px; color:#fff; background-color:#f4341a; border-radius:4px;}
 .goods-list>li:hover .gray-icon>a i{ display:none;}
@@ -107,6 +115,7 @@
 .goods-list .goods-pic img {width: 100%;}
 .goods-list .goods-pic .ticket-tab {position: absolute;bottom: 0;background:rgba(248,56,84,0.9);color: #fff;text-align: center; height: 40px;line-height: 40px;width: 100%;font-size: 18px;z-index: 100;}
 .goods-list .goods-pic .ticket-tab:hover {background: #f5344f;cursor: pointer;}
+.goods-list .ticket-quan{position: relative; color:#fff; text-align: center; height:45px;line-height:45px;width:100%; font-size:18px;z-index:2; background:#ef2542;}
 
 .goods-list .goods-name{ padding:0 5px; width:276px; height:30px; line-height:30px; font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 .goods-list .goods-name>a:hover{color:#f4341a; }
@@ -126,9 +135,11 @@
 .goods-list .gray-icon .m-icon{position:absolute; left:0; top:6px; width:15px; height:15px; background-position:right -71px;}
 .goods-list .gray-icon .t-icon{position:absolute; left:0; top:6px; width:15px; height:15px; background-position:right -88px;}
 .goods-list .gray-icon .j-icon{position:absolute; left:0; top:6px; width:15px; height:15px; background-position:right -54px;}
-.goods-list .goods-tips {bottom:0px;position:absolute;width:100%;height:30px;line-height:30px;font-size:14px;border-top:1px solid #e5e5e5;}
+.goods-list .goods-tips {bottom:0px;position:relative;width:100%;height:32px;line-height:32px;font-size:14px;border-top:1px solid #e5e5e5; clear:both;}
 .goods-list .goods-tips a {float:left;display:block;width:50%;text-align:center;}
+.goods-list .goods-tips a:hover{ color:#f4341a;}
 .goods-list .goods-tips a:nth-child(1) {border-right:1px solid #e5e5e5;box-sizing: border-box;width: 50%;}
+.goods-list .goods-tips a>i{ position:relative; bottom:-2px; margin-right:2px; font-size:18px;}
 
  /*红包*/
 .goods-list .red-package-tips {width: 82px;height:73px; font-size:14px;position: absolute;right: 0;top: 0;z-index: 500;}
@@ -146,20 +157,22 @@
 
 /***********At the bottom of the web site************/
 .foot{ border-top:4px solid #f4341a; background-color:#fff;}
-.foot-top>dl{ background:url(../images/boot_bg.gif) no-repeat left center;}
-.foot-top>dl,.foot-top>.foot-log{ padding:10px 20px;}
-.foot-top>.foot-log img{ width:263px; height:42px;}
-.foot-top>.foot-log img{ margin:40px 0;}
-.foot-top .foot-cage{ width:140px;}
+.foot-top{ padding:12px 0;}
+.foot-top dl{ background:url(../images/boot_bg.gif) no-repeat left center;}
+.foot-top dl,.foot-top>.foot-log{ padding:10px 20px;}
+.foot-top>.foot-log img{ width:260px; height:60px;}
+.foot-top>.foot-log img{ margin:10px 0;}
+.foot-top .foot-cage{ width:138px;}
 .foot-top .foot-other{ width:322px;}
-.foot-top .foot-cage dt,.foot-top .foot-other dt{ font-size:16px; line-height:25px; color:#666;}
-.foot-top .foot-cage dd,.foot-top .foot-other dd{ float:left; margin-right:10px; line-height:25px;}
+.foot-top .foot-cage dt,.foot-top .foot-other dt{ padding-bottom:5px; font-size:16px; line-height:25px; color:#666;}
+.foot-top .foot-cage dd,.foot-top .foot-other dd{ margin-right:10px; line-height:25px;}
 .foot-top .foot-cage dd a,.foot-top .foot-other dd a{ color:#7b7b7b;}
+.foot-top .foot-cage dd a:hover,.foot-top .foot-other dd a:hover{ color:#fe5800;}
 .foot-top .ewcode img{ width:74px; height:74px;}
-.foot-top .ewcode dd{ margin-left:6px; float:left;}
+.foot-top .ewcode dd{ margin: 10px 0 0 6px; font-size:14px; float:left;}
 .foot-bom{ padding:12px 0; line-height:24px; border-top:1px solid #ddd;}
 .link-list{ overflow:hidden;}
-.link-list>a{ float:left; margin-right:10px;}
+.link-list>a{  margin-right:10px;}
 
 /***********The lower classification************/
 .subMenu{ display:none; position:fixed; left:0; right:0; top:0; background:rgba(255, 255, 255, 0.9); z-index:12;}
@@ -290,15 +303,46 @@
 .sort>.sort-nav span .up_triangle{margin-bottom:1px; border-top:0;}
 .sort>.sort-nav span .down_triangle{border-bottom:0;}
 
+.goods-choice{ position:relative; padding:15px 10px 15px 10px; line-height:24px;}
+.choice-condite .choice-matter{ position:relative; float:left; margin-left:5px; padding:0 28px 0 5px; line-height:22px; border:#bcbcbc 1px solid; cursor:pointer;}
+.choice-condite .choice-matter i{ position:absolute; right:3px; top:2px; cursor:pointer;}
+.choice-condite .choice-matter:hover{ border-color:#fe5800;}
+.choice-condite .choice-matter:hover i{ color:#fe5800;}
+.choice-condite .choice-num{ margin-left:12px;}
+.choice-condite .choice-num b{ padding:0 4px; font-family:Arial; font-size:14px; color:#fe5800;}
+.goods-choice .choice-right{ line-height:24px;}
+.goods-choice .choice-right i{ position:relative; float:left; bottom:-2px; margin-right:2px; color:#fe5800;}
+.goods-choice .choice-right a:hover{ color:#fe5800;}
 
+.goods-type-filter{ padding:0 18px; border:1px solid #eee; background-color:#fff;}
+.goods-type{ position:relative; padding:10px 0 10px 90px; line-height:32px;}
+.goods-type .goods-label{ position:absolute; left:0; top:10px; width:60px;}
+.goods-type-cage{ overflow:hidden;}
+.goods-type-cage li{ float:left; margin-right:18px;}
+.goods-type-cage li b{ font-weight:400;}
+.goods-type-cage li a:hover{ color:#fe5800;}
 
+/*-----helpCenter-----*/
+.subside{ margin:20px 0; width:200px;}
+.subside>.title{ margin-bottom:0; font-size:16px; color:#fff; line-height:35px; text-align:center; background-color:#fe5800;}
+.subside-cage{ border:1px solid #eee;}
+.subside-mod .title{ margin:0; padding-left:40px; font-size:14px; font-weight:400; line-height:40px; background-color:#eaeaea;}
+.subside-mod .subside-list{ padding:0 0 12px 40px; line-height:32px;}
+.subside-mod .subside-list a.active,.subside-mod .subside-list a:hover{ color:#f60; font-weight:700; text-decoration:none;}
+.subside-mod .subside-list p{ margin-bottom:0; font-size:13px;}
+.sidebox{ margin:20px 0 30px; width:986px; border:1px solid #ddd;}
+.sidebox .breadcrum{ padding-left:15px; line-height:35px; font-size:14px; background-color:#eaeaea;}
+.sidebox .breadcrum .sLevel{ font-weight:700;}
+.sidebox .all-ques{ padding:30px 15px; line-height:26px; font-size:14px;}
+.sidebox .quesant{ margin-bottom:15px;}
+.sidebox .quesant h4{ font-size:16px; font-family:'\5FAE\8F6F\96C5\9ED1'; margin-bottom:8px; color:#f60;}
+.dlinden{ text-indent:24px;}
 
-
-
-
-
-
-
-
+/*-----404-----*/
+.error-con{ padding:60px; width:610px; margin:0 auto;}
+.no-find{ margin-right:46px; font-size:250px; color:#fe5800;}
+.sm-find{ padding-top:45px;}
+.sm-find h3{ padding-bottom:16px; font-size:24px;}
+.sm-find .other .btn{ display:inline-block; padding:0 18px; height:36px; line-height:36px; color:#fff;}
 
 
