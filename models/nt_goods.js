@@ -117,6 +117,10 @@ module.exports = function(sequelize, DataTypes) {
     ticket_link: {
       type: DataTypes.STRING(100),
       allowNull: false
+    },
+    gid: {
+      type: DataTypes.INTEGER(10),
+      allowNull: false
     }
   }, {
     tableName: 'nt_goods'
