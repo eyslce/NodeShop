@@ -7,7 +7,7 @@ var config = {
     tbk_url: 'https://eco.taobao.com/router/rest',
     adzone_id: 68784612,
     pid: 'mm_29574340_19906004_68784612',
-    ticket_and_goods_url: 'http://uland.taobao.com/coupon/edetail?',
+    ticket_and_goods_url: 'http://uland.taobao.com/coupon/edetail?dx=1&src=neetao&',
     //mysql配置
     mysql: {
         host: process.env.MYSQL_HOST,
