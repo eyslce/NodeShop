@@ -4,10 +4,7 @@ var index = {
     total_page: 0,
     page_size: 48,
     getGoodsList: function (page_no) {
-        if (!category) {
-            category = 'index';
-        }
-        $.post('/goods/getTicketList', {page_no: page_no, category: category}, function (result) {
+        $.post('/goods/getTicketList', {page_no: page_no, category_id: category_id}, function (result) {
             index.total_page = result.total_page;
             index.page_size = result.page_size;
             $('ul.goods-list').empty();

@@ -6,23 +6,23 @@ var config = {
     app_secret: '44553e0abe4863eaaddae035889a0323',
     tbk_url: 'https://eco.taobao.com/router/rest',
     adzone_id: 68784612,
-    pid:'mm_29574340_19906004_68784612',
-    ticket_and_goods_url:'http://uland.taobao.com/coupon/edetail?',
+    pid: 'mm_29574340_19906004_68784612',
+    ticket_and_goods_url: 'http://uland.taobao.com/coupon/edetail?',
     //mysql配置
-    mysql:{
-        host     : process.env.MYSQL_HOST,
-        port     : process.env.MYSQL_PORT,
-        user     : process.env.ACCESSKEY,
-        password : process.env.SECRETKEY,
-        database : 'app_' + process.env.APPNAME
+    mysql: {
+        host: process.env.MYSQL_HOST,
+        port: process.env.MYSQL_PORT,
+        user: process.env.ACCESSKEY,
+        password: process.env.SECRETKEY,
+        database: 'app_' + process.env.APPNAME
     },
     //测试库
-    dev_mysql:{
-        host     : '192.168.49.128',
-        port     : '3306',
-        user     : 'root',
-        password : '123456',
-        database : 'app_neetao'
+    dev_mysql: {
+        host: '192.168.1.103',
+        port: '3306',
+        user: 'root',
+        password: '123456',
+        database: 'app_neetao'
     },
     //redis配置
     redis: {
@@ -67,6 +67,20 @@ var config = {
         dress3: {favorites_id: 2432661, favorites_title: '女装3', type: 1},
         dress2: {favorites_id: 2420024, favorites_title: '女装2', type: 1},
         dress: {favorites_id: 2418800, favorites_title: '女装', type: 1}
-    }
+    },
+    NeeTaoCate: [
+        {cid: 1, cname: '女装', is_use: 1,icon:'&#xe738;'},
+        {cid: 2, cname: '内衣', is_use: 1,icon:'&#xe738;'},
+        {cid: 3, cname: '母婴', is_use: 1,icon:'&#xe738;'},
+        {cid: 4, cname: '美妆', is_use: 1,icon:'&#xe738;'},
+        {cid: 5, cname: '鞋包配饰', is_use: 1,icon:'&#xe738;'},
+        {cid: 6, cname: '美食', is_use: 1,icon:'&#xe738;'},
+        {cid: 7, cname: '居家', is_use: 1,icon:'&#xe738;'},
+        {cid: 8, cname: '数码家电', is_use: 1,icon:'&#xe738;'},
+        {cid: 9, cname: '男装', is_use: 1,icon:'&#xe738;'},
+        {cid: 10, cname: '文体车品', is_use: 1,icon:'&#xe738;'},
+        {cid: 11, cname: '其他', is_use: 1,icon:'&#xe738;'}
+    ]
+
 };
 module.exports = config;

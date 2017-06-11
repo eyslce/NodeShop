@@ -24,23 +24,10 @@
            <div class="top-warp">
                <div class="top-remain hot-hunt left">
                    <ul class="cate-menu">
-                      <li><a href="/cage"><i class="iconfont nt-icon">&#xe738;</i>女装</a></li>
-                      <li><a href="/cage"><i class="iconfont nt-icon">&#xe734;</i>内衣</a></li>
-                      <li><a href="/cage"><i class="iconfont nt-icon">&#xe732;</i>母婴</a></li>
-                      <li><a href="/cage"><i class="iconfont nt-icon">&#xe61a;</i>美妆</a></li>
-                      <!--<li><a><i class="iconfont nt-icon">&#xe71d;</i>鞋子</a></li>
-                      <li><a><i class="iconfont nt-icon">&#xe62d;</i>包包</a></li>
-                      <li><a><i class="iconfont nt-icon">&#xec25;</i>美食</a></li>
-                      <li><a><i class="iconfont nt-icon">&#xe60a;</i>家电</a></li>
-                      <li><a><i class="iconfont nt-icon">&#xe67e;</i>配饰</a></li>
-                      -->
-					 <li><a href="/cage"><i class="iconfont nt-icon">&#xe600;</i>居家</a></li>
-					 <li><a href="/cage"><i class="iconfont nt-icon">&#xe60a;</i>数码家电</a></li>
+					   <% for(var i in all_category){ %>
+					   <li><a href="/cage?category_id=<%=all_category[i].cid%>"><%=all_category[i].cname%></a></li>
+					   <% }%>
 
-					 <li><a href="/cage"><i class="iconfont nt-icon">&#xe604;</i>男装</a></li>
-
-					 <li><a href="/cage"><i class="iconfont nt-icon">&#xe628;</i>文体车品</a></li>
-					 <li><a href="/cage"><i class="iconfont nt-icon">&#xe623;</i>其他</a></li>
 				  </ul>
 			  </div>
 			  <div class="top-remain new-dl">

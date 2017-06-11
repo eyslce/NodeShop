@@ -49,6 +49,10 @@ router.post('/getTicketList',function(req, res, next){
     if(isNaN(pageNo)){
         pageNo = 1;
     }
+    var category_id = req.body.category_id;
+    if(undefined != category_id){
+        where.gid=category_id;
+    }
     var offset = (pageNo-1)*limit;
     GoodsService.getGoodsList(where,limit,offset,function(count,rows){
         var result = {total_page:count,page_size:limit,data:[]};

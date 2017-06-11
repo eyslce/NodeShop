@@ -38,6 +38,7 @@ function base() {
         }
         common_params.category = category;
         common_params.category_name = config.goodsLibrary[category].favorites_title;
+        common_params.all_category = config.NeeTaoCate;
         next();
     };
     //获取视图路径

@@ -3,6 +3,7 @@ var router = express.Router();
 var login = require('../lib/login.js');
 var base = require('./base.js');
 var path = require('path');
+var _ = require('lodash');
 
 router.use(base.init);
 /* GET home page. */
@@ -39,7 +40,8 @@ router.get('/catid', function(req, res, next) {
     res.render(base.getViewPath() +'/catid',base.getCommonParams());
 });
 router.get('/cage', function(req, res, next) {
-    res.render(base.getViewPath() +'/cage',base.getCommonParams());
+    var category_id = req.query.category_id;
+    res.render(base.getViewPath() +'/cage',_.defaults(base.getCommonParams(),{category_id:category_id}));
 });
 router.get('/coupon', function(req, res, next) {
     res.render(base.getViewPath() +'/coupon',base.getCommonParams());
