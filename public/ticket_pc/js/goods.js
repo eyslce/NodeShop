@@ -4,7 +4,16 @@ var index = {
     total_page: 0,
     page_size: 48,
     getGoodsList: function (page_no) {
-        $.post('/goods/getTicketList', {page_no: page_no, category_id: category_id}, function (result) {
+        if(typeof(category_id) == 'undefined'){
+            category_id = 0;
+        }
+        if(typeof(orderBy) == 'undefined'){
+            orderBy = null;
+        }
+        if(typeof(direction) == 'undefined'){
+            direction = null;
+        }
+        $.post('/goods/getTicketList', {page_no: page_no, category_id: category_id,orderBy:orderBy,direction:direction}, function (result) {
             index.total_page = result.total_page;
             index.page_size = result.page_size;
             $('ul.goods-list').empty();

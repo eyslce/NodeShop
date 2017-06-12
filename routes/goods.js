@@ -50,11 +50,17 @@ router.post('/getTicketList',function(req, res, next){
         pageNo = 1;
     }
     var category_id = req.body.category_id;
-    if(undefined != category_id){
-        where.gid=category_id;
+    if(0 != category_id){
+        where.gid = category_id;
     }
     var offset = (pageNo-1)*limit;
-    GoodsService.getGoodsList(where,limit,offset,function(count,rows){
+    var orderBy = req.body.orderBy;
+    var direction = req.body.direction;
+    var order = null;
+    if(orderBy&&direction){
+        order = [[orderBy,direction]];
+    }
+    GoodsService.getGoodsList(where,limit,offset,order,function(count,rows){
         var result = {total_page:count,page_size:limit,data:[]};
         for(var i in rows){
             var obj = rows[i].dataValues;
