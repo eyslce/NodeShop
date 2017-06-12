@@ -345,4 +345,35 @@
 .sm-find h3{ padding-bottom:16px; font-size:24px;}
 .sm-find .other .btn{ display:inline-block; padding:0 18px; height:36px; line-height:36px; color:#fff;}
 
+/*-----9 9 packages mailed-----*/
+.goods-list .goods-info{ padding:0 5px 12px;}
+.goods-list .seckill-item .info-tit{ width:276px; height:30px; line-height:30px; font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.goods-list .seckill-item .info-tit>a:hover{color:#f4341a; }
+.goods-list .seckill-item .goods-img{ display:block; height:286px;overflow: hidden;position: relative;}
+.goods-list .seckill-item .new{font-family:Arial; font-size:23px; color:#f4341a;}
+.goods-list .seckill-item .sales{ float:right; line-height:26px;}
+.goods-list .seckill-item .old{ float:left; margin-right:10px; font-size:14px; font-family:Arial; color:#a0a0a0;}
+.goods-list .seckill-item .info-mark{ line-height:18px;}
+.goods-list .seckill-item .info-mark:after{ display:block; content:''; clear:both;}
+.goods-list .seckill-item .icon9{ display:block; float:left; line-height:18px; padding:0 5px; font-size:12px; color:#fff; font-style:normal; background-color:#ff472b; border-radius:2px;}
+.goods-list .seckill-item .icon9:after{ display:inline-block; content:'包邮';}
+.goods-list .seckill-item .mall{ float:right; width:46px; height:18px; background:url(../images/icon7.png) no-repeat;}
+.goods-list .seckill-item .bicon01{ background-position:0 -20px;}
+.goods-list .seckill-item .bicon02{ background-position:0 0;}
+.goods-list .seckill-item .info-pinzhi {bottom:0px;position:relative;width:100%;height:32px;line-height:32px;font-size:14px;border-top:1px solid #e5e5e5; clear:both;}
+.goods-list .seckill-item .info-pinzhi>p{ float:left; width:50%; text-align:center;}
+.goods-list .seckill-item .info-pinzhi>p.pinzhi1{ border-right:1px solid #e5e5e5; box-sizing:border-box;}
+.goods-list .seckill-item .info-pinzhi>p.line{ display:none;}
+.goods-list .seckill-item .info-pinzhi a{ display:block;}
+.goods-list .seckill-item .info-pinzhi a:hover{ color:#f4341a;}
+.goods-list .seckill-item .red-packe{ width:82px;height:50px; position:absolute; right:0; top:0; padding-bottom:23px; z-index:500; background:url(../images/getc.png) no-repeat left bottom; background-size:82px 23px;}
+.goods-list .seckill-item .dispacka{ height:50px; text-align:center; line-height:25px; color:#fff; background-color:#ff4c66; font-size:14px;}
+.goods-list .seckill-item .dispacka:before{ display:block; content:'返现金红包';}
+.goods-list .seckill-item .dispacka:after{ display:inline-block; content:'元'}
+.goods-list .seckill-item .dispacka .discount-img{ font-size:18px; font-family:Arial;}
+
+
+
+
+
 
