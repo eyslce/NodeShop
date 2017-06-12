@@ -70,5 +70,40 @@ router.post('/getTicketList',function(req, res, next){
         res.json(result);
     })
 });
-
+/**
+ * 路径：/goods/search
+ * 商品搜索页
+ */
+router.get('/search', function(req, res, next) {
+    var where = {};
+    var serach_name = req.query.search_name;
+    if(serach_name){
+        where.title = {$like:'%'+serach_name+'%'};
+    }
+    //每页分页数
+    var limit = base.page_size;
+    //第几页
+    var pageNo = parseInt(req.query.page_no);
+    if(isNaN(pageNo)){
+        pageNo = 1;
+    }
+    var offset = (pageNo-1)*limit;
+    var orderBy = req.query.orderBy;
+    var direction = req.query.direction;
+    var order = null;
+    if(orderBy&&direction){
+        order = [[orderBy,direction]];
+    }
+    GoodsService.getGoodsList(where,limit,offset,order,function(count,rows){
+        var result = {total_page:count,page_size:limit,data:[]};
+        for(var i in rows){
+            var obj = rows[i].dataValues;
+            obj.click_url = config.ticket_and_goods_url+'activityId='+obj.ticket_id+'&pid=mm_29574340_19906004_68784612&itemId='+obj.goods_id;
+            result.data.push(obj);
+        }
+        console.log(serach_name);
+        res.render(base.getViewPath() +'/search'
+            , _.defaults(base.getCommonParams(),{serach_name:serach_name,result:result}));
+    });
+});
 module.exports = router;
