@@ -69,17 +69,17 @@ var config = {
         dress: {favorites_id: 2418800, favorites_title: '女装', type: 1}
     },
     NeeTaoCate: [
-        {cid: 1, cname: '女装', is_use: 1,icon:'&#xe738;'},
-        {cid: 2, cname: '内衣', is_use: 1,icon:'&#xe738;'},
-        {cid: 3, cname: '母婴', is_use: 1,icon:'&#xe738;'},
-        {cid: 4, cname: '美妆', is_use: 1,icon:'&#xe738;'},
-        {cid: 5, cname: '鞋包配饰', is_use: 1,icon:'&#xe738;'},
-        {cid: 6, cname: '美食', is_use: 1,icon:'&#xe738;'},
-        {cid: 7, cname: '居家', is_use: 1,icon:'&#xe738;'},
-        {cid: 8, cname: '数码家电', is_use: 1,icon:'&#xe738;'},
-        {cid: 9, cname: '男装', is_use: 1,icon:'&#xe738;'},
-        {cid: 10, cname: '文体车品', is_use: 1,icon:'&#xe738;'},
-        {cid: 11, cname: '其他', is_use: 1,icon:'&#xe738;'}
+        {cid: 1, cname: '女装', is_use: 1,icon:'nt-icon-nz'},
+        {cid: 2, cname: '内衣', is_use: 1,icon:'nt-icon-ny'},
+        {cid: 3, cname: '母婴', is_use: 1,icon:'nt-icon-my'},
+        {cid: 4, cname: '美妆', is_use: 1,icon:'nt-icon-mz'},
+        {cid: 5, cname: '鞋包配饰', is_use: 1,icon:'nt-icon-xb'},
+        {cid: 6, cname: '美食', is_use: 1,icon:'nt-icon-ms'},
+        {cid: 7, cname: '居家', is_use: 1,icon:'nt-icon-jj'},
+        {cid: 8, cname: '数码家电', is_use: 1,icon:'nt-icon-sm'},
+        {cid: 9, cname: '男装', is_use: 1,icon:'nt-icon-man'},
+        {cid: 10, cname: '文体车品', is_use: 1,icon:'nt-icon-wt'},
+        {cid: 11, cname: '其他', is_use: 1,icon:'nt-icon-qt'}
     ]
 
 };

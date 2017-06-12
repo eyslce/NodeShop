@@ -82,7 +82,29 @@
 .cate-menu>li>a:after{ display:block; position:absolute; right:0; top:12px; width:1px; height:15px; background-color:#eee; content:'';}
 .cate-menu>li>a:hover{ color:#fe5800;}
 .cate-menu>li:nth-child(2n)>a:after{ background-color:#fff;}
-.cate-menu .nt-icon{ position:relative; top:-2px; display:inline-block; margin-right:3px; height:24px; width:24px; line-height:24px; font-size:18px; vertical-align:middle;}
+.cate-menu .nt-icon{ position:relative; top:-3px; display:inline-block; margin-right:3px; height:24px; width:24px; line-height:24px; font-size:18px; vertical-align:middle; background:url(../images/nt_icon.png) no-repeat;}
+.cate-menu .nt-icon-nz{ background-position: 0 0;}
+.cate-menu a:hover>.nt-icon-nz{background-position:0 -24px;}
+.cate-menu .nt-icon-ny{ background-position:-288px 0;}
+.cate-menu a:hover>.nt-icon-ny{background-position:-288px -24px;}
+.cate-menu .nt-icon-my{ background-position:-96px 0;}
+.cate-menu a:hover>.nt-icon-my{background-position:-288px -24px;}
+.cate-menu .nt-icon-mz{ background-position:-120px 0;}
+.cate-menu a:hover>.nt-icon-my{ background-position:-120px -24px;}
+.cate-menu .nt-icon-xb{ background-position:-48px 0;}
+.cate-menu a:hover>.nt-icon-xb{ background-position:-48px -24px;}
+.cate-menu .nt-icon-ms{ background-position:-216px 0;}
+.cate-menu a:hover>.nt-icon-ms{ background-position:-216px -24px;}
+.cate-menu .nt-icon-jj{ background-position:-144px 0;}
+.cate-menu a:hover>.nt-icon-jj{ background-position:-144px -24px;}
+.cate-menu .nt-icon-sm{ background-position:-240px 0;}
+.cate-menu a:hover>.nt-icon-sm{ background-position:-240px -24px;}
+.cate-menu .nt-icon-man{ background-position:-24px 0;}
+.cate-menu a:hover>.nt-icon-man{ background-position:-24px -24px;}
+.cate-menu .nt-icon-wt{ background-position:-192px 0;}
+.cate-menu a:hover>.nt-icon-wt{ background-position:-192px -24px;}
+.cate-menu .nt-icon-qt{ background-position:-336px 0;}
+.cate-menu a:hover>.nt-icon-qt{ background-position:-336px -24px;}
 
 /*--3个广告图--*/
 .ad-top {overflow: hidden;margin: 10px 0px;}
@@ -112,6 +134,7 @@
 .goods-list>li:hover .gray-icon>a{ width:47px; padding-left:5px; color:#fff; background-color:#f4341a; border-radius:4px;}
 .goods-list>li:hover .gray-icon>a i{ display:none;}
 .goods-list .goods-pic{height:286px;overflow: hidden;position: relative;}
+.goods-list .goods-pic a{ display:block; background:url(../images/mrbg.png) no-repeat center;}
 .goods-list .goods-pic img {width: 100%;}
 .goods-list .goods-pic .ticket-tab {position: absolute;bottom: 0;background:rgba(248,56,84,0.9);color: #fff;text-align: center; height: 40px;line-height: 40px;width: 100%;font-size: 18px;z-index: 100;}
 .goods-list .goods-pic .ticket-tab:hover {background: #f5344f;cursor: pointer;}
@@ -349,7 +372,7 @@
 .goods-list .goods-info{ padding:0 5px 12px;}
 .goods-list .seckill-item .info-tit{ width:276px; height:30px; line-height:30px; font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 .goods-list .seckill-item .info-tit>a:hover{color:#f4341a; }
-.goods-list .seckill-item .goods-img{ display:block; height:286px;overflow: hidden;position: relative;}
+.goods-list .seckill-item .goods-img{ display:block; height:286px;overflow: hidden;position: relative; background:url(../images/mrbg.png) no-repeat center;}
 .goods-list .seckill-item .new{font-family:Arial; font-size:23px; color:#f4341a;}
 .goods-list .seckill-item .sales{ float:right; line-height:26px;}
 .goods-list .seckill-item .old{ float:left; margin-right:10px; font-size:14px; font-family:Arial; color:#a0a0a0;}

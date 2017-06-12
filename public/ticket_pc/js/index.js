@@ -3,6 +3,8 @@
     $(document).ready(function(){
          $('.J-banner-list').imgSlider();
          $('.J-subcage').setTab();
+         $('.J-nav-menu').setNav();
+         $('.J-hottest').setCage();
     });
 
     //默认设置参数
@@ -80,6 +82,42 @@
                     smain.find(".sLevel").text(sLevel).end().find(".subLeve").text(sublev);
                     smain.find(".queslist").eq(index).removeClass("none").siblings().addClass("none");
                 })
+            })
+
+        })
+    }
+
+    //中部导航
+    $.fn.setNav = function(){
+        return this.each(function(){
+            var thisTag = $(this);
+            var thisLi = thisTag.find('li');
+            var thisLoc = ((location.pathname).split("/"))[1];
+            thisLi.each(function(){
+                var thisLink = $('a',this);
+                var thisData = thisLink.attr('data-nav');
+
+                if(thisData===thisLoc){
+                    $(this).find('a').addClass('on').parent().siblings().find('a').removeAttr('class');
+
+                }
+            })
+
+        })
+    }
+
+    //内页分类
+    $.fn.setCage = function(){
+        return this.each(function(){
+            var thisTag = $(this);
+            var tahiLik = $('a',this);
+            var thisLoc = (location.href).split('?');
+            var thisLm = thisLoc[1];
+            tahiLik.each(function(){
+                var thisData = $(this).attr('href');
+                if(thisData.indexOf(thisLm) > 0){
+                    console.log(thisData);
+                }
             })
 
         })

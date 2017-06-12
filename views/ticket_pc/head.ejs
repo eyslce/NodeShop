@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
+    <base href="/" />
     <meta charset="UTF-8">
     <title>【狸淘网官网】狸淘网,天天特价,九块邮,九块九包邮,9.9特卖,9.9包邮,9块9包邮秒杀尽在狸淘网</title>
     <meta name="keywords" content="狸淘网,导购网,狸淘网,u站,天天特价,九块邮,九块九包邮,9.9特卖,9.9包邮,9块9包邮官网">
@@ -27,7 +27,7 @@
     <!------头部导航------>
     <div class="head-top">
         <div class="w1205 middle">
-            
+
         </div>
     </div>
 
@@ -36,14 +36,14 @@
         <div class="w1205 middle">
 
             <div class="head-log left">
-                <a href="/"><img src="ticket_pc/images/logo2x.png" /></a>
+                <a><img src="ticket_pc/images/logo2x.png" /></a>
             </div>
 
             <div class="head-search left">
                 <div class="search-form">
-                    <form action="#" method="get">
-                        <input type="text" class="search-field" placeholder="请输入想找的宝贝" />
-                        <input type="button" class="search-btn" />
+                    <form action="/goods/search" method="get">
+                        <input name="search_name" type="text" class="search-field" placeholder="请输入想找的宝贝" />
+                        <input type="submit" class="search-btn" />
                     </form>
                 </div>
             </div>
@@ -63,11 +63,11 @@
     <nav>
         <div class="head-nav">
             <div class="w1205 middle">
-                <ul class="nav-menu left">
-                    <li><a class="on" href="/index">首页新品</a></li>
-                    <li><a href="/package?category=99">9块9包邮</a></li>
-                    <li><a href="/hot">热销排行</a></li>
-                    <li><a href="/redpacket">现金红包</a></li>
+                <ul class="nav-menu left J-nav-menu">
+                    <li><a class="on" href="/index" data-nav="index">首页新品</a></li>
+                    <li><a href="/package?category=99" data-nav="package">9块9包邮</a></li>
+                    <li><a href="/hot" data-nav="hot">热销排行</a></li>
+                    <li><a href="/redpacket" data-nav="redpacket">现金红包</a></li>
                     <li><a href="//shang.qq.com/wpa/qunwpa?idkey=169eda0e64c5e66a93c7a1900b1677510c1b11f33a66849842c3c7b3c7055bab">福利Q群</a></li>
                 </ul>
             </div>

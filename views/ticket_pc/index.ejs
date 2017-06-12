@@ -25,7 +25,7 @@
                <div class="top-remain hot-hunt left">
                    <ul class="cate-menu">
 					   <% for(var i in all_category){ %>
-					   <li><a href="/cage?category_id=<%=all_category[i].cid%>"><%=all_category[i].cname%></a></li>
+					   <li><a href="/cage?category_id=<%=all_category[i].cid%>"><i class="nt-icon <%= all_category[i].icon%>"></i><%=all_category[i].cname%></a></li>
 					   <% }%>
 
 				  </ul>
