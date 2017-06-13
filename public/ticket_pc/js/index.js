@@ -116,7 +116,7 @@
             tahiLik.each(function(){
                 var thisData = $(this).attr('href');
                 if(thisData.indexOf(thisLm) > 0){
-                    console.log(thisData);
+                    $(this).addClass('hover').siblings().removeAttr('class');
                 }
             })
 
