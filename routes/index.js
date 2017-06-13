@@ -41,7 +41,9 @@ router.get('/catid', function(req, res, next) {
 });
 router.get('/cage', function(req, res, next) {
     var category_id = req.query.category_id;
-    res.render(base.getViewPath() +'/cage',_.defaults(base.getCommonParams(),{category_id:category_id}));
+    var local_vars =  {};
+    _.assignIn(local_vars,base.getCommonParams(),{category_id:category_id});
+    res.render(base.getViewPath() +'/cage',local_vars);
 });
 router.get('/coupon', function(req, res, next) {
     res.render(base.getViewPath() +'/coupon',base.getCommonParams());

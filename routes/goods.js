@@ -32,7 +32,7 @@ router.post('/getlist', function (req, res, next) {
                 goods_data.results.uatm_tbk_item.splice(i,1);
             }
         }
-        res.json(_.defaults(goods_data, {page_size: base.page_size}));
+        res.json(_.assignIn(goods_data, {page_size: base.page_size}));
     });
 });
 
@@ -101,9 +101,11 @@ router.get('/search', function(req, res, next) {
             obj.click_url = config.ticket_and_goods_url+'activityId='+obj.ticket_id+'&pid='+config.pid+'&itemId='+obj.goods_id;
             result.data.push(obj);
         }
+        var local_vars =  {};
+        _.assignIn(local_vars,base.getCommonParams(),{serach_name:serach_name,result:result});
         //渲染视图
         res.render(base.getViewPath() +'/search'
-            , _.defaults(base.getCommonParams(),{serach_name:serach_name,result:result}));
+            ,local_vars);
     });
 });
 module.exports = router;
