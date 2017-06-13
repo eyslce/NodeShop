@@ -38,7 +38,7 @@ var index = {
                     + '<div class="info-pinzhi hidden-sm hidden-md">'
                     + '<p class="pinzhi1"><a href="/ensure"><i class="free-icon icon1"></i>已缴保证金</a></p>'
                     + '<p class="line">|</p>'
-                    + '<p class="pinzhi2"><a href="/ensure"><i class="free-icon icon1"></i>狸淘品质保障</a></p>'
+                    + '<p class="pinzhi2"><a href="/ensure"><i class="free-icon icon1"></i>商家品质保障</a></p>'
                     + '</div>'
                     + '</div>'
                     + '</li>';
