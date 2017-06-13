@@ -163,7 +163,7 @@
 .goods-list .goods-tips a {float:left;display:block;width:50%;text-align:center;}
 .goods-list .goods-tips a:hover{ color:#f4341a;}
 .goods-list .goods-tips a:nth-child(1) {border-right:1px solid #e5e5e5;box-sizing: border-box;width: 50%;}
-.goods-list .goods-tips a>i{ position:relative; bottom:-2px; margin-right:2px; font-size:18px;}
+.goods-list .goods-tips a>i{ position:relative; bottom:0; margin-right:2px; font-size:18px;}
 
  /*红包*/
 .goods-list .red-package-tips {width: 82px;height:73px; font-size:14px;position: absolute;right: 0;top: 0;z-index: 500;}
