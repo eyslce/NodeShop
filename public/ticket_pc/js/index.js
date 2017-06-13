@@ -111,11 +111,11 @@
         return this.each(function(){
             var thisTag = $(this);
             var tahiLik = $('a',this);
-            var thisLoc = (location.href).split('?');
-            var thisLm = thisLoc[1];
+            var thisLoc = (location.href).split('/');
+            var thisLm = ("/" + thisLoc[3]);
             tahiLik.each(function(){
                 var thisData = $(this).attr('href');
-                if(thisData.indexOf(thisLm) > 0){
+                if(thisData === thisLm){
                     $(this).addClass('hover').siblings().removeAttr('class');
                 }
             })
