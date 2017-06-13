@@ -24,16 +24,17 @@
 .head-menu>li{ float:left; margin-left:12px; line-height:36px;}
 
 /*The head search*/
-.head-mid{ padding:16px 0 12px; background-color:#fff;}
+.head-mid{ padding:20px 0 18px; background-color:#fff;}
 .head-log {width: 380px;}
 .head-log img {width:76%;margin-top: -5px;}
-.head-search {overflow: hidden;}
+.head-search { padding-top:12px; overflow: hidden;}
 .head-search .search-form{ height:36px;}
 .head-search .search-field{ float:left; padding:0 6px 0 12px; width:270px; height:32px; border:2px solid #fe5800; border-width:2px 0 2px 2px; background-color:transparent;}
 .head-search .search-btn{ float:left; width:78px; height:36px; background:url(../images/ico-header9.png) no-repeat 0 -40px; border:none; cursor:pointer; text-indent:-22em;}
 .head-hot{ width:370px; height:22px; overflow:hidden;margin-left:0;margin-top: 10px;}
 .head-hot>li{float:left; line-height:18px; margin-left:12px}
 .head-hot>li>a:hover{ color:#fe5800;}
+.head-tips{ padding-top:12px;}
 
 .bz-list li{ float:left; margin-left:10px; font-size:18px; line-height:36px;}
 .bz-list li>i{ float:left; margin-right:6px; font-size:36px; color:#fe5800;}
