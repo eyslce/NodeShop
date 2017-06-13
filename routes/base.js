@@ -12,7 +12,7 @@ function base() {
     //公共参数
     var common_params = {};
     //每页分页数
-    this.page_size = 48;
+    this.page_size = 100;
     //初始化
     this.init = function (req, res, next) {
         //生成淘点金签名参数
