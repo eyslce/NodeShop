@@ -80,7 +80,9 @@ var config = {
         {cid: 9, cname: '男装', is_use: 1,icon:'nt-icon-man'},
         {cid: 10, cname: '文体车品', is_use: 1,icon:'nt-icon-wt'},
         {cid: 11, cname: '其他', is_use: 1,icon:'nt-icon-qt'}
+
     ]
 
 };
+
 module.exports = config;
