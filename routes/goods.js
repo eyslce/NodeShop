@@ -98,10 +98,10 @@ router.get('/search', function(req, res, next) {
         var result = {total_page:count,page_size:limit,data:[]};
         for(var i in rows){
             var obj = rows[i].dataValues;
-            obj.click_url = config.ticket_and_goods_url+'activityId='+obj.ticket_id+'&pid=mm_29574340_19906004_68784612&itemId='+obj.goods_id;
+            obj.click_url = config.ticket_and_goods_url+'activityId='+obj.ticket_id+'&pid='+config.pid+'&itemId='+obj.goods_id;
             result.data.push(obj);
         }
-        console.log(serach_name);
+        //渲染视图
         res.render(base.getViewPath() +'/search'
             , _.defaults(base.getCommonParams(),{serach_name:serach_name,result:result}));
     });
