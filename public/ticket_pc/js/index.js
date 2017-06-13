@@ -112,11 +112,15 @@
             var thisTag = $(this);
             var tahiLik = $('a',this);
             var thisLoc = (location.href).split('/');
+            var thisCag = (location.href).split('=');
             var thisLm = ("/" + thisLoc[3]);
+
             tahiLik.each(function(){
                 var thisData = $(this).attr('href');
                 if(thisData === thisLm){
                     $(this).addClass('hover').siblings().removeAttr('class');
+                    category_id = thisCag[1];
+
                 }
             })
 

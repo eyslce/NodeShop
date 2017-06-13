@@ -135,7 +135,7 @@
 .goods-list>li:hover .gray-icon>a{ width:47px; padding-left:5px; color:#fff; background-color:#f4341a; border-radius:4px;}
 .goods-list>li:hover .gray-icon>a i{ display:none;}
 .goods-list .goods-pic{height:286px;overflow: hidden;position: relative;}
-.goods-list .goods-pic a{ display:block; background:url(../images/mrbg.png) no-repeat center;}
+.goods-list .goods-pic a{ display:block; height:100%; width:100%; background:url(../images/mrbg.png) no-repeat center;}
 .goods-list .goods-pic img {width: 100%;}
 .goods-list .goods-pic .ticket-tab {position: absolute;bottom: 0;background:rgba(248,56,84,0.9);color: #fff;text-align: center; height: 40px;line-height: 40px;width: 100%;font-size: 18px;z-index: 100;}
 .goods-list .goods-pic .ticket-tab:hover {background: #f5344f;cursor: pointer;}

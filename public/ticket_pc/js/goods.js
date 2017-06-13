@@ -53,7 +53,7 @@ var index = {
                 html += '<span>销量:' + item[i].sales_num + '</span>'
                     + '</div>'
                     + '<div class="goods-tips">'
-                    + '<a><i class="iconfont">&#xe66a;</i>已缴保证金</a><a><i class="iconfont">&#xe78d;</i>进群领红包</a>'
+                    + '<a><i class="iconfont">&#xe66a;</i>已缴保证金</a><a><i class="iconfont">&#xe68c;</i>进群领红包</a>'
                     + '</div>'
                     + '<div class="red-package-tips">'
                     + '<a href="#"><span>返现金红包</span>'
