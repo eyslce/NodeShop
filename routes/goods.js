@@ -80,6 +80,14 @@ router.get('/search', function(req, res, next) {
     if(serach_name){
         where.title = {$like:'%'+serach_name+'%'};
     }
+    var is_tmall =  req.query.is_tmall;
+    if(typeof(is_tmall) != 'undefined' && is_tmall != null){
+        where.is_tmall = is_tmall;
+    }
+    var sort_name = req.query.sort_name;
+    if(typeof(sort_name) == 'undefined' || sort_name == null){
+        sort_name = 'all';
+    }
     //每页分页数
     var limit = base.page_size;
     //第几页
@@ -102,7 +110,7 @@ router.get('/search', function(req, res, next) {
             result.data.push(obj);
         }
         var local_vars =  {};
-        _.assignIn(local_vars,base.getCommonParams(),{serach_name:serach_name,result:result});
+        _.assignIn(local_vars,base.getCommonParams(),{sort_name:sort_name,serach_name:serach_name,result:result});
         //渲染视图
         res.render(base.getViewPath() +'/search'
             ,local_vars);

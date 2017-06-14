@@ -11,11 +11,10 @@
 					<span class="choice-title left">您搜索的 > </span>
 					<div class="choice-condite left">
 						<div class="choice-item left">
-							<span class="choice-matter">关键词：<b><%=serach_name%></b><i class="iconfont">&#xe663;</i></span>
+							<span class="choice-matter">关键词：<b><%=serach_name%></b></span>
 						</div>
 						<p class="choice-num left">为您找到<b><%=result.total_page%></b>款商品</p>
 					</div>
-					<div class="choice-right right"><a href="/goods/search?serach_name=<%=serach_name%>"><i class="iconfont">&#xe667;</i>清除所有条件</a></div>
 					<div class="clear"></div>
 				</div>
 				<div class="goods-type-filter">
@@ -30,8 +29,12 @@
 					</div>
 				</div>
 				<div class="sort">
-					<a class="sort-nav sort-curn">综合</a><a class="sort-nav">销量</a><a class="sort-nav">价格<span><i class="up_triangle"></i><i class="down_triangle"></i></span></a><a class="sort-nav">最新</a>
-					<a class="sort-chose sort-checked"><i></i>只看特卖商城</a><a class="sort-chose"><i></i>只看天猫/淘宝</a>
+					<a href="/goods/search?search_name=<%=serach_name%>&sort_name=all" class="sort-nav <%if(sort_name == 'all'){%>sort-curn<%}%>">综合</a>
+                    <a href="/goods/search?search_name=<%=serach_name%>&sort_name=sales_num&orderBy=sales_num&direction=desc" class="sort-nav <%if(sort_name == 'sales_num'){%>sort-curn<%}%>">销量</a>
+                    <a href="/goods/search?search_name=<%=serach_name%>&sort_name=price&orderBy=price&direction=asc" class="sort-nav <%if(sort_name == 'price'){%>sort-curn<%}%>">价格</a>
+                    <a href="/goods/search?search_name=<%=serach_name%>&sort_name=newest&orderBy=id&direction=desc" class="sort-nav <%if(sort_name == 'newest'){%>sort-curn<%}%>">最新</a>
+					<a href="/goods/search?search_name=<%=serach_name%>&sort_name=tmall&is_tmall=1" class="sort-nav <%if(sort_name == 'tmall'){%>sort-curn<%}%>">只看天猫</a>
+                    <a href="/goods/search?search_name=<%=serach_name%>&sort_name=taobao&is_tmall=0" class="sort-nav <%if(sort_name == 'taobao'){%>sort-curn<%}%>">只看淘宝</a>
 				</div>
 				<div class="floor-goods">
 					<ul class="goods-list">
@@ -84,5 +87,4 @@
 
 	</div>
 </article>
-
 <%include foot %>
