@@ -411,9 +411,8 @@
 .goods-list .seckill-item .dispacka .discount-img{ font-size:18px; font-family:Arial;}
 
 /*红包页面*/
-.redpacket-content {background: #fff;padding: 10px 0px 0px 30px 0px;}
-.redpacket-content  h3 {height:30px;line-height: 30px;font-weight: bold;font-size:18px;text-align: center;}
-
+.redpacket-content { margin:20px 0; border:1px solid #eee; background: #fff;padding: 10px 0px 0px 30px;}
+.redpacket-content  h3{height:30px;line-height: 30px;font-weight: bold;font-size:18px;text-align: center;}
 .redpacket-content .red-1 {margin-top: 10px;overflow: hidden;}
 .redpacket-content .red-1 .red-1-left {float: left;}
 .redpacket-content .red-1 .red-1-left p {line-height: 25px;font-size:16px;padding-left: 30px;}
