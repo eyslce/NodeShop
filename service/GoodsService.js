@@ -4,7 +4,7 @@
 var _ = require('lodash');
 var model = require('../models/model.js');
 function GoodsService() {
-
+    this.filter = {ticket_time: {gt: new Date().toLocaleString()}};
 }
 
 /**
@@ -12,7 +12,7 @@ function GoodsService() {
  */
 GoodsService.prototype.getGoodsList = function (where, limit, offset, order, callback) {
     var search_where = {};
-    _.assignIn(search_where,where, {ticket_time: {gt: new Date().toLocaleString()}});
+    _.assignIn(search_where,where,this.filter);
     var fields = ['id', 'source', 'p_goods_id', 'goods_id', 'title', 'd_title'
         , 'pic', 'cid', 'org_price', 'price', 'is_tmall', 'sales_num', 'dsr'
         , 'seller_id', 'commission_plan', 'commission_queqiao', 'plan_link'
@@ -22,7 +22,7 @@ GoodsService.prototype.getGoodsList = function (where, limit, offset, order, cal
     model.nt_goods
         .findAndCountAll({
             attributes: fields,
-            where: where,
+            where: search_where,
             limit: limit,
             offset: offset,
             order: order || [["id", "desc"]]
