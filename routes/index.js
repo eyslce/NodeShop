@@ -43,7 +43,10 @@ router.get('/cage', function(req, res, next) {
  * 底部说明页面
  */
 router.get('/issue', function(req, res, next) {
-    res.render(base.getViewPath() +'/issue',base.getCommonParams());
+    var issue_id = req.query.issue_id;
+    var loca_vars = {};
+    _.assignIn(loca_vars,base.getCommonParams(),{issue_id:issue_id});
+    res.render(base.getViewPath() +'/issue',loca_vars);
 });
 /**
  * 现金红包页面

@@ -70,18 +70,21 @@
     $.fn.setTab = function(){
         return this.each(function(){
             var thisTag = $(this);
+            var thisLik = $('.subside-cage',this);
+            var smain =  thisTag.find('.sidebox');
+            thisLik.find("a").each(function(index,elem){
 
-            thisTag.find("a").each(function(index,elem){
-                $(elem).click(function(){
-                    var sLevel = $(this).parents(".subside-list").prev().text();
-                    var sublev = $(this).text();
-                    var smain =  $(this).parents(".middle").find('.sidebox');
-                    $(this).addClass("active").parent().siblings().children().removeClass("active");
-                    debugger;
-                    $(this).parents(".subside-mod").siblings().find("a").removeClass("active");
+                var thisHref = $(this).attr('href');
+                var sublev = $(this).text();
+                var sLevel = $(this).parents(".subside-list").prev().text();
+                if(thisHref.indexOf(issue_id)>0){
                     smain.find(".sLevel").text(sLevel).end().find(".subLeve").text(sublev);
+                    thisLik.find("a").eq(index).addClass('active').parent().siblings().find('a').removeAttr('class');
                     smain.find(".queslist").eq(index).removeClass("none").siblings().addClass("none");
-                })
+                }
+
+
+
             })
 
         })
