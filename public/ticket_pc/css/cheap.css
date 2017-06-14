@@ -193,8 +193,8 @@
 .page .page-sel select{ float:left; width:74px; height:34px; line-height:34px; font-size:14px; border:1px solid #eee; color:#666;}
 
 /***********At the bottom of the web site************/
-.foot{ border-top:4px solid #f4341a; background-color:#fff;}
-.foot-top{ padding:12px 0;}
+.foot{ border-top:2px solid #f4341a; background-color:#fff;}
+.foot-top{ padding:12px 0;padding-bottom: 0px;}
 .foot-top dl{ background:url(../images/boot_bg.gif) no-repeat left center;}
 .foot-top dl,.foot-top>.foot-log{ padding:10px 20px;}
 .foot-top>.foot-log img{ width:260px; height:60px;}
@@ -428,4 +428,4 @@
 .redpacket-content .red-3 li {float:left;margin: 10px;margin-bottom: 30px;width: 320px;}
 .redpacket-content .red-3 li .red-pic {width:320px;height:565px;overflow: hidden;border:1px solid #f6f6f6;}
 .redpacket-content .red-3 li span {font-size:15px;margin-top: 10px;display: block;}
-/*.redpacket-content .red-3 li img {width:60%;}*/
+.redpacket-content .red-tips {padding: 5px 0px 20px 0px;}
