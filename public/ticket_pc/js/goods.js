@@ -56,7 +56,7 @@ var index = {
                     + '<a><i class="iconfont">&#xe66a;</i>已缴保证金</a><a><i class="iconfont">&#xe68c;</i>进群领红包</a>'
                     + '</div>'
                     + '<div class="red-package-tips">'
-                    + '<a href="#"><span>返现金红包</span>'
+                    + '<a href="/redpacket"><span>返现金红包</span>'
                     + '<span><em>' + (price<1?1:price)+ '</em>元</span></a>'
                     + '</div>'
                     + '</li>';
