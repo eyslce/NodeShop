@@ -192,8 +192,9 @@
 .foot-top .foot-cage dd,.foot-top .foot-other dd{ margin-right:10px; line-height:25px;}
 .foot-top .foot-cage dd a,.foot-top .foot-other dd a{ color:#7b7b7b;}
 .foot-top .foot-cage dd a:hover,.foot-top .foot-other dd a:hover{ color:#fe5800;}
-.foot-top .ewcode img{ width:74px; height:74px;}
-.foot-top .ewcode dd{ margin: 10px 0 0 6px; font-size:14px; float:left;}
+.foot-top .ewcode {padding-top: 0px;}
+.foot-top .ewcode img{ width:120px; height:120px;}
+.foot-top .ewcode dd{ text-align:center;font-size:14px;}
 .foot-bom{ padding:12px 0; line-height:24px; border-top:1px solid #ddd;}
 .link-list{ overflow:hidden;}
 .link-list>a{  margin-right:10px;}
@@ -396,8 +397,23 @@
 .goods-list .seckill-item .dispacka:after{ display:inline-block; content:'元'}
 .goods-list .seckill-item .dispacka .discount-img{ font-size:18px; font-family:Arial;}
 
+/*红包页面*/
+.redpacket-content {background: #fff;padding: 10px 0px 0px 30px 0px;}
+.redpacket-content  h3 {height:30px;line-height: 30px;font-weight: bold;font-size:18px;text-align: center;}
 
+.redpacket-content .red-1 {margin-top: 10px;overflow: hidden;}
+.redpacket-content .red-1 .red-1-left {float: left;}
+.redpacket-content .red-1 .red-1-left p {line-height: 25px;font-size:16px;padding-left: 30px;}
+.redpacket-content .red-1 .red-1-left p:nth-child(2) {margin-top: 30px;}
+.redpacket-content .red-1 .red-1-right {float: left;width: 120px;height:120px;overflow: hidden;}
+.redpacket-content .red-2 {font-size:16px;margin-top: 10px;padding-left: 30px;}
+.redpacket-content .red-2 p{line-height: 25px;}
+.redpacket-content .red-2 p span.red-buy {color:blue;}
+.redpacket-content .red-2 p span.red-cart {color:red;}
 
-
-
-
+.redpacket-content .red-3 {overflow: hidden;margin-top: 30px;}
+.redpacket-content .red-3 h3 {text-align: left;font-size:16px;color:#666;padding-left: 30px}
+.redpacket-content .red-3 li {float:left;margin: 10px;margin-bottom: 30px;width: 320px;}
+.redpacket-content .red-3 li .red-pic {width:320px;height:565px;overflow: hidden;border:1px solid #f6f6f6;}
+.redpacket-content .red-3 li span {font-size:15px;margin-top: 10px;display: block;}
+/*.redpacket-content .red-3 li img {width:60%;}*/
