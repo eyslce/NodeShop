@@ -14,9 +14,12 @@
 
 /***********The head************/
 /*the top of the navigation*/
-.head-top{ height:36px; background-color:#f6f6f6;}
-.head-top a{ color:#6c6c6c;}
-.head-top a:hover{ color:#ff4a00;}
+.head-top{ height:36px;line-height: 36px; background-color:#f6f6f6;}
+.head-top div {position: relative;}
+.head-top p {text-align: center;font-size:14px;}
+.head-top p a{ color:red;margin: 0px 3px;text-decoration: underline;}
+.head-top p a:hover{ color:#ff4a00;}
+.head-top span {position: absolute;top:0px;right:50px;}
 .head-login>li{ float:left; margin-right:12px; line-height:36px;}
 .head-login .head-icon{ width:16px; height:14px; margin:10px 4px 0 2px;}
 .head-login .qq-icon{ background-position:-10px -10px;}
@@ -193,8 +196,8 @@
 .page .page-sel select{ float:left; width:74px; height:34px; line-height:34px; font-size:14px; border:1px solid #eee; color:#666;}
 
 /***********At the bottom of the web site************/
-.foot{ border-top:4px solid #f4341a; background-color:#fff;}
-.foot-top{ padding:12px 0;}
+.foot{ border-top:2px solid #f4341a; background-color:#fff;}
+.foot-top{ padding:12px 0;padding-bottom: 0px;}
 .foot-top dl{ background:url(../images/boot_bg.gif) no-repeat left center;}
 .foot-top dl,.foot-top>.foot-log{ padding:10px 20px;}
 .foot-top>.foot-log img{ width:260px; height:60px;}
@@ -411,9 +414,8 @@
 .goods-list .seckill-item .dispacka .discount-img{ font-size:18px; font-family:Arial;}
 
 /*红包页面*/
-.redpacket-content {background: #fff;padding: 10px 0px 0px 30px 0px;}
-.redpacket-content  h3 {height:30px;line-height: 30px;font-weight: bold;font-size:18px;text-align: center;}
-
+.redpacket-content { margin:20px 0; border:1px solid #eee; background: #fff;padding: 10px 0px 0px 30px;}
+.redpacket-content  h3{height:30px;line-height: 30px;font-weight: bold;font-size:18px;text-align: center;}
 .redpacket-content .red-1 {margin-top: 10px;overflow: hidden;}
 .redpacket-content .red-1 .red-1-left {float: left;}
 .redpacket-content .red-1 .red-1-left p {line-height: 25px;font-size:16px;padding-left: 30px;}
@@ -429,4 +431,4 @@
 .redpacket-content .red-3 li {float:left;margin: 10px;margin-bottom: 30px;width: 320px;}
 .redpacket-content .red-3 li .red-pic {width:320px;height:565px;overflow: hidden;border:1px solid #f6f6f6;}
 .redpacket-content .red-3 li span {font-size:15px;margin-top: 10px;display: block;}
-/*.redpacket-content .red-3 li img {width:60%;}*/
+.redpacket-content .red-tips {padding: 5px 0px 20px 0px;}
