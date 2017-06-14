@@ -7,12 +7,8 @@ var crypto = require('crypto');
 function base() {
     //是否移动端
     var is_mobile = false;
-    //视图
-    var view_path ;
     //公共参数
     var common_params = {};
-    //每页分页数
-    this.page_size = 100;
     //初始化
     this.init = function (req, res, next) {
         //生成淘点金签名参数
@@ -26,7 +22,7 @@ function base() {
         res.cookie("timestamp",timestamp);
         res.cookie("sign",sign);
         //设置视图路径
-        view_path = 'ticket_pc';
+        common_params.view_path = 'ticket_pc';
         if(isMobile(req)){
             is_mobile = true;
             //view_path ='mobile';
@@ -43,7 +39,7 @@ function base() {
     };
     //获取视图路径
     this.getViewPath = function(){
-        return view_path;
+        return common_params.view_path;
     };
     //判断是否移动端
     this.isMobile = function(){

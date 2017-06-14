@@ -14,23 +14,13 @@
 <div class="w1205 middle">
   <section>
       <div class="floor-list">
-
-          <div class="floor-goods">
-              <ul class="goods-list">
-
-              </ul>
-          </div>
-
+          <!--加载商品列表 -->
+          <%include goods %>
+          <!--加载分页数据 -->
           <%include page %>
       </div>
-
   </section>
 
  </div>
 </article>
-<script type="text/javascript">
-    var orderBy = 'sales_num';
-    var direction = 'desc';
-</script>
-<script type="text/javascript" src="ticket_pc/js/goods.js"></script>
 <% include foot %>

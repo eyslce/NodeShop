@@ -1,7 +1,47 @@
 <!------商品列表------>
 <div class="floor-goods">
     <ul class="goods-list">
-
+        <% var item = result.data; %>
+        <% for(var i in item){%>
+        <li>
+            <div class="goods-pic">
+                <a href="<%=item[i].click_url%>"><img src="<%=item[i].pic%>" /></a>
+                <p class="ticket-tab">优惠券<%=item[i].ticket_price%>元</p>
+            </div>
+            <h3 class="goods-name"><a href="<%=item[i].click_url%>"><%=item[i].title%></a></h3>
+            <div class="goods-price left">
+                <div class="new-price">
+                    <span class="left sell-prb">￥</span>
+                    <label class="left sell-prb"><%=item[i].price%></label>
+                </div>
+                <div class="old-price">
+                    <p>￥<%=item[i].org_price%></p><i class="icon-fan">包邮</i>
+                </div>
+            </div>
+            <div class="gray-icon">
+                <% if(item[i].is_tmall == 1){ %>
+                <a  data-source="天猫" href="<%=item[i].click_url %>" target="_blank"><i class="m-icon"></i>天猫</a>
+                <% }else{ %>
+                <a  data-source="淘宝" href="<%=item[i].click_url %>" target="_blank"><i class="t-icon"></i>淘宝</a>
+                <% } %>
+                <span>销量:<%=item[i].sales_num%></span>
+            </div>
+            <div class="goods-tips">
+                <a><i></i>已缴保证金</a>
+                <a><i></i>进群领红包</a>
+            </div>
+            <div class="red-package-tips">
+                <% if(item[i].commission_plan > item[i].commission_queqiao){
+                    var final_price = item[i].price * item[i].commission_plan/100;
+                }else{
+                    var final_price = item[i].price * item[i].commission_queqiao/100;
+                }
+                    var price = Math.floor(final_price * 0.7);price = price<1?1:price;%>
+                <a href="#"><span>返现金红包</span>
+                    <span><em><%=price%></em>元</span></a>
+            </div>
+        </li>
+        <% }%>
     </ul>
 </div>
 

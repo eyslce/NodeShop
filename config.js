@@ -8,6 +8,7 @@ var config = {
     adzone_id: 68784612,
     pid: 'mm_29574340_19906004_68784612',
     ticket_and_goods_url: 'http://uland.taobao.com/coupon/edetail?dx=1&src=neetao&',
+    page_size:100,
     //mysql配置
     mysql: {
         host: process.env.MYSQL_HOST,

@@ -5,7 +5,9 @@
     <!------今日新品------>
     <div class="cate-nav">
         <div class="middle w1205 hottest">
-            <a class="hover">全部<i>(3259)</i></a><a>上衣<i>(359)</i></a><a>套装<i>(329)</i></a><a>裙子<i>(59)</i></a><a>上衣<i>(359)</i></a><a>套装<i>(329)</i></a><a>裙子<i>(59)</i></a>
+            <% for(var i in all_category){ %>
+            <a href="/cage?category_id=<%=all_category[i].cid%>"><%=all_category[i].cname%></a>
+            <% }%>
         </div>
     </div>
     <div class="w1205 middle">
@@ -59,5 +61,4 @@
 
     </div>
 </article>
-<!--<script type="text/javascript" src="ticket_pc/js/goods.js"></script>-->
 <%include foot %>

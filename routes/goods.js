@@ -4,23 +4,40 @@ var base = require('./base.js');
 var baseApi = require('../lib/baseApi.js');
 var config = require('../config.js');
 var _ = require('lodash');
-var GoodsService = require('../service/GoodsService.js');
+var goodsRequest = require('../lib/goodsRequest.js');
+
 
 router.use(base.init);
 /**
  *  路径：/goods/getlist
  *  获取阿里妈妈选品库商品
  */
-router.post('/getlist', function (req, res, next) {
-    var category = req.body.category;
+router.get('/package', function (req, res, next) {
+    var category = req.query.category;
     if(!config.goodsLibrary[category]){
         category = 'index';
     }
     var platform = base.isMobile() ? 2:1;
     var pre = base.isMobile() ? 'wx':'pc';
+    //每页分页数
+    var limit = config.page_size;
+    //第几页
+    var page_no = parseInt(req.query.page_no);
+    if (isNaN(page_no)) {
+        page_no = 1;
+    }
+    var params = [];
+    var keys = Object.keys(req.query);
+    for (var i in keys) {
+        //过滤不需要的参数
+        if (keys[i] != 'page_no') {
+            params.push(keys[i] + '=' + req.query[keys[i]]);
+        }
+    }
+    var baseUrl = '/goods'+req.path + '?' + params.join('&');
     baseApi.init().getItemFavoritesUatm({
-        'page_size': base.page_size,
-        'page_no': req.body.page_no,
+        'page_size': limit,
+        'page_no': page_no,
         'favorites_id': config.goodsLibrary[category].favorites_id,
         'adzone_id': config.adzone_id,
         'unid':pre+category,
@@ -32,88 +49,32 @@ router.post('/getlist', function (req, res, next) {
                 goods_data.results.uatm_tbk_item.splice(i,1);
             }
         }
-        res.json(_.assignIn(goods_data, {page_size: base.page_size}));
+        var total_page = Math.ceil(goods_data.total_results / limit);
+        var result = {
+            pre_page:page_no-1>=1?page_no-1:1,
+            next_page:page_no+1>total_page?total_page:page_no+1,
+            total_page: total_page,
+            page_no: page_no,
+            total_num: goods_data.total_results,
+            page_size: limit,
+            data: goods_data.results.uatm_tbk_item
+        };
+        var local_vars = {};
+        _.assignIn(local_vars,base.getCommonParams(),{
+            baseUrl: baseUrl,
+            result: result
+        });
+        //渲染视图
+        res.render(base.getViewPath() + '/package', local_vars);
     });
 });
 
-/**
- * 路径：/goods/getTicketlist
- * 获取优惠卷商品列表
- */
-router.post('/getTicketList',function(req, res, next){
-    var where = {};
-    //每页分页数
-    var limit = base.page_size;
-    //第几页
-    var pageNo = parseInt(req.body.page_no);
-    if(isNaN(pageNo)){
-        pageNo = 1;
-    }
-    var category_id = req.body.category_id;
-    if(0 != category_id){
-        where.gid = category_id;
-    }
-    var offset = (pageNo-1)*limit;
-    var orderBy = req.body.orderBy;
-    var direction = req.body.direction;
-    var order = null;
-    if(orderBy&&direction){
-        order = [[orderBy,direction]];
-    }
-    GoodsService.getGoodsList(where,limit,offset,order,function(count,rows){
-        var result = {total_page:count,page_size:limit,data:[]};
-        for(var i in rows){
-            var obj = rows[i].dataValues;
-            obj.click_url = config.ticket_and_goods_url+'activityId='+obj.ticket_id+'&pid=mm_29574340_19906004_68784612&itemId='+obj.goods_id;
-            result.data.push(obj);
-        }
-        res.json(result);
-    })
-});
+
 /**
  * 路径：/goods/search
  * 商品搜索页
  */
 router.get('/search', function(req, res, next) {
-    var where = {};
-    var serach_name = req.query.search_name;
-    if(serach_name){
-        where.title = {$like:'%'+serach_name+'%'};
-    }
-    var is_tmall =  req.query.is_tmall;
-    if(typeof(is_tmall) != 'undefined' && is_tmall != null){
-        where.is_tmall = is_tmall;
-    }
-    var sort_name = req.query.sort_name;
-    if(typeof(sort_name) == 'undefined' || sort_name == null){
-        sort_name = 'all';
-    }
-    //每页分页数
-    var limit = base.page_size;
-    //第几页
-    var pageNo = parseInt(req.query.page_no);
-    if(isNaN(pageNo)){
-        pageNo = 1;
-    }
-    var offset = (pageNo-1)*limit;
-    var orderBy = req.query.orderBy;
-    var direction = req.query.direction;
-    var order = null;
-    if(orderBy&&direction){
-        order = [[orderBy,direction]];
-    }
-    GoodsService.getGoodsList(where,limit,offset,order,function(count,rows){
-        var result = {total_page:count,page_size:limit,data:[]};
-        for(var i in rows){
-            var obj = rows[i].dataValues;
-            obj.click_url = config.ticket_and_goods_url+'activityId='+obj.ticket_id+'&pid='+config.pid+'&itemId='+obj.goods_id;
-            result.data.push(obj);
-        }
-        var local_vars =  {};
-        _.assignIn(local_vars,base.getCommonParams(),{sort_name:sort_name,serach_name:serach_name,result:result});
-        //渲染视图
-        res.render(base.getViewPath() +'/search'
-            ,local_vars);
-    });
+    goodsRequest.handle(req,res,'search',_.assignIn({},base.getCommonParams(),{root_path:'/goods'}));
 });
 module.exports = router;

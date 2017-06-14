@@ -85,31 +85,20 @@
  <div class="w1205 middle">
   <section>
       <div class="floor-list">
-
           <div class="floor-title">
               <div class="tips left">今日新品</div>
               <div class="floor-cage right">
-
               </div>
               <div class="clear"></div>
           </div>
-
           <div class="floor-main">
-
-
-              <div class="floor-goods">
-                  <ul class="goods-list">
-
-                  </ul>
-              </div>
-
+              <!--加载商品列表 -->
+              <%include goods %>
+              <!--加载分页数据 -->
               <%include page %>
-
           </div>
       </div>
   </section>
-
  </div>
 </article>
-<script type="text/javascript" src="ticket_pc/js/goods.js"></script>
 <%include foot %>

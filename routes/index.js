@@ -3,11 +3,12 @@ var router = express.Router();
 var base = require('./base.js');
 var path = require('path');
 var _ = require('lodash');
+var goodsRequest = require('../lib/goodsRequest.js');
 
 router.use(base.init);
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render(base.getViewPath() +'/index',base.getCommonParams());
+    goodsRequest.handle(req,res,'index',base.getCommonParams());
 });
 router.get('/root.txt', function(req, res, next) {
     res.sendFile(path.join(__dirname,'../root.txt'));
@@ -16,28 +17,20 @@ router.get('/root.txt', function(req, res, next) {
  * 首页
  */
 router.get('/index', function(req, res, next) {
-    res.render(base.getViewPath() +'/index',base.getCommonParams());
+    goodsRequest.handle(req,res,'index',base.getCommonParams());
 });
-/**
- * 9块9包邮页面
- */
-router.get('/package', function(req, res, next) {
-    res.render(base.getViewPath() +'/package',base.getCommonParams());
-});
+
 /**
  * 热销排行页面
  */
 router.get('/hot', function(req, res, next) {
-    res.render(base.getViewPath() +'/hot',base.getCommonParams());
+    goodsRequest.handle(req,res,'hot',base.getCommonParams());
 });
 /**
  * 分类页面
  */
 router.get('/cage', function(req, res, next) {
-    var category_id = req.query.category_id;
-    var local_vars =  {};
-    _.assignIn(local_vars,base.getCommonParams(),{category_id:category_id});
-    res.render(base.getViewPath() +'/cage',local_vars);
+    goodsRequest.handle(req,res,'cage',base.getCommonParams());
 });
 /**
  * 底部说明页面
