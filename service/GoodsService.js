@@ -11,7 +11,8 @@ function GoodsService() {
  * 获取商品列表
  */
 GoodsService.prototype.getGoodsList = function (where, limit, offset, order, callback) {
-    var where = _.defaults(where, {ticket_time: {gt: new Date().toLocaleString()}});
+    var search_where = {};
+    _.assignIn(search_where,where, {ticket_time: {gt: new Date().toLocaleString()}});
     var fields = ['id', 'source', 'p_goods_id', 'goods_id', 'title', 'd_title'
         , 'pic', 'cid', 'org_price', 'price', 'is_tmall', 'sales_num', 'dsr'
         , 'seller_id', 'commission_plan', 'commission_queqiao', 'plan_link'
