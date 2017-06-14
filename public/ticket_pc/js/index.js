@@ -95,12 +95,12 @@
         return this.each(function(){
             var thisTag = $(this);
             var thisLi = thisTag.find('li');
-            var thisLoc = ((location.pathname).split("/"))[1];
+            var thisLoc = location.pathname;
+
             thisLi.each(function(){
                 var thisLink = $('a',this);
                 var thisData = thisLink.attr('data-nav');
-
-                if(thisData===thisLoc){
+                if(thisLoc.indexOf(thisData)>0){
                     $(this).find('a').addClass('on').parent().siblings().find('a').removeAttr('class');
 
                 }
