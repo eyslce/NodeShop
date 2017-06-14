@@ -14,8 +14,9 @@
 
 /***********The head************/
 /*the top of the navigation*/
-.head-top{ height:36px; background-color:#f6f6f6;}
-.head-top a{ color:#6c6c6c;}
+.head-top{ height:36px;line-height: 36px; background-color:#f6f6f6;}
+.head-top p {text-align: center;font-size:14px;}
+.head-top a{ color:red;margin: 0px 3px;}
 .head-top a:hover{ color:#ff4a00;}
 .head-login>li{ float:left; margin-right:12px; line-height:36px;}
 .head-login .head-icon{ width:16px; height:14px; margin:10px 4px 0 2px;}
