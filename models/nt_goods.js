@@ -24,17 +24,17 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: ''
     },
     title: {
-      type: DataTypes.STRING(50),
+      type: DataTypes.STRING(200),
       allowNull: false,
       defaultValue: ''
     },
     d_title: {
-      type: DataTypes.STRING(30),
+      type: DataTypes.STRING(200),
       allowNull: false,
       defaultValue: ''
     },
     pic: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(400),
       allowNull: false,
       defaultValue: ''
     },
@@ -63,7 +63,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     seller_id: {
-      type: DataTypes.INTEGER(11),
+      type: DataTypes.STRING(50),
       allowNull: false
     },
     commission_plan: {
@@ -75,7 +75,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     plan_link: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(500),
       allowNull: false
     },
     plan_approval: {
@@ -87,7 +87,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     ticket_id: {
-      type: DataTypes.STRING(30),
+      type: DataTypes.STRING(100),
       allowNull: false
     },
     ticket_price: {
@@ -111,15 +111,15 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     ticket_m_link: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(500),
       allowNull: false
     },
     ticket_link: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(500),
       allowNull: false
     },
     gid: {
-      type: DataTypes.INTEGER(10),
+      type: DataTypes.INTEGER(11),
       allowNull: false
     }
   }, {
