@@ -8,8 +8,8 @@
 		  <div class="banner-list J-banner-list">
 			 <ul class="banner-img">
 				<li class="swiper-slide"><a><img src="ticket_pc/images/brand01.png" /></a></li>
-				<li class="swiper-slide"><a><img src="ticket_pc/images/brand02.png" /></a></li>
-				<li class="swiper-slide"><a><img src="ticket_pc/images/brand03.png" /></a></li>
+				<li class="swiper-slide"><a href="/cage?category_id=1" target="_blank"><img src="ticket_pc/images/brand02.png" /></a></li>
+				<li class="swiper-slide"><a href="/cage?category_id=3" target="_blank"><img src="ticket_pc/images/brand03.png" /></a></li>
 			 </ul>
 			  <!------<div class="banner-com">
                  <a class="banner-pre swiper-button-prev"></a>
@@ -25,7 +25,7 @@
                <div class="top-remain hot-hunt left">
                    <ul class="cate-menu">
 					   <% for(var i in all_category){ %>
-					   <li><a href="/cage?category_id=<%=all_category[i].cid%>"><i class="nt-icon <%= all_category[i].icon%>"></i><%=all_category[i].cname%></a></li>
+					   <li><a href="/cage?category_id=<%=all_category[i].cid%>" target="_blank"><i class="nt-icon <%= all_category[i].icon%>"></i><%=all_category[i].cname%></a></li>
 					   <% }%>
 
 				  </ul>
@@ -58,19 +58,19 @@
 	<section>
 		<ul class="ad-top">
 			<li>
-				<a href="/redpacket">
+				<a href="/redpacket" target="_blank">
 					<img src="ticket_pc/images/ad001.jpg">
 				</a>
 
 			</li>
 			<li>
-				<a href="/package?category=99">
+				<a href="/package?category=99" target="_blank">
 					<img src="ticket_pc/images/ad002.jpg">
 				</a>
 
 			</li>
 			<li>
-				<a href="/cage?category_id=1">
+				<a href="/cage?category_id=1" target="_blank">
 					<img src="ticket_pc/images/ad003.jpg">
 				</a>
 

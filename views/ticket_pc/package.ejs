@@ -2,7 +2,7 @@
 <!------网站中部------>
 <article id="ibox">
     <div class="page-ad">
-        <img src="window/assets/images/nt-banner.png" />
+        <img src="ticket_pc/images/nt-banner.png" />
     </div>
 <!------9kuai9------>
 <div class="w1205 middle">
@@ -21,8 +21,8 @@
                                   <span class="new"><%=item[i].zk_final_price%></span>
                                   <p class="sales">近30天已售<%=item[i].volume%></p>
                               </div>
-                              <div class="info-mark">'
-                                  <p class="old fl"><del>¥<%=item[i].reserve_price%></del></p>'
+                              <div class="info-mark">
+                                  <p class="old fl"><del>¥<%=item[i].reserve_price%></del></p>
                                   <i class="free-icon icon9"></i>
                                   <%if (item[i].user_type == 1) {%>
                                   <a class="mall bicon02 free-icon" data-source="天猫" href="<%=item[i].click_url%>" target="_blank"></a>
@@ -32,9 +32,9 @@
                                 </div>
                           </div>
                           <div class="info-pinzhi hidden-sm hidden-md">
-                              <p class="pinzhi1"><a href="/index"><i class="free-icon icon1"></i>已缴保证金</a></p>
+                              <p class="pinzhi1"><a href="/index" target="_blank"><i class="free-icon icon1"></i>已缴保证金</a></p>
                               <p class="line">|</p>
-                              <p class="pinzhi2"><a href="/redpacket"><i class="free-icon icon1"></i>商家品质保障</a></p>
+                              <p class="pinzhi2"><a href="/redpacket" target="_blank"><i class="free-icon icon1"></i>商家品质保障</a></p>
                               </div>
                           </div>
                       </li>
