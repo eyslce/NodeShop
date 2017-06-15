@@ -91,11 +91,11 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     ticket_price: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.DECIMAL,
       allowNull: false
     },
     ticket_time: {
-      type: DataTypes.STRING(20),
+      type: DataTypes.DATE,
       allowNull: false
     },
     ticket_surplus: {
