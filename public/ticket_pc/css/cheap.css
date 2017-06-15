@@ -70,7 +70,9 @@
 .top-remain{ position:absolute; top:-280px; height:280px; background-color:#fff;}
 .top-warp .hot-hunt{ left:0; width:200px;}
 .top-warp .new-dl{ right:0; width:200px;}
-.dl-list{ padding:10px 0 0 10px; height:110px overflow:hidden;}
+.top-adves{ position:absolute; top:-280px; right:0; height:280px;}
+.top-adves .new-adves{ margin-top:6px;}
+.dl-list{ padding:10px 0 0 10px; height:110px; overflow:hidden;}
 .dl-list dt{ float:left; margin-right:6px;}
 .dl-list dt img{ width:90px; height:95px;}
 .dl-list dd>a{ display:block; margin-bottom:10px;}

@@ -5,8 +5,10 @@
         <% for(var i in item){%>
         <li>
             <div class="goods-pic">
-                <a href="<%=item[i].click_url%>" target="_blank"><img src="<%=item[i].pic%>" /></a>
-                <p class="ticket-tab">优惠券<%=item[i].ticket_price%>元</p>
+                <a href="<%=item[i].click_url%>" target="_blank">
+                  <img src="<%=item[i].pic%>" />
+                  <p class="ticket-tab">优惠券<%=item[i].ticket_price%>元</p>
+                </a>
             </div>
             <h3 class="goods-name"><a href="<%=item[i].click_url%>" target="_blank"><%=item[i].title%></a></h3>
             <div class="goods-price left">
