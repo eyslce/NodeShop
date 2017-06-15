@@ -379,6 +379,7 @@
 .sidebox .quesant h4{ font-size:16px; font-family:'\5FAE\8F6F\96C5\9ED1'; margin-bottom:8px; color:#f60;}
 .dlinden{ text-indent:24px;}
 
+.sidebox .all-ques .queslist p a {text-decoration: underline;color: #f60;margin: 0px 5px;}
 /*-----404-----*/
 .error-con{ padding:60px; width:610px; margin:0 auto;}
 .no-find{ margin-right:46px; font-size:250px; color:#fe5800;}
