@@ -79,8 +79,7 @@ var config = {
         {cid: 7, cname: '居家', is_use: 1,icon:'nt-icon-jj'},
         {cid: 8, cname: '数码家电', is_use: 1,icon:'nt-icon-sm'},
         {cid: 9, cname: '男装', is_use: 1,icon:'nt-icon-man'},
-        {cid: 10, cname: '文体车品', is_use: 1,icon:'nt-icon-wt'},
-        {cid: 11, cname: '其他', is_use: 1,icon:'nt-icon-qt'}
+        {cid: 10, cname: '文体车品', is_use: 1,icon:'nt-icon-wt'}
 
     ]
 

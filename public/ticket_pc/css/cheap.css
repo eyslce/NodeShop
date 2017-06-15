@@ -168,6 +168,11 @@
 .goods-list .goods-tips a:nth-child(1) {border-right:1px solid #e5e5e5;box-sizing: border-box;width: 50%;}
 .goods-list .goods-tips a>i{ position:relative; bottom:0; margin-right:2px; font-size:18px;}
 
+.goods-ex-list{ width:1220px;}
+.goods-ex-list>li{ width:230px; margin:6px 9px 6px 2px;}
+.goods-ex-list .goods-pic{ height:230px;}
+.goods-ex-list .goods-name{ width:218px;}
+
  /*红包*/
 .goods-list .red-package-tips {width: 82px;height:73px; font-size:14px;position: absolute;right: 0;top: 0;z-index: 500;}
 .goods-list .red-package-tips span { display: block;line-height: 25px;text-align: center; background:#ff4c66; color:#fff;}
@@ -418,6 +423,9 @@
 .goods-list .seckill-item .dispacka:before{ display:block; content:'返现金红包';}
 .goods-list .seckill-item .dispacka:after{ display:inline-block; content:'元'}
 .goods-list .seckill-item .dispacka .discount-img{ font-size:18px; font-family:Arial;}
+
+.goods-ex-list .seckill-item .goods-img{ height:230px;}
+.goods-ex-list .seckill-item .info-tit{ width:218px;}
 
 /*红包页面*/
 .redpacket-content { margin:20px 0; border:1px solid #eee; background: #fff;padding: 10px 0px 0px 30px;}
