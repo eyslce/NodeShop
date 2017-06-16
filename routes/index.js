@@ -21,11 +21,7 @@ router.get('/root.txt', function(req, res, next) {
  * 首页
  */
 router.get('/index', function(req, res, next) {
-    if(base.isMobile()){
-        res.redirect('/mobile/index');
-    }else{
-        goodsRequest.handle(req,res,'index',base.getCommonParams());
-    }
+   goodsRequest.handle(req,res,'index',base.getCommonParams());
 });
 
 /**
