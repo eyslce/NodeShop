@@ -135,7 +135,7 @@
 .switch-tab>a.on{ color:#fff; background-color:#ff4a00;}
  /*--商品展示--*/
 .goods-list{ padding:12px 0 0;}
-.goods-list>li{ float:left;border:1px solid #eee;box-sizing:border-box;width:288px;background-color:#fff;margin: 6px;position: relative;height:auto;}
+.goods-list>li{ float:left;border:1px solid #eee; width:230px;background-color:#fff;margin: 6px;position: relative;height:auto;}
 .goods-list>li:hover{ border-color:#f60;box-shadow:3px 3px 5px #999;position:relative;}
 .goods-list>li:hover .gray-icon>a{ width:47px; padding-left:5px; color:#fff; background-color:#f4341a; border-radius:4px;}
 .goods-list>li:hover .gray-icon>a i{ display:none;}
@@ -170,8 +170,8 @@
 .goods-list .goods-tips a:nth-child(1) {border-right:1px solid #e5e5e5;box-sizing: border-box;width: 50%;}
 .goods-list .goods-tips a>i{ position:relative; bottom:0; margin-right:2px; font-size:18px;}
 
-.goods-ex-list{ width:1220px;}
-.goods-ex-list>li{ width:230px; margin:6px 9px 6px 2px;}
+.goods-ex-list{ padding-left:2px; width:1200px;}
+.goods-ex-list>li{ width:230px; margin:6px 6px 6px 2px;}
 .goods-ex-list .goods-pic{ height:230px;}
 .goods-ex-list .goods-name{ width:218px;}
 
