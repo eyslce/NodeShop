@@ -1,0 +1,62 @@
+<!------商品列表------>
+
+<div class="recommend">
+    <!--item1-->
+    <% var item = result.data; %>
+    <% for(var i in item){%>
+    <div class="list-item">
+        <div class="list-item-left">
+            <a href="<%=item[i].click_url%>">
+                <img class="list-item-img" src="<%=item[i].pic%>" />
+                <div class="list-item-info">
+                    <p class="list-item-name">
+						<span class="tmall-icon">
+                            <% if(item[i].is_tmall == 1){ %>
+                            <a  data-source="天猫" href="<%=item[i].click_url %>" target="_blank"><i class="m-icon"></i>天猫</a>
+                            <% }else{ %>
+                            <a  data-source="淘宝" href="<%=item[i].click_url %>" target="_blank"><i class="t-icon"></i>淘宝</a>
+                            <% } %>
+                        </span>
+                        <%=item[i].title%>
+                    </p>
+                    <p class="sell-price">
+                        <span class="item-discount-price">券后<i><%=item[i].price%></i></span>
+                        <span class="item-market-price">￥<%=item[i].org_price%></span>
+                    </p>
+                    <p class="sell-num">
+                        <span class="mail-icon">包邮</span>
+                        <span class="item-sell-num">销量<%=item[i].sales_num%></span>
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="list-item-right">
+            <p class="right-price">
+                <span class="right-price-icon">￥</span>
+                <span class="right-price-num"><%=item[i].ticket_price%></span>
+                <span class="quan-text">优惠券</span>
+            </p>
+            <p class="quan-btn">
+                <span class="quan-text-icon">领券购买</span>
+            </p>
+        </div>
+        <p class="redpackage">
+            此商品狸淘返现金红包
+            <% if(item[i].commission_plan > item[i].commission_queqiao){
+                var final_price = item[i].price * item[i].commission_plan/100;
+            }else{
+                var final_price = item[i].price * item[i].commission_queqiao/100;
+            }
+                var price = Math.floor(final_price * 0.7);price = price<1?1:price;%>
+            <span><%=price%></span>元</p>
+    </div>
+    <% }%>
+</div>
+
+
+
+
+
+
+
+

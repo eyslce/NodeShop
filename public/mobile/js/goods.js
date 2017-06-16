@@ -6,7 +6,42 @@ var index = {
             index.page_num = Math.round(data.total_results / data.page_size);
             var item = data.results.uatm_tbk_item;
             for (var i in item) {
-                var html = '<li class="goods-item">'
+                var html = '<div class="list-item">'
+                        + '<a href="#" url="' + item[i].click_url + '">'
+                        + '<div class="list-item-left">'
+
+                        + '<img class="list-item-img" src="' + item[i].pict_url + '">'
+                        + '<div class="list-item-info">'
+                        + '<p class="list-item-name"><span class="tmall-icon"><img src="img/tmall.png"></span>' + item[i].title + '</p>'
+                        + '<p class="sell-price"><span class="item-discount-price">券后<i>'+item[i].zk_final_price+'</i></span>'
+                        + '<span class="item-market-price">￥'+item[i].reserve_price+'</span>'
+                        + '</p>'
+                        + '<p class="sell-num"><span class="mail-icon">包邮</span>'
+                        + '<span class="item-sell-num">销量'+item[i].volume+'</span>'
+                        + '</p>'
+                        + '</div>'
+
+                        + '</div>'
+                        + '<div class="list-item-right">'
+                        + '<p class="right-price">'
+                        + '<span class="right-price-icon">￥</span>'+'<span class="right-price-num">60</span>'
+                        + '<span class="quan-text">优惠券</span>'
+                        + '</p>'
+                        + '<p class="quan-btn">'
+                        + '<span class="quan-text-icon">领券购买</span>'
+                        + '</p>'
+                        + '</div>'
+                        + '<p class="redpackage">此商品狸淘返现金红包<span>10</span>元</p>'
+                        + '</a>'
+                        + '</div>'
+
+
+
+
+
+
+
+                /*var html = '<div class="list-item">'
                     + '<a href="javascript:;" class="goods_click" url="' + item[i].click_url + '">'
                     + '<img src="' + item[i].pict_url + '" alt="">'
                     + '<div class="goods-info clearfix">'
@@ -18,14 +53,14 @@ var index = {
                     + '<span>已售 ' + item[i].volume + '</span>'
                     + '</div>'
                     + '</a>'
-                    + '</li>';
-                /*
+                    + '</div>';
+
                  if (item[i].user_type == 1) {
                  html += '<a class="mall bicon02 free-icon" data-source="天猫" href="' + item[i].click_url + '" target="_blank"></a>';
                  } else {
                  html += '<a class="mall bicon01 free-icon" data-source="淘宝" href="' + item[i].click_url + '" target="_blank"></a>';
                  }*/
-                $('ul.good-list').append(html);
+                $('div.recommend').append(html);
             }
 
         }, 'json');

@@ -36,6 +36,28 @@ $(document).ready(function(){
 	    	"background":"rgb(255, 255, 255)"
 	    });
     });
+
+    //首页轮播幻灯片
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false,
+        noSwiping:true,
+        loop: true,
+    });
+
+// 全部分类  展开
+
+    $("#top-nav li:last-child").click(function(){
+        $(".all-goods-classify").slideToggle("fast");
+        $(this).siblings().click(function(){
+            $(".all-goods-classify").hide("fast");
+        });
+    });
+
 	
 });			
 
