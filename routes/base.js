@@ -23,8 +23,8 @@ function base() {
         //设置视图路径
         common_params.view_path = 'ticket_pc';
         if(isMobile(req)){
-            is_mobile = true;
-            common_params.view_path ='mobile';
+            //is_mobile = true;
+            //common_params.view_path ='mobile';
         }
         common_params.app_key = app_key;
         var category = req.query.category;
