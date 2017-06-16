@@ -173,7 +173,7 @@
 .goods-ex-list{ padding-left:2px; width:1200px;}
 .goods-ex-list>li{ width:230px; margin:6px 6px 6px 2px;}
 .goods-ex-list .goods-pic{ height:230px;}
-.goods-ex-list .goods-name{ width:218px;}
+.goods-ex-list .goods-name{ width:218px; font-size:14px;}
 
  /*红包*/
 .goods-list .red-package-tips {width: 82px;height:73px; font-size:14px;position: absolute;right: 0;top: 0;z-index: 500;}
@@ -181,6 +181,12 @@
 .goods-list .red-package-tips span em {font-size: 18px;font-style: normal; }
 .goods-list .red-package-tips a:hover span{background: #f5344f;cursor: pointer;}
 .goods-list .red-package-tips a:after{ display:block; height:23px; content:""; background:url(../images/getc.png) no-repeat; background-size:82px 23px;}
+
+.goods-ex-list .red-package-tips{ width:70px; height:62px; font-size:12px;}
+.goods-ex-list .red-package-tips span{ line-height:19px;}
+.goods-ex-list .red-package-tips span em{ font-size:16px;}
+.goods-ex-list .red-package-tips a:after{ background-size:70px 23px;}
+.goods-ex-list .goods-pic .ticket-tab{ height:30px; line-height:30px; font-size:16px;}
 
 /***********Turn the page************/
 .page{ padding:30px 0; text-align:center;}
@@ -427,7 +433,7 @@
 .goods-list .seckill-item .dispacka .discount-img{ font-size:18px; font-family:Arial;}
 
 .goods-ex-list .seckill-item .goods-img{ height:230px;}
-.goods-ex-list .seckill-item .info-tit{ width:218px;}
+.goods-ex-list .seckill-item .info-tit{ width:218px; font-size:14px;}
 
 /*红包页面*/
 .redpacket-content { margin:20px 0; border:1px solid #eee; background: #fff;padding: 10px 0px 0px 30px;}
