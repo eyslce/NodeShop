@@ -8,7 +8,11 @@ var goodsRequest = require('../lib/goodsRequest.js');
 router.use(base.init);
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    goodsRequest.handle(req,res,'index',base.getCommonParams());
+    if(base.isMobile()){
+        res.redirect('/mobile/index');
+    }else{
+        goodsRequest.handle(req,res,'index',base.getCommonParams());
+    }
 });
 router.get('/root.txt', function(req, res, next) {
     res.sendFile(path.join(__dirname,'../root.txt'));
@@ -17,7 +21,11 @@ router.get('/root.txt', function(req, res, next) {
  * 首页
  */
 router.get('/index', function(req, res, next) {
-    goodsRequest.handle(req,res,'index',base.getCommonParams());
+    if(base.isMobile()){
+        res.redirect('/mobile/index');
+    }else{
+        goodsRequest.handle(req,res,'index',base.getCommonParams());
+    }
 });
 
 /**

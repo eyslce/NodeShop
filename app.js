@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var goods = require('./routes/goods');
+var mobile = require('./routes/mobile');
 
 var app = express();
 
@@ -21,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //默认路由
 app.use('/', routes);
 app.use('/goods', goods);
+app.use('/mobile',mobile);
 
 
 // catch 404 and forward to error handler
@@ -53,7 +55,7 @@ app.use(function(err, req, res, next) {
         category = 'index';
     }
     res.status(err.status || 500);
-    res.render('window/404.ejs',{category:category});
+    res.render('ticket_pc/404.ejs',{category:category});
 });
 
 

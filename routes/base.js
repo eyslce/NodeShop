@@ -5,7 +5,6 @@ var crypto = require('crypto');
  * 路由级别中间件
  */
 function base() {
-    //是否移动端
     var is_mobile = false;
     //公共参数
     var common_params = {};
@@ -25,7 +24,7 @@ function base() {
         common_params.view_path = 'ticket_pc';
         if(isMobile(req)){
             is_mobile = true;
-            //view_path ='mobile';
+            common_params.view_path ='mobile';
         }
         common_params.app_key = app_key;
         var category = req.query.category;
