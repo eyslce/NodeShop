@@ -37,17 +37,8 @@ $(document).ready(function(){
 	    });
     });
 
-    //首页轮播幻灯片
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        paginationClickable: true,
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: 2500,
-        autoplayDisableOnInteraction: false,
-        noSwiping:true,
-        loop: true,
-    });
+
+
 
 // 全部分类  展开
 

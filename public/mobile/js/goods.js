@@ -12,7 +12,15 @@ var index = {
 
                         + '<img class="list-item-img" src="' + item[i].pict_url + '">'
                         + '<div class="list-item-info">'
-                        + '<p class="list-item-name"><span class="tmall-icon"><img src="img/tmall.png"></span>' + item[i].title + '</p>'
+                        + '<p class="list-item-name">';
+
+                        if (item[i].user_type == 1) {
+                            html += '<span class="iconfont tmall-icon">&#xe744;</span>';
+                        } else {
+                            html += '<span class="iconfont tmall-icon">&#xe767;</span>';
+                        }
+
+                    html += item[i].title +'</p>'
                         + '<p class="sell-price"><span class="item-discount-price">券后<i>'+item[i].zk_final_price+'</i></span>'
                         + '<span class="item-market-price">￥'+item[i].reserve_price+'</span>'
                         + '</p>'

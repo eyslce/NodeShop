@@ -24,84 +24,46 @@
 
 <body>
 <div class="app">
-	<div class="head">
+	<div class="other-head">
 		<!--头部-->
 		<div class="head-content">
-			<span class="left"><i class="iconfont">&#xe835;</i></span>
-			<div class="search">
-				<input type="text" placeholder="输入关键词搜索" />
-				<button><i class="iconfont top-search-btn">&#xe7f8;</i></button>
-			</div>
-			<span class="right"><i class="iconfont">&#xe6a1;</i></span>
+			<span class="btn-back"><i class="iconfont icon-back">&#xe6fe;</i></span>
+			<h2 class="head-text">商品分类</h2>
+
 		</div>
 	</div>
 	<div class="bg-weixin">
 		<div id="weixin-code">
-			<div class="member-close-tag"><i class="iconfont">&#xe803;</i></div>
-			<div class="member-top-title"><i class="iconfont">&#xe819;</i>点击二维码长按关注<i class="iconfont">&#xe819;</i></div>
-			<img src="ticket_pc/images/load-ewm.jpg" class="member-center-pic">
-			<div class="member-bottom-title">关于我们公众号</div>
+			<div class="close-tag"><i class="iconfont">&#xe69d;</i></div>
+			<div class="weixin-top-title"><i class="iconfont">&#xe6ef;</i>点击二维码长按关注<i class="iconfont">&#xe6ef;</i></div>
+			<img src="img/weixin-public-code-600.jpg" class="weixin-code-pic">
+			<div class="weixin-bottom-title">关于我们公众号</div>
 
 		</div>
 	</div>
 	<!--回到顶部 start-->
 	<div class="go-top">
-		<p class="go-top-text"><i class="iconfont go-top-arrow">&#xe7f0;</i></p>
+		<p class="go-top-text"><i class="iconfont go-top-arrow"/>&#xe7f0;</i></p>
 	</div>
 	<!--回到顶部 end-->
 	<div class="main">
-		<!--轮播幻灯片start-->
-		<!-- Swiper -->
-		<div class="swiper-container">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide"><a href=""><img src="mobile/img/b01.jpg"></a></div>
-				<div class="swiper-slide"><a href=""><img src="mobile/img/b02.jpg"></a></div>
-				<div class="swiper-slide"><a href=""><img src="mobile/img/b03.jpg"></a></div>
-			</div>
-			<div class="swiper-pagination"></div>
-		</div>
-		<!--轮播幻灯片end-->
-		<!--内容区-->
-		<div class="top-nav">
-			<ul id="top-nav">
-				<li class="active">
-					<span><i class="iconfont icon-xinnew">&#xe6f5;</i></span>
-					<span>最新推荐</span>
-				</li>
-				<li>
-					<span><i class="iconfont icon-miaosha">&#xe730;</i></span>
-					<span>9.9包邮</span>
-				</li>
-				<li>
-					<span><i class="iconfont icon-paihang">&#xe724;</i></span>
-					<span>销量排行</span>
-				</li>
-				<li>
 
-					<span><i class="iconfont icon-quanbu">&#xe786;</i></span>
-					<span>全部分类</span>
-				</li>
-			</ul>
+		<div class="swiper-container nav-list">
+           <ul class="swiper-wrapper">
+               <% for(var i in all_category){ %>
+			   <li class="swiper-slide"><a href="/cage?category_id=<%=all_category[i].cid%>"><%=all_category[i].cname%></a></li>
+               <% }%>
+		   </ul>
 		</div>
-		<!--全部分类内容 start-->
-		<div class="all-goods-classify">
-			<ul>
-                <% for(var i in all_category){ %>
-				<li><a href="/cage?category_id=<%=all_category[i].cid%>"><%=all_category[i].cname%></a></li>
-                <% }%>
-			</ul>
-		</div>
-		<!--全部分类内容 end-->
-
 		<!--加载商品列表 -->
-        <div class="recommend"> </div>
-
+		<div class="recommend"> </div>
 		<!--加载分页数据 -->
 		<div class="next-page">
 			<a class="call_more">
 				召唤更多
 			</a>
 		</div>
+
 
 	</div>
 	<!--foot-->
@@ -111,7 +73,7 @@
 	<div class="bottom-nav" id="bottom-nav">
 		<ul>
 			<li>
-				<a class="hover" href="/index">
+				<a href="/index">
 					<span class="bottom-icon iconfont">&#xe835;</span>
 					<span>首页</span>
 				</a>
@@ -123,30 +85,39 @@
 				</a>
 			</li>
 			<li>
-				<a href="/hot?orderBy=sales_num&direction=desc">
+				<a class="hover" href="/hot?orderBy=sales_num&direction=desc">
 					<span class="bottom-icon iconfont">&#xe717;</span>
 					<span>热销</span>
 				</a>
 			</li>
 		</ul>
 	</div>
+	<!--个人中心弹窗层start-->
+	<div class="bg-member">
+		<div id="member-center">
+			<div class="member-close-tag"><i class="iconfont">&#xe69d;</i></div>
+			<div class="member-top-title"><i class="iconfont">&#xe6ef;</i>点击二维码长按关注<i class="iconfont">&#xe6ef;</i></div>
+			<img src="img/weixin-public-code-600.jpg" class="member-center-pic">
+			<div class="member-bottom-title">关于我们公众号</div>
 
+		</div>
+	</div>
+	<!--个人中心弹窗层end-->
 </div>
 
 <!--遮罩层-->
 <% include ayer %>
 <script type="text/javascript" src="mobile/js/goods.js"></script>
+
 <script>
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
+    var swiper = new Swiper('.nav-list', {
+        loop : false,
+        slidesPerView:5,
         paginationClickable: true,
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: 2500,
-        autoplayDisableOnInteraction: false,
-        noSwiping:true,
-        loop: true,
+        spaceBetween: 0,
+        noSwiping:false
     });
+
 </script>
 
 </body>
