@@ -262,6 +262,14 @@ i.fa-search:before {vertical-align: sub;}
 #member-code fieldset legend {background:#f60;border: none;width:120px;font-size: 0.8rem;letter-spacing: 2px;line-height: 20px;color: #fff;}
 #member-code .bg-tcode-text {background: #f6f4f4;margin: 20px -10px 0px -10px;padding: 10px 10px;font-size: 13px;color: #cc763d;border-radius: 10px;}
 
-
 /*---详情页底部 淘口令购买弹窗 end---*/
 
+/*红包领取页面*/
+.redpackage-rules {margin: 10px 0px;padding: 0px 1rem;}
+.redpackage-rules span {font-size: 1rem;color: #fff;background: #f60;padding:3px 5px;margin:5px 0px;border-radius: 5px;display: inline-block;}
+.redpackage-rules p {font-size: 0.9rem;}
+.redpackage-rules p.buy-tips {color: red;}
+
+.redpackage-contact span{text-align: center;display:block;line-height: 2rem;font-size: 0.8rem;}
+.redpackage-contact .img {margin: 0 auto;text-align: center;width: 60%;}
+.redpackage-contact .img img {width: 100%;}
