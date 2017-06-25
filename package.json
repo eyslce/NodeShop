@@ -50,7 +50,7 @@
     "npm": ">=3.7.3"
   },
   "scripts": {
-    "test": "istanbul cover test/test.js",
+    //"test": "istanbul cover test/test.js",
     "start": "node index.js"
   },
   "devDependencies": {
