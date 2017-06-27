@@ -43,5 +43,4 @@
    sequelize-auto -o "./models" -d app_neetao -h 192.168.49.128 -u root -p   3306 -x 123456 -e mysql  
 ### 项目结构        
 ![项目结构](public/doc/jiegou.png)
-#### 测试
  
