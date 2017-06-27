@@ -45,10 +45,6 @@
     "serve-favicon": "^2.3.0",
     "ws": "^0.4.32"
   },
-  "engines": {
-    "node": ">= 5.9.1",
-    "npm": ">=3.7.3"
-  },
   "scripts": {
     "start": "node index.js"
   }
