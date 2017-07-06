@@ -17,8 +17,8 @@ router.get('/package', function (req, res, next) {
     if(!config.goodsLibrary[category]){
         category = 'index';
     }
-    var platform = base.isMobile() ? 2:1;
-    var pre = base.isMobile() ? 'wx':'pc';
+    var platform = base.isMobile(req) ? 2:1;
+    var pre = base.isMobile(req) ? 'wx':'pc';
     //每页分页数
     var limit = config.page_size;
     //第几页

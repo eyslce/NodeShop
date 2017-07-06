@@ -16,7 +16,6 @@ router.use(base.init);
  * 路径：/mobile/index
  */
 router.get('/index', function(req, res, next) {
-    //console.log(base.getViewPath());
     //渲染视图
     res.render(base.getViewPath() + '/index',base.getCommonParams());
 });
@@ -35,33 +34,7 @@ router.get('/cage', function(req, res, next) {
 router.get('/hot', function(req, res, next) {
     res.render(base.getViewPath() + '/hot',base.getCommonParams());
 });
-/**
- *
- */
-router.post('/package', function (req, res, next) {
-    var category = req.body.category;
-    if(!config.goodsLibrary[category]){
-        category = 'index';
-    }
-    var platform = base.isMobile() ? 2:1;
-    var pre = base.isMobile() ? 'wx':'pc';
-    baseApi.init().getItemFavoritesUatm({
-        'page_size': config.page_size,
-        'page_no': req.body.page_no,
-        'favorites_id': config.goodsLibrary[category].favorites_id,
-        'adzone_id': config.adzone_id,
-        'unid': pre + category,
-        'platform':platform
-    }, function (goods_data) {
-        for(var i in goods_data.results.uatm_tbk_item){
-            //过滤掉已经失效的商品
-            if(!goods_data.results.uatm_tbk_item[i].click_url){
-                goods_data.results.uatm_tbk_item.splice(i,1);
-            }
-        }
-        res.json(_.assignIn({},goods_data, {page_size: config.page_size}));
-    });
-});
+
 
 /**
  * 获取商品列表
