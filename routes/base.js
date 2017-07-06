@@ -50,8 +50,8 @@ function base() {
         return common_params.view_path;
     };
     //判断是否移动端
-    this.isMobile = function () {
-        return is_mobile;
+    this.isMobile = function (req) {
+        return isMobile(req);
     };
     //获取公共参数
     this.getCommonParams = function () {
