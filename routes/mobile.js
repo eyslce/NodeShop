@@ -128,5 +128,9 @@ router.get('/redpacket', function(req, res, next) {
     //渲染视图
     res.render(base.getViewPath() + '/redpacket',base.getCommonParams());
 });
+router.get('/search', function(req, res, next) {
+    //渲染视图
+    res.render(base.getViewPath() + '/search',base.getCommonParams());
+});
 
 module.exports = router;

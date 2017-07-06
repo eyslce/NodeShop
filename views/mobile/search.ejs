@@ -28,7 +28,7 @@
         <!--头部-->
         <div class="head-content">
             <span class="btn-back"><i class="iconfont">&#xe6dc;</i></span>
-            <h2 class="head-text">热销产品</h2>
+            <h2 class="head-text">搜索结果</h2>
 
         </div>
     </div>
@@ -66,20 +66,20 @@
     <div class="bottom-nav" id="bottom-nav">
         <ul>
             <li>
-                <a href="/index">
-                    <img src="mobile/img/home-page.png">
+                <a href="/mobile/index">
+                    <span class="bottom-icon iconfont">&#xe835;</span>
                     <span>首页</span>
                 </a>
             </li>
             <li>
-                <a href="/goods/package?category=99">
-                    <img src="mobile/img/order-share.png">
+                <a href="/mobile/redpacket">
+                    <span class="bottom-icon iconfont">&#xe681;</span>
                     <span>领红包</span>
                 </a>
             </li>
             <li>
-                <a href="/mobile/hot?orderBy=sales_num&direction=desc">
-                    <img src="mobile/img/user-center.png">
+                <a class="hover" href="/mobile/hot?orderBy=sales_num&direction=desc">
+                    <span class="bottom-icon iconfont">&#xe717;</span>
                     <span>热销</span>
                 </a>
             </li>
@@ -100,6 +100,9 @@
 
 <!--遮罩层-->
 <% include ayer %>
+<script type="text/javascript">
+    var queryStr = '<%= queryStr%>';
+</script>
 <script type="text/javascript" src="mobile/js/goods.js"></script>
 
 </body>

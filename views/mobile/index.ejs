@@ -29,8 +29,10 @@
 		<div class="head-content">
 			<span class="left"><i class="iconfont">&#xe835;</i></span>
 			<div class="search">
-				<input type="text" placeholder="输入关键词搜索" />
-				<button><i class="iconfont top-search-btn">&#xe7f8;</i></button>
+                <form action="/mobile/search" method="get">
+				<input type="text" name="search_name" placeholder="输入关键词搜索" />
+				<button type="submit"><i class="iconfont top-search-btn">&#xe7f8;</i></button>
+                </form>
 			</div>
 			<span class="right"><i class="iconfont">&#xe6a1;</i></span>
 		</div>
@@ -117,7 +119,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="/goods/package?category=99">
+				<a href="/mobile/redpacket">
 					<span class="bottom-icon iconfont">&#xe681;</span>
 					<span>领红包</span>
 				</a>
