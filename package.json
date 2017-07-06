@@ -46,16 +46,9 @@
     "ws": "^0.4.32"
   },
   "engines": {
-    "node": ">= 5.9.1",
-    "npm": ">=3.7.3"
+    "npm": "4.6.1"
   },
   "scripts": {
-    "test": "istanbul cover test/test.js",
     "start": "node index.js"
-  },
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "istanbul": "^0.4.5",
-    "mocha": "^3.1.2"
   }
 }

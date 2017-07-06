@@ -16,7 +16,7 @@ router.use(base.init);
  * 路径：/mobile/index
  */
 router.get('/index', function(req, res, next) {
-    console.log(base.getViewPath());
+    //console.log(base.getViewPath());
     //渲染视图
     res.render(base.getViewPath() + '/index',base.getCommonParams());
 });
@@ -123,4 +123,10 @@ router.post('/getList', function (req, res, next) {
         res.json(result);
     })
 });
+
+router.get('/redpacket', function(req, res, next) {
+    //渲染视图
+    res.render(base.getViewPath() + '/redpacket',base.getCommonParams());
+});
+
 module.exports = router;
