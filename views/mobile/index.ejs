@@ -87,7 +87,7 @@
 		<div class="all-goods-classify">
 			<ul>
                 <% for(var i in all_category){ %>
-				<li><a href="/cage?category_id=<%=all_category[i].cid%>"><%=all_category[i].cname%></a></li>
+				<li><a href="/mobile/cage?category_id=<%=all_category[i].cid%>"><%=all_category[i].cname%></a></li>
                 <% }%>
 			</ul>
 		</div>
@@ -111,7 +111,7 @@
 	<div class="bottom-nav" id="bottom-nav">
 		<ul>
 			<li>
-				<a class="hover" href="/index">
+				<a class="hover" href="/mobile/index">
 					<span class="bottom-icon iconfont">&#xe835;</span>
 					<span>首页</span>
 				</a>
@@ -123,7 +123,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="/hot?orderBy=sales_num&direction=desc">
+				<a href="/mobile/hot?orderBy=sales_num&direction=desc">
 					<span class="bottom-icon iconfont">&#xe717;</span>
 					<span>热销</span>
 				</a>

@@ -9,6 +9,7 @@ router.use(base.init);
 /* GET home page. */
 router.get('/', function(req, res, next) {
     if(base.isMobile()){
+        console.log('mob');
         res.redirect('/mobile/index');
     }else{
         goodsRequest.handle(req,res,'index',base.getCommonParams());

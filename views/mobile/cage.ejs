@@ -43,7 +43,7 @@
 	</div>
 	<!--回到顶部 start-->
 	<div class="go-top">
-		<p class="go-top-text"><i class="iconfont go-top-arrow"/>&#xe7f0;</i></p>
+		<p class="go-top-text"><i class="iconfont go-top-arrow">&#xe7f0;</i></p>
 	</div>
 	<!--回到顶部 end-->
 	<div class="main">
@@ -51,7 +51,7 @@
 		<div class="swiper-container nav-list">
            <ul class="swiper-wrapper">
                <% for(var i in all_category){ %>
-			   <li class="swiper-slide"><a href="/cage?category_id=<%=all_category[i].cid%>"><%=all_category[i].cname%></a></li>
+			   <li class="swiper-slide"><a href="/mobile/cage?category_id=<%=all_category[i].cid%>"><%=all_category[i].cname%></a></li>
                <% }%>
 		   </ul>
 		</div>
@@ -72,24 +72,24 @@
 	</div>
 	<div class="bottom-nav" id="bottom-nav">
 		<ul>
-			<li>
-				<a href="/index">
-					<span class="bottom-icon iconfont">&#xe835;</span>
-					<span>首页</span>
-				</a>
-			</li>
-			<li>
-				<a href="/goods/package?category=99">
-					<span class="bottom-icon iconfont">&#xe681;</span>
-					<span>领红包</span>
-				</a>
-			</li>
-			<li>
-				<a class="hover" href="/hot?orderBy=sales_num&direction=desc">
-					<span class="bottom-icon iconfont">&#xe717;</span>
-					<span>热销</span>
-				</a>
-			</li>
+            <li>
+                <a href="/mobile/index">
+                    <span class="bottom-icon iconfont">&#xe835;</span>
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/goods/package?category=99">
+                    <span class="bottom-icon iconfont">&#xe681;</span>
+                    <span>领红包</span>
+                </a>
+            </li>
+            <li>
+                <a class="hover" href="/mobile/hot?orderBy=sales_num&direction=desc">
+                    <span class="bottom-icon iconfont">&#xe717;</span>
+                    <span>热销</span>
+                </a>
+            </li>
 		</ul>
 	</div>
 	<!--个人中心弹窗层start-->
@@ -107,8 +107,10 @@
 
 <!--遮罩层-->
 <% include ayer %>
+<script type="text/javascript">
+    var queryStr = '<%= queryStr%>';
+</script>
 <script type="text/javascript" src="mobile/js/goods.js"></script>
-
 <script>
     var swiper = new Swiper('.nav-list', {
         loop : false,

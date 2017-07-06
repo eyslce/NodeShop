@@ -14,41 +14,50 @@ function base() {
         var app_key = config.app_key;
         var secret = config.app_secret;
         var timestamp = Date.now();
-        var message = secret+'app_key'+app_key+'timestamp'+timestamp+secret;
-        var hmac = crypto.createHmac('md5',secret);
+        var message = secret + 'app_key' + app_key + 'timestamp' + timestamp + secret;
+        var hmac = crypto.createHmac('md5', secret);
         hmac.update(message);
         var sign = hmac.digest('hex').toLowerCase();
-        res.cookie("timestamp",timestamp);
-        res.cookie("sign",sign);
+        res.cookie("timestamp", timestamp);
+        res.cookie("sign", sign);
         //设置视图路径
         common_params.view_path = 'ticket_pc';
-        if(isMobile(req)){
-            //is_mobile = true;
-            //common_params.view_path ='mobile';
+        if (isMobile(req)) {
+            is_mobile = true;
+            common_params.view_path = 'mobile';
         }
         common_params.app_key = app_key;
         var category = req.query.category;
-        if(!config.goodsLibrary[category]){
+        if (!config.goodsLibrary[category]) {
             category = 'index';
         }
         common_params.category = category;
         common_params.category_name = config.goodsLibrary[category].favorites_title;
         common_params.all_category = config.NeeTaoCate;
+        var params = [];
+        var keys = Object.keys(req.query);
+        for (var i in keys) {
+            //过滤不需要的参数
+            if (keys[i] != 'page_no') {
+                params.push(keys[i] + '=' + req.query[keys[i]]);
+            }
+        }
+        common_params.queryStr = params.join('&');
         next();
     };
     //获取视图路径
-    this.getViewPath = function(){
+    this.getViewPath = function () {
         return common_params.view_path;
     };
     //判断是否移动端
-    this.isMobile = function(){
+    this.isMobile = function () {
         return is_mobile;
     };
     //获取公共参数
-    this.getCommonParams = function(){
-      return common_params;
+    this.getCommonParams = function () {
+        return common_params;
     };
-    function isMobile (req) {
+    function isMobile(req) {
         // 如果有X_WAP_PROFILE则一定是移动设备
         if (req.get('X_WAP_PROFILE')) {
             return true;
@@ -61,38 +70,11 @@ function base() {
         //判断手机发送的客户端标志,兼容性有待提高
         if (req.get('User-Agent')) {
             var clientkeywords = [
-                'nokia',
-                'sony',
-                'ericsson',
-                'mot',
-                'samsung',
-                'htc',
-                'sgh',
-                'lg',
-                'sharp',
-                'sie-',
-                'philips',
-                'panasonic',
-                'alcatel',
-                'lenovo',
-                'iphone',
-                'ipod',
-                'blackberry',
-                'meizu',
-                'android',
-                'netfront',
-                'symbian',
-                'ucweb',
-                'windowsce',
-                'palm',
-                'operamini',
-                'operamobi',
-                'openwave',
-                'nexusone',
-                'cldc',
-                'midp',
-                'wap',
-                'mobile'
+                'nokia','sony','ericsson','mot','samsung','htc','sgh',
+                'lg', 'sharp','sie-','philips','panasonic','alcatel',
+                'lenovo','iphone','ipod','blackberry','meizu','android',
+                'netfront','symbian','ucweb','windowsce','palm','operamini',
+                'operamobi','openwave','nexusone','cldc','midp','wap','mobile'
             ];
             // 从HTTP_USER_AGENT中查找手机浏览器的关键字
             if (req.get('User-Agent').toLowerCase().match("/" + clientkeywords.join('|') + "/")) {
