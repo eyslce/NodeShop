@@ -20,12 +20,15 @@
 .app .other-head .head-text{ font-size:1.2rem; font-weight:400; text-align:center;}
 
 /*---顶部点击关注二维码弹窗 start---*/
-.bg-weixin {position: absolute;z-index: 105;max-width: 640px;min-width: 320px;width: 100%;height: 100%;background: rgba(0,0,0,0.2);border-left: 1px solid #f3e7e3;
+.bg-weixin {position: fixed; top:0; z-index: 105;max-width: 640px;min-width: 320px;width: 100%;height: 100%;background: rgba(0,0,0,0.2);border-left: 1px solid #f3e7e3;
     border-right:1px solid #f3e7e3;display: none;}
 #weixin-code {display: none1;min-width:192px;max-width: 248px;max-height: 295px;background: #fff;margin: 30% auto;padding: 10px 10px 20px 10px;}
 #weixin-code div.close-tag {text-align: right;}
+#weixin-code .member-center-pic{ max-width:100%;}
 .weixin-top-title,.weixin-bottom-title {text-align:center;font-size: 0.9rem;margin-top: -5px;}
 .weixin-code-pic {width: 100%;}
+.member-close-tag{ position:absolute; right:0; top:0;}
+#weixin-code .member-top-title{ position:relative; text-align:center;}
 @media (max-width:413px) {
     .app .head .head-content .search input {width: 80%;}
     .weixin-code-pic {max-width: 80%;margin-left: 10%;}
@@ -37,12 +40,12 @@
     border-right:1px solid #f3e7e3;display: none;}
 .all-goods-classify ul li {float: left;width: 25%;text-align: center;background: #fff;padding: 8px 0px;border-top: 1px solid #f3e7e3;
     border-left:1px solid #f3e7e3;box-sizing: border-box;font-size: 0.8rem}
-.all-goods-classify ul li>a {color: #8f8f8f;}
+.all-goods-classify ul li>a { display:block; color: #8f8f8f;}
 /*--全部商品分类下拉展示 end--*/
 
 /*--回到顶部 start--*/
 .go-top {position: fixed;bottom:30%;left: 80%;z-index: 900;display: none;}
-.go-top p.go-top-text i {font-size: 2.5rem;color:#231f1f}
+.go-top p.go-top-text i {font-size: 2.5rem;color:#fff}
 /*--回到顶部 end--*/
 
 /*内容区*/
@@ -50,6 +53,7 @@
 .main .top-nav {margin-top: 5px;background: #fff;}
 .main .top-nav ul {width: 90%;margin: 0 auto;overflow: hidden;}
 .main .top-nav ul li {float:left;width: 22%;margin-left: 2%;text-align: center;margin-top: 5px;}
+.main .top-nav ul li a{ color:#333;}
 .main .top-nav ul li span {display: block;font-size: 0.9rem;}
 .main .top-nav ul li span i {font-size: 2.5rem;}
 .main .top-nav ul li span i.icon-xinnew {color: #0ECD5E;}
@@ -59,6 +63,7 @@
 
 /*导航点击样式*/
 .main .top-nav ul li.active span:last-child {border-bottom: 2px solid #e94643;margin-bottom: 5px;}
+.main .top-nav ul li:hover span:last-child{border-bottom: 2px solid #e94643;}
 /*--新增页面start--*/
 .main .btn-select {width: 90%;margin: 10px auto;;}
 .main .btn-select button {border: none;background: #e94643;color: #fff;padding: 5px 6px;width: 30%;margin-left: 1%;font-size: 0.8rem;border-radius: 5px;}
@@ -91,8 +96,8 @@
 .discount-price .discount-icon {float: left;margin-top: 5px;margin-left:5px;font-size: 0.9rem;color: #eb4e53;}
 .discount-price .discount-price-num {float:left;margin-left:5px;font-size: 1.2rem;color:#f54452;font-weight: bold;}
 
-.list-item-right {width:24%;display: inline-block;top:calc(50% - 96px);position: absolute;}
-.list-item-right .right-price {text-align: center;color: #fff;margin-top: 1.5rem;}
+.list-item-right {width:24%;display: inline-block;top:0;position: absolute;}
+.list-item-right .right-price {text-align: center;color: #fff;margin-top: 0.5rem;}
 .list-item-right .right-price .right-price-num {font-size: 2rem;}
 .list-item-right .right-price .right-price-icon {font-size: 0.9rem;}
 .list-item-right .open-p {border: 1px solid #fff;color: #fff;text-align: center;margin-left: 3px;border-radius: 1rem;}
@@ -123,7 +128,7 @@
 .list-item-left .list-item-info .sell-price .item-market-price {color:#999;text-decoration: line-through;font-size: 0.8rem;margin-left: 3px;}
 .sell-price .item-discount-price {color:#F06000;margin-left: 5px;}
 .sell-price .item-discount-price i {font-style: normal;font-weight: bold;font-size: 1.1rem;margin-left: 5px;}
-.list-item-left .list-item-info .sell-num .mail-icon {background: #8bc34a;color: #fff;padding: 0px 3px;font-size: 0.9rem;}
+.list-item-left .list-item-info .sell-num .mail-icon {background: #8bc34a;color: #fff;padding: 0px 3px; margin-left:5px; font-size: 0.9rem;}
 .sell-num .item-sell-num {font-size: 0.9rem;margin-left: 5px;color: #4a4a4a;float: right;}
 .list-item-right .right-price .quan-text {display: block;font-size: 0.8rem;}
 .quan-btn {border:1px solid #fff;color:#fff;text-align:center;width: 80%;margin:0 auto;margin-top: 10px;border-radius: 5px;}
@@ -168,11 +173,11 @@
 
 @font-face {
     font-family: 'iconfont';  /* project id 323247 */
-    src: url('//at.alicdn.com/t/font_ghg4dc4a7bsxlxr.eot');
-    src: url('//at.alicdn.com/t/font_ghg4dc4a7bsxlxr.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_ghg4dc4a7bsxlxr.woff') format('woff'),
-    url('//at.alicdn.com/t/font_ghg4dc4a7bsxlxr.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_ghg4dc4a7bsxlxr.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_s4q3x7pe3gyl23xr.eot');
+    src: url('//at.alicdn.com/t/font_s4q3x7pe3gyl23xr.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_s4q3x7pe3gyl23xr.woff') format('woff'),
+    url('//at.alicdn.com/t/font_s4q3x7pe3gyl23xr.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_s4q3x7pe3gyl23xr.svg#iconfont') format('svg');
 }
 .iconfont{
     font-family:"iconfont" !important;

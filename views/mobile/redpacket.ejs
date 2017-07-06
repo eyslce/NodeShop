@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<base href="/">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<meta name="format-detection" content="telephone=no">
@@ -10,9 +11,9 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<title>粉丝福利购</title>
 	<!--css-->
-	<link rel="stylesheet" type="text/css" href="mobile/css/common.css">
-	<link rel="stylesheet" type="text/css" href="mobile/css/swiper.min.css">
-	<link rel="stylesheet" type="text/css" href="mobile/css/mobile.css">
+	<link rel="stylesheet" href="mobile/css/base.css" />
+	<link rel="stylesheet" href="mobile/css/index.css" />
+	<link rel="stylesheet" href="mobile/css/swiper.min.css" />
 	<!--js-->
 	<script src="mobile/js/jquery-3.0.0.min.js"></script>
 	<script src="mobile/js/swiper.jquery.min.js"></script>
@@ -21,6 +22,16 @@
 </head>
 <body>
 <div class="app">
+
+	<div class="other-head">
+		<!--头部-->
+		<div class="head-content">
+			<span class="btn-back"><i class="iconfont icon-back">&#xe6fe;</i></span>
+			<h2 class="head-text">粉丝福利购</h2>
+
+		</div>
+	</div>
+
 	<!--logo-->
 	<div class="head-logo"><img src="mobile/img/new_logo.png"></div>
 
@@ -68,13 +79,13 @@
 	<div class="bottom-nav" id="bottom-nav">
         <ul>
             <li>
-                <a class="hover" href="/mobile/index">
+                <a href="/mobile/index">
                     <span class="bottom-icon iconfont">&#xe835;</span>
                     <span>首页</span>
                 </a>
             </li>
             <li>
-                <a href="/mobile/redpacket">
+                <a class="hover" href="/mobile/redpacket">
                     <span class="bottom-icon iconfont">&#xe681;</span>
                     <span>领红包</span>
                 </a>
@@ -87,17 +98,7 @@
             </li>
         </ul>
 	</div>
-	<!--个人中心弹窗层start-->
-	<div class="bg-member">
-		<div id="member-center">
-			<div class="member-close-tag"><i class="iconfont">&#xe69d;</i></div>
-			<div class="member-top-title"><i class="iconfont">&#xe6ef;</i>点击二维码长按关注<i class="iconfont">&#xe6ef;</i></div>
-			<img src="mobile/img/weixin-public-code-600.jpg" class="member-center-pic">
-			<div class="member-bottom-title">关于我们公众号</div>
 
-		</div>
-	</div>
-	<!--个人中心弹窗层end-->
 </div>
 </body>
 </html>

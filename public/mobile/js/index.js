@@ -19,8 +19,40 @@ $(document).ready(function(){
 			"opacity":0.5,
             "background": "rgb(152, 132, 132)"
 		});
-	});	
-	
+	});
+
+    //二维码展示
+    $('.J-erwm').click(function () {
+
+        $('.bg-weixin').show();
+        $('.member-close-tag').click(function () {
+            $('.bg-weixin').removeAttr('style');
+        })
+    })
+
+    // 分类页效果
+    $('.nav-list li').each(function (index,items) {
+    	var cagehrf = $(items).find('a').attr('href');
+        var cageId = (location.href).split('/');
+        var cageFz = (location.href).split('=');
+        var cageLm = ("/mobile/" + cageId[4]);
+        var width = $(items).outerWidth(true);
+
+        if(cagehrf == cageLm){
+            $(items).addClass('curn').siblings().removeClass('curn');
+            var slent = -width*(index -4);
+            if(index>4){
+            	$('.swiper-wrapper').css({'transform':'translate3d('+ slent + 'px, 0px, 0px)'});
+			}
+		}
+
+    })
+
+	$('.btn-back').click(function () {
+		history.back(-1);
+    })
+
+
 //    点击弹出层，作用：收起侧边栏菜单和收起弹出层
 	$(".alert-fullbg").click(function(){
 		$(".app-other").css({
@@ -49,8 +81,9 @@ $(document).ready(function(){
         });
     });
 
-	
-});			
+});
+
+
 
 
 //回到顶部 top，   作用：页面往下滚动超过1000px时  页面右下角会自动出现置顶 按钮
@@ -86,5 +119,7 @@ $(document).ready(function(){
 		   $("#inner").height(boxHeight);
 		});
 });
+
+
 
 //********************************************************************************************
