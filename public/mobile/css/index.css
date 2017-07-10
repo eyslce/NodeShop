@@ -163,11 +163,11 @@
 
 @font-face {
     font-family: 'iconfont';  /* project id 323247 */
-    src: url('//at.alicdn.com/t/font_ssc5aufn0brl766r.eot');
-    src: url('//at.alicdn.com/t/font_ssc5aufn0brl766r.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_ssc5aufn0brl766r.woff') format('woff'),
-    url('//at.alicdn.com/t/font_ssc5aufn0brl766r.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_ssc5aufn0brl766r.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_r3oz23xgl6dpldi.eot');
+    src: url('//at.alicdn.com/t/font_r3oz23xgl6dpldi.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_r3oz23xgl6dpldi.woff') format('woff'),
+    url('//at.alicdn.com/t/font_r3oz23xgl6dpldi.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_r3oz23xgl6dpldi.svg#iconfont') format('svg');
 }
 .iconfont{
     font-family:"iconfont" !important;
@@ -263,6 +263,8 @@ i.fa-search:before {vertical-align: sub;}
 /*---详情页底部 淘口令购买弹窗 end---*/
 
 /*红包领取页面*/
+.head-logo{ padding:1.2rem 0; text-align:center;}
+.head-logo img{ width:60%;}
 .redpackage-rules {margin: 10px 0px;padding: 0px 1rem;}
 .redpackage-rules span {font-size: 1rem;color: #fff;background: #f60;padding:3px 5px;margin:5px 0px;border-radius: 5px;display: inline-block;}
 .redpackage-rules p {font-size: 0.9rem;}
@@ -271,6 +273,8 @@ i.fa-search:before {vertical-align: sub;}
 .redpackage-contact span{text-align: center;display:block;line-height: 2rem;font-size: 0.8rem;}
 .redpackage-contact .img {margin: 0 auto;text-align: center;width: 60%;}
 .redpackage-contact .img img {width: 100%;}
+.recpackage-contact{padding: 0px 1rem; text-align:center; line-height:3rem;}
+.recpackage-contact img{margin: 0 auto;width: 60%;}
 
 .swiper-ppt .swiper-slide img{ max-width:100%;}
 
