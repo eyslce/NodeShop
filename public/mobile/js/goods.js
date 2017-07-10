@@ -7,48 +7,61 @@ var index = {
             index.page_num = result.total_page;
             index.queryStr = result.queryStr;
             var item = result.data;
-            for (var i in item) {
-                var html = '<div class="list-item">'
-                    + '<a href="' + item[i].click_url + '" >'
-                    + '<div class="list-item-left">'
-                    + '<img class="list-item-img" src="' + item[i].pic + '">'
-                    + '<div class="list-item-info">'
-                    + '<p class="list-item-name">';
-                if (item[i].is_tmall == 1) {
-                    html += '<span class="iconfont tmall-icon">&#xe744;</span>';
-                } else {
-                    html += '<span class="iconfont tmall-icon">&#xe767;</span>';
+            if(item.length){
+                for (var i in item) {
+                    var html = '<div class="list-item">'
+                        + '<a href="' + item[i].click_url + '" >'
+                        + '<div class="list-item-left">'
+                        + '<img class="list-item-img" src="' + item[i].pic + '">'
+                        + '<div class="list-item-info">'
+                        + '<p class="list-item-name">';
+                    if (item[i].is_tmall == 1) {
+                        html += '<span class="iconfont tmall-icon">&#xe744;</span>';
+                    } else {
+                        html += '<span class="iconfont tmall-icon">&#xe767;</span>';
+                    }
+                    html += item[i].title + '</p>'
+                        + '<p class="sell-price"><span class="item-discount-price">券后<i>' + item[i].price + '</i></span>'
+                        + '<span class="item-market-price">￥' + item[i].org_price + '</span>'
+                        + '</p>'
+                        + '<p class="sell-num"><span class="mail-icon">包邮</span>'
+                        + '<span class="item-sell-num">销量' + item[i].sales_num + '</span>'
+                        + '</p>'
+                        + '</div>'
+                        + '</div>'
+                        + '<div class="list-item-right">'
+                        + '<p class="right-price">'
+                        + '<span class="right-price-icon">￥</span>' + '<span class="right-price-num">' + item[i].ticket_price + '</span>'
+                        + '<span class="quan-text">优惠券</span>'
+                        + '</p>'
+                        + '<p class="quan-btn">'
+                        + '<span class="quan-text-icon">领券购买</span>'
+                        + '</p>'
+                        + '</div>';
+
+                    if (item[i].commission_plan > item[i].commission_queqiao) {
+                        var final_price = item[i].price * item[i].commission_plan / 100;
+                    } else {
+                        var final_price = item[i].price * item[i].commission_queqiao / 100;
+                    }
+                    var price = Math.floor(final_price * 0.7);
+                    price = price < 1 ? 1 : price;
+                    html += '<p class="redpackage">此商品狸淘返现金红包<span>' + price + '</span>元</p>'
+                        + '</a>'
+                        + '</div>';
+                    $('div.recommend').append(html);
                 }
-                html += item[i].title + '</p>'
-                    + '<p class="sell-price"><span class="item-discount-price">券后<i>' + item[i].price + '</i></span>'
-                    + '<span class="item-market-price">￥' + item[i].org_price + '</span>'
-                    + '</p>'
-                    + '<p class="sell-num"><span class="mail-icon">包邮</span>'
-                    + '<span class="item-sell-num">销量' + item[i].sales_num + '</span>'
-                    + '</p>'
-                    + '</div>'
-                    + '</div>'
-                    + '<div class="list-item-right">'
-                    + '<p class="right-price">'
-                    + '<span class="right-price-icon">￥</span>' + '<span class="right-price-num">' + item[i].ticket_price + '</span>'
-                    + '<span class="quan-text">优惠券</span>'
-                    + '</p>'
-                    + '<p class="quan-btn">'
-                    + '<span class="quan-text-icon">领券购买</span>'
-                    + '</p>'
-                    + '</div>'
-                if (item[i].commission_plan > item[i].commission_queqiao) {
-                    var final_price = item[i].price * item[i].commission_plan / 100;
-                } else {
-                    var final_price = item[i].price * item[i].commission_queqiao / 100;
-                }
-                var price = Math.floor(final_price * 0.7);
-                price = price < 1 ? 1 : price;
-                +'<p class="redpackage">此商品狸淘返现金红包<span>' + price + '</span>元</p>'
-                + '</a>'
-                + '</div>';
+            }else{
+                var html = '<div class="no-result iconfont">&#xe82f;</div>'
+                         + '<div class="no-result-find">'
+                         + '<h3>抱歉，没有找到相关结果</h3>'
+                         + '<div class="other">请尝试输入其他关键词</div>'
+                         + '</div>'
+                         + '<div class="clear"></div>';
                 $('div.recommend').append(html);
+                $('.next-page').addClass('none');
             }
+
 
         }, 'json');
     },

@@ -18,6 +18,7 @@
 .app .other-head .btn-back{ float:left; height:44px;}
 .app .other-head .btn-back .icon-back{font-size:1.6rem;}
 .app .other-head .head-text{ font-size:1.2rem; font-weight:400; text-align:center;}
+.app .head-log img{ position:relative; top:-2px; height:28px; width:28px;}
 
 /*---顶部点击关注二维码弹窗 start---*/
 .bg-weixin {position: fixed; top:0; z-index: 105;max-width: 640px;min-width: 320px;width: 100%;height: 100%;background: rgba(0,0,0,0.2);border-left: 1px solid #f3e7e3;
@@ -106,30 +107,13 @@
 .next-page{ padding:2rem 0; text-align:center;}
 .next-page .call_more{ display:inline-block; padding:0 1rem; line-height:2.2rem; font-size:1.2rem; background-color:#e94643; color:#fff; border-radius:4px;}
 
+.recommend .no-result{ font-size:8rem; text-align:center; color:#999;}
+.recommend .no-result-find{ text-align:center; font-size:1rem;}
+.recommend .no-result-find .other{ padding:0.6rem 0 1rem; font-size:0.8rem;}
+
 /*红包返现*/
 .list-item .redpackage{height: 30px;line-height: 30px;font-size: 0.8rem;text-align: center; color:#4a4a4a; border-top: 1px solid #e5e5e5;background: #fff;}
 .list-item .redpackage span {color: red;font-size: 1.5rem;margin: 0px 5px;}
-/*红包返现end*/
-@media only screen and (max-width:413px){
-    .list-item-left img {margin-left: 0px;}
-    .list-item-left .list-item-info .list-item-name {font-size: 0.8rem;height: 2.3rem;}
-    .list-item-left .list-item-info .sell-price {font-size: 0.8rem;}
-    .discount-price .discount-icon {margin-top: 0px;}
-    .discount-price .discount-price-num {margin-left: 10px;font-size: 1.1rem;}
-    .list-item-right .right-price {margin-top: 1rem;margin-bottom: 5px;}
-    .list-item-right .right-price .right-price-num {font-size: 1.8rem;}
-    .list-item-right .right-price .right-price-icon{font-size: 0.8rem;}
-    .list-item-right .open-p {margin-left: 0px;}
-    .list-item-right .open-p .open-icon {font-size: 0.8rem;}
-
-}
-@media only screen and (max-width:320px) {
-    .swiper-container {height:120px; overflow: hidden;}
-    .swiper-container img {width:100%;height:120px;}
-    .list-item-right .right-price {margin-top: 0rem;}
-    .next-page .call_more {font-size:1rem;line-height:2rem;}
-    .next-page {padding:1rem 0;}
-}
 
 .list-item-left .list-item-info .sell-price .item-market-price {color:#999;text-decoration: line-through;font-size: 0.8rem;margin-left: 3px;}
 .sell-price .item-discount-price {color:#F06000;margin-left: 5px;}
@@ -179,11 +163,11 @@
 
 @font-face {
     font-family: 'iconfont';  /* project id 323247 */
-    src: url('//at.alicdn.com/t/font_s4q3x7pe3gyl23xr.eot');
-    src: url('//at.alicdn.com/t/font_s4q3x7pe3gyl23xr.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_s4q3x7pe3gyl23xr.woff') format('woff'),
-    url('//at.alicdn.com/t/font_s4q3x7pe3gyl23xr.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_s4q3x7pe3gyl23xr.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_ssc5aufn0brl766r.eot');
+    src: url('//at.alicdn.com/t/font_ssc5aufn0brl766r.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_ssc5aufn0brl766r.woff') format('woff'),
+    url('//at.alicdn.com/t/font_ssc5aufn0brl766r.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_ssc5aufn0brl766r.svg#iconfont') format('svg');
 }
 .iconfont{
     font-family:"iconfont" !important;
@@ -287,3 +271,57 @@ i.fa-search:before {vertical-align: sub;}
 .redpackage-contact span{text-align: center;display:block;line-height: 2rem;font-size: 0.8rem;}
 .redpackage-contact .img {margin: 0 auto;text-align: center;width: 60%;}
 .redpackage-contact .img img {width: 100%;}
+
+.swiper-ppt .swiper-slide img{ max-width:100%;}
+
+/*红包返现end*/
+@media screen and ( max-width:320px) {
+    .list-item-left img {margin-left: 0px;}
+    .list-item-left .list-item-info .list-item-name {font-size:0.7rem;height: 2.3rem;}
+    .list-item-left .list-item-info .sell-price {font-size: 0.8rem;}
+    .discount-price .discount-icon {margin-top: 0px;}
+    .discount-price .discount-price-num {margin-left: 10px;font-size: 1.1rem;}
+    .list-item-right .right-price {margin-top: .5rem;margin-bottom: 0;}
+    .list-item-right .right-price .right-price-num {font-size: 1.5rem;}
+    .list-item-right .right-price .right-price-icon{font-size: 0.8rem;}
+    .list-item-right .open-p {margin-left: 0px;}
+    .list-item-right .open-p .open-icon {font-size: 0.8rem;}
+    .quan-text-icon{ font-size:0.8rem;}
+    .sell-price .item-discount-price i{ font-size:1rem;}
+    .list-item-left .list-item-info .sell-price .item-market-price{ font-size:0.7rem;}
+    .list-item-left .list-item-info .sell-num .mail-icon{ font-size:0.8rem;}
+    .sell-num .item-sell-num{ font-size:0.8rem;}
+    .nav-list li{ line-height:2.2rem; font-size:0.8rem;}
+    .list-item .redpackage{ font-size:0.7rem;}
+    .list-item .redpackage span{ font-size:1.2rem;}
+}
+
+@media ( min-width:321px) and ( max-width:379px) {
+    .list-item-left img {margin-left: 0px;}
+    .list-item-left .list-item-info .list-item-name {font-size: 0.8rem;height: 2.3rem;}
+    .list-item-left .list-item-info .sell-price {font-size: 0.8rem;}
+    .discount-price .discount-icon {margin-top: 0px;}
+    .discount-price .discount-price-num {margin-left: 10px;font-size: 1.1rem;}
+    .list-item-right .right-price {margin-top: .5rem;margin-bottom: 5px;}
+    .list-item-right .right-price .right-price-num {font-size: 1.8rem;}
+    .list-item-right .right-price .right-price-icon{font-size: 0.8rem;}
+    .list-item-right .open-p {margin-left: 0px;}
+    .list-item-right .open-p .open-icon {font-size: 0.8rem;}
+    .list-item .redpackage{ font-size:0.7rem;}
+    .list-item .redpackage span{ font-size:1.3rem;}
+}
+
+
+@media ( min-width:380px) and (max-width:413px){
+    .list-item-left img {margin-left: 0px;}
+    .list-item-left .list-item-info .list-item-name {font-size: 0.8rem;height: 2.3rem;}
+    .list-item-left .list-item-info .sell-price {font-size: 0.8rem;}
+    .discount-price .discount-icon {margin-top: 0px;}
+    .discount-price .discount-price-num {margin-left: 10px;font-size: 1.1rem;}
+    .list-item-right .right-price {margin-top: 1rem;margin-bottom: 5px;}
+    .list-item-right .right-price .right-price-num {font-size: 1.8rem;}
+    .list-item-right .right-price .right-price-icon{font-size: 0.8rem;}
+    .list-item-right .open-p {margin-left: 0px;}
+    .list-item-right .open-p .open-icon {font-size: 0.8rem;}
+
+}
